@@ -79,7 +79,32 @@
 		if (number >= 2) {
 			$(this).addClass('style-7');
 		}
-
 	})
+
+	if($('.second-progress').length > 0) {
+		var number = Number($(this).find('.precent em').text());
+
+		if (number < 0.3) {
+			$('.second-progress').addClass('style-1');
+		}
+		if (0.6 > number && number >= 0.3) {
+			$('.second-progress').addClass('style-2');
+		}
+		if (1 > number && number >= 0.6) {
+			$('.second-progress').addClass('style-3');
+		}
+		if (number == 1) {
+			$('.second-progress').addClass('style-4');
+		}
+		if (1.3 > number && number > 1) {
+			$('.second-progress').addClass('style-5');
+		}
+		if (2 > number && number >= 1.3) {
+			$('.second-progress').addClass('style-6');
+		}
+		if (number >= 2) {
+			$('.second-progress').addClass('style-7');
+		}
+	}
  	
  });

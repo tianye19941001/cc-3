@@ -36,6 +36,13 @@ body {
         height: rem(520);
     }
 
+    .title {
+        position: absolute;
+        top: rem(96);
+        left: rem(90);
+        width: rem(584);
+    }
+
     .tips {
         width: rem(183);
         height: rem(74);
@@ -79,7 +86,7 @@ body {
     background: #fff;
     margin: 0 auto;
     border-radius: rem(12);
-    margin-bottom: rem(40);
+    margin-bottom: rem(70);
 }
 
 .report-title {
@@ -150,6 +157,23 @@ body {
         width: rem(84);
         height: rem(84);
         border-radius: rem(84);
+    }
+
+    .tip-5 {
+        bottom: rem(158);
+        left: 0;
+        width: rem(86);
+        height: rem(86);
+        border-radius: rem(86);
+    }
+
+    .tip-6 {
+        font-size: rem(14);
+        bottom: rem(178);
+        right: 0;
+        width: rem(68);
+        height: rem(68);
+        border-radius: rem(68);
     }
 }
 
@@ -601,4 +625,176 @@ body {
     padding: rem(80);
     font-size: rem(24);
     color: rgba(33, 86, 104, 1);
+}
+
+.kp-list-1 {
+    width: rem(117*2+130);
+    margin: 0 auto;
+    padding-bottom: rem(40);
+
+    ul {
+        overflow: hidden;
+    }
+
+    li {
+        float: left;
+        width: rem(117);
+        margin-right: rem(125);
+        overflow: hidden;
+
+        &:nth-child(even) {
+            margin-right: 0;
+        }
+
+        img {
+            width: rem(117);
+            height: rem(117);
+            background: #eee;
+            border-radius: rem(117);
+            margin-bottom: rem(20);
+            display: block;
+        }
+
+        font-size:rem(24);
+        color:rgba(159, 159, 160, 1);
+        padding: 0 0 rem(20);
+        text-align: center;
+
+    }
+}
+
+.list-style-4 {
+    width: rem(117*3+80*2);
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: rem(36) 0;
+
+    li {
+        width: rem(117);
+        margin-right: rem(78);
+        float: left;
+        color: #9f9fa0;
+        text-align: center;
+        margin-bottom: rem(6);
+
+        img {
+            width: rem(117);
+            height: rem(117);
+            border-radius: rem(117);
+            background: #eee;
+        }
+
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+    }
+}
+
+.kp-list-2 .list-style-1 li span {
+    font-size: rem(28)
+}
+
+.small-title {
+    font-size: rem(30)
+}
+
+.report-div-2 {
+    padding: rem(40) rem(100) rem(70);
+    font-size: rem(20);
+    color: rgba(159, 159, 160, 1);
+}
+
+.second-progress {
+    width: rem(450);
+    position: relative;
+
+    .precent {
+        position: absolute;
+        font-size: rem(32);
+        color: rgba(98, 185, 194, 1);
+        right: -1.5rem;
+        top: 5.1rem;
+    }
+
+    .p2 {
+        width: 18rem
+    }
+
+    &.style-1 {
+        .in span {
+            width: 10%;
+            @extend .style-blue;
+        }
+
+        .precent {
+            color: #219AD8;
+        }
+    }
+
+    &.style-2 {
+        .in span {
+            width: 30%;
+            @extend .style-blue;
+        }
+
+        .precent {
+            color: #219AD8;
+        }
+    }
+
+    &.style-3 {
+        .in span {
+            width: 40%;
+            @extend .style-blue;
+        }
+
+        .precent {
+            color: #219AD8;
+        }
+    }
+
+    &.style-4 {
+        .in span {
+            width: 50%;
+            @extend .style-green;
+        }
+
+        .precent {
+            color: #219AD8;
+        }
+    }
+
+    &.style-5 {
+        .in span {
+            width: 60%;
+            @extend .style-red;
+        }
+
+        .precent {
+            color: #FF616A;
+        }
+    }
+
+    &.style-6 {
+        .in span {
+            width: 70%;
+            @extend .style-red;
+        }
+
+        .precent {
+            color: #FF616A;
+        }
+    }
+
+    &.style-7 {
+        .in span {
+            width: 90%;
+            @extend .style-red;
+        }
+
+        .precent {
+            color: #FF616A;
+        }
+    }
 }
