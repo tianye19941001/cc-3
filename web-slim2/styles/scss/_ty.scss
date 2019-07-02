@@ -798,3 +798,38 @@ body {
         }
     }
 }
+
+.mail-body {
+    width: rem(670);
+    margin: rem(50) auto;
+    background-color: #e5f8f7;
+    border-radius: rem(10);
+    background-image: url(../images/mail-5.png);
+    background-size: 100% auto;
+    position: relative;
+
+    h1 {
+        font-size: rem(44);
+        color: rgba(98, 185, 194, 1);
+        position: absolute;
+        left: rem(50);
+        top: rem(20);
+        margin-bottom: 10;
+    }
+
+    .in {
+        &:before, &:after {
+            content: '';
+            display: block;
+            width: rem(580);
+        }
+
+        &:before {
+            height: rem(179);
+            background-size: rem(580) rem(179);
+        }
+
+        p{position: relative; z-index: 3;}
+
+    }
+}
