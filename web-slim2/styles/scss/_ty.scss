@@ -705,7 +705,7 @@ body {
     color: rgba(159, 159, 160, 1);
 }
 
-.second-progress {
+.second-progress-2 {
     width: rem(450);
     position: relative;
 
@@ -802,34 +802,105 @@ body {
 .mail-body {
     width: rem(670);
     margin: rem(50) auto;
+    padding: rem(100) 0 rem(60);
     background-color: #e5f8f7;
     border-radius: rem(10);
     background-image: url(../images/mail-5.png);
     background-size: 100% auto;
     position: relative;
 
+    .tan {
+        width: rem(36);
+        position: absolute;
+        right: rem(130);
+        top: rem(70)
+    }
+
     h1 {
         font-size: rem(44);
         color: rgba(98, 185, 194, 1);
         position: absolute;
         left: rem(50);
-        top: rem(20);
-        margin-bottom: 10;
+        top: rem(25);
     }
 
     .in {
-        &:before, &:after {
+        width: rem(580);
+        margin: rem(179) auto rem(122);
+        background-size: rem(580) auto;
+        background-image: url(../images/mail-2.png);
+        background-position: rem(1) 0;
+        position: relative;
+
+        &:before,
+        &:after {
             content: '';
             display: block;
             width: rem(580);
+            position: absolute;
+            left: 0;
         }
 
         &:before {
+            top: rem(-179);
             height: rem(179);
             background-size: rem(580) rem(179);
+            background-image: url(../images/mail-1.png);
         }
 
-        p{position: relative; z-index: 3;}
+        &:after {
+            height: rem(122);
+            bottom: rem(-122);
+            background-size: rem(580) rem(122);
+            background-image: url(../images/mail-3.png);
+        }
+
+        p {
+            position: relative;
+            z-index: 3;
+        }
+
+        .p1 {
+            position: absolute;
+            font-size: rem(30);
+            color: rgba(136, 136, 137, 1);
+            left: rem(30);
+            top: rem(-100);
+        }
+
+        .p2 {
+            position: relative;
+            top: rem(-20);
+            padding: 0 rem(30);
+            font-size: rem(20);
+            color: rgba(136, 136, 137, 1);
+            line-height: rem(30);
+            text-indent: rem(40);
+        }
+
+        .p3 {
+            font-size: rem(30);
+            color: rgba(136, 136, 137, 1);
+            text-align: right;
+            padding: rem(40) rem(40) rem(20) 0;
+        }
 
     }
+}
+
+.can-open {
+    i {
+        float: right;
+        width: rem(26);
+        height: rem(29);
+        display: block;
+        background-image: url(../images/icon0.png);
+        background-size: 100%;
+        margin:rem(18) rem(20) 0 0;
+        cursor: pointer;
+    }
+}
+
+.isHide {
+    border-radius: .4rem !important;
 }

@@ -106,5 +106,10 @@
 			$('.second-progress').addClass('style-7');
 		}
 	}
+
+	$('.can-open i').on('click', function(){
+		$(this).parent().toggleClass('isHide');
+		$(this).parent().siblings().toggle()
+	})
  	
  });
