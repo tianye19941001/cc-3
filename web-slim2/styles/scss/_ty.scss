@@ -43,6 +43,18 @@ body {
         width: rem(584);
     }
 
+    h1 {
+        position: absolute;
+        display: block;
+        width: 100%;
+        text-align: center;
+        top: rem(90);
+        font-size: rem(58);
+        color: #63c2cc;
+        letter-spacing: rem(20);
+        text-shadow: 0 0 rem(20) #fff;
+    }
+
     .tips {
         width: rem(183);
         height: rem(74);
