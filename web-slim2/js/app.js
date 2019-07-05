@@ -53,63 +53,11 @@
  			}
  			return ""
  		}
-	 }
-	 
-	$('.line').each(function(){
-		//  设置为<0.3(10%)，<=0.3-0.6(30%)，0.6-1(40%)，1(50%)，1-1.3(60%)，(1.3-2)70%，>2(90%)，
-		var number = Number($(this).find('strong').text());
-		if (number < 0.3) {
-			$(this).addClass('style-1');
-		}
-		if (0.6 > number && number >= 0.3) {
-			$(this).addClass('style-2');
-		}
-		if (1 > number && number >= 0.6) {
-			$(this).addClass('style-3');
-		}
-		if (number == 1) {
-			$(this).addClass('style-4');
-		}
-		if (1.3 > number && number > 1) {
-			$(this).addClass('style-5');
-		}
-		if (2 > number && number >= 1.3) {
-			$(this).addClass('style-6');
-		}
-		if (number >= 2) {
-			$(this).addClass('style-7');
-		}
-	})
+ 	}
 
-	if($('.second-progress').length > 0) {
-		var number = Number($(this).find('.precent em').text());
+ 	$('.can-open i').on('click', function () {
+ 		$(this).parent().toggleClass('isHide');
+ 		$(this).parent().siblings().toggle()
+ 	})
 
-		if (number < 0.3) {
-			$('.second-progress').addClass('style-1');
-		}
-		if (0.6 > number && number >= 0.3) {
-			$('.second-progress').addClass('style-2');
-		}
-		if (1 > number && number >= 0.6) {
-			$('.second-progress').addClass('style-3');
-		}
-		if (number == 1) {
-			$('.second-progress').addClass('style-4');
-		}
-		if (1.3 > number && number > 1) {
-			$('.second-progress').addClass('style-5');
-		}
-		if (2 > number && number >= 1.3) {
-			$('.second-progress').addClass('style-6');
-		}
-		if (number >= 2) {
-			$('.second-progress').addClass('style-7');
-		}
-	}
-
-	$('.can-open i').on('click', function(){
-		$(this).parent().toggleClass('isHide');
-		$(this).parent().siblings().toggle()
-	})
- 	
  });

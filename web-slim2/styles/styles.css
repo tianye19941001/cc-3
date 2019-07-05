@@ -593,14 +593,23 @@ body {
     height: 2.2666666667rem;
     border-radius: 2.2666666667rem; }
 
-.style-blue, .index-progress ul .progress-3 .style-1, .line.style-1 span, .line.style-2 span, .line.style-3 span, .second-progress .progress-3 .style-1, .second-progress-2.style-1 .in span, .second-progress-2.style-2 .in span, .second-progress-2.style-3 .in span {
+.style-blue {
   background: linear-gradient(90deg, #8cddff 0%, #71c8ff 100%) !important; }
 
-.style-green, .index-progress ul .progress-2 .style-1, .index-progress ul .progress-3 .style-2, .line.style-4 span, .second-progress .progress-2 .style-1, .second-progress .progress-3 .style-2, .second-progress-2.style-4 .in span {
+.style-green {
   background: linear-gradient(90deg, #c1e49b 0%, #7cd591 100%) !important; }
 
-.style-red, .index-progress ul .progress-2 .style-2, .index-progress ul .progress-3 .style-3, .line.style-5 span, .line.style-6 span, .line.style-7 span, .second-progress .progress-2 .style-2, .second-progress .progress-3 .style-3, .second-progress-2.style-5 .in span, .second-progress-2.style-6 .in span, .second-progress-2.style-7 .in span {
+.style-red {
   background: linear-gradient(90deg, #ffa57b 0%, #ff8b7b 100%) !important; }
+
+.style-blue-2, .index-progress ul .progress-3 .style-1, .line.disease-blue span, .second-progress .progress-3 .style-1, .second-progress-2.disease-blue .in span {
+  background: linear-gradient(90deg, #8cddff 0%, #71c8ff 100%); }
+
+.style-green-2, .index-progress ul .progress-2 .style-1, .index-progress ul .progress-3 .style-2, .line.disease-green span, .second-progress .progress-2 .style-1, .second-progress .progress-3 .style-2, .second-progress-2.disease-green .in span {
+  background: linear-gradient(90deg, #c1e49b 0%, #7cd591 100%); }
+
+.style-red-2, .index-progress ul .progress-2 .style-2, .index-progress ul .progress-3 .style-3, .line.disease-red span, .second-progress .progress-2 .style-2, .second-progress .progress-3 .style-3, .second-progress-2.disease-red .in span {
+  background: linear-gradient(90deg, #ffa57b 0%, #ff8b7b 100%); }
 
 .index-progress > p {
   color: #888889;
@@ -623,7 +632,8 @@ body {
       width: 100%;
       height: 100%; }
   .index-progress ul .r {
-    float: left; }
+    float: left;
+    position: relative; }
     .index-progress ul .r h3 {
       font-size: 1rem;
       color: #888889;
@@ -637,6 +647,11 @@ body {
         height: 0.9rem;
         background-image: url(../images/icon0.png);
         background-size: 100%; }
+    .index-progress ul .r em {
+      font-size: 1rem;
+      position: absolute;
+      right: 0;
+      top: 0.2666666667rem; }
     .index-progress ul .r .progress-ing {
       width: 14.2rem;
       height: 1.2rem;
@@ -666,39 +681,38 @@ body {
   .index-progress ul .progress-3 .style-3 {
     width: 100%; }
 
+.line-1 {
+  width: 14%; }
+
+.line-2 {
+  width: 28%; }
+
+.line-3 {
+  width: 42%; }
+
+.line-4 {
+  width: 56%; }
+
+.line-5 {
+  width: 70%; }
+
+.line-6 {
+  width: 84%; }
+
+.line-7 {
+  width: 92%; }
+
 .line span {
   float: left;
   height: 100%; }
 .line em {
   float: right; }
-.line.style-1 span {
-  width: 10%; }
-.line.style-1 em {
+.line.disease-blue em {
   color: #219AD8; }
-.line.style-2 span {
-  width: 30%; }
-.line.style-2 em {
-  color: #219AD8; }
-.line.style-3 span {
-  width: 40%; }
-.line.style-3 em {
-  color: #219AD8; }
-.line.style-4 span {
-  width: 50%; }
-.line.style-4 em {
-  color: #219AD8; }
-.line.style-5 span {
-  width: 60%; }
-.line.style-5 em {
+.line.disease-red em {
   color: #FF616A; }
-.line.style-6 span {
-  width: 70%; }
-.line.style-6 em {
-  color: #FF616A; }
-.line.style-7 span {
-  width: 90%; }
-.line.style-7 em {
-  color: #FF616A; }
+.line.disease-green em {
+  color: #03c046; }
 
 .second-header .logo-1 img,
 .second-header .logo-2 img {
@@ -927,34 +941,12 @@ body {
     top: 5.1rem; }
   .second-progress-2 .p2 {
     width: 18rem; }
-  .second-progress-2.style-1 .in span {
-    width: 10%; }
-  .second-progress-2.style-1 .precent {
+  .second-progress-2.disease-blue .precent {
     color: #219AD8; }
-  .second-progress-2.style-2 .in span {
-    width: 30%; }
-  .second-progress-2.style-2 .precent {
-    color: #219AD8; }
-  .second-progress-2.style-3 .in span {
-    width: 40%; }
-  .second-progress-2.style-3 .precent {
-    color: #219AD8; }
-  .second-progress-2.style-4 .in span {
-    width: 50%; }
-  .second-progress-2.style-4 .precent {
-    color: #219AD8; }
-  .second-progress-2.style-5 .in span {
-    width: 60%; }
-  .second-progress-2.style-5 .precent {
+  .second-progress-2.disease-red .precent {
     color: #FF616A; }
-  .second-progress-2.style-6 .in span {
-    width: 70%; }
-  .second-progress-2.style-6 .precent {
-    color: #FF616A; }
-  .second-progress-2.style-7 .in span {
-    width: 90%; }
-  .second-progress-2.style-7 .precent {
-    color: #FF616A; }
+  .second-progress-2.disease-green .precent {
+    color: #03C046; }
 
 .mail-body {
   width: 22.3333333333rem;
