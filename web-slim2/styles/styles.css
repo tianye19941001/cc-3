@@ -812,8 +812,9 @@ body {
     border-radius: 3.9rem; }
   .list-style-1 span {
     float: left;
-    height: 3.9rem;
-    line-height: 3.9rem;
+    width: 12.6666666667rem;
+    padding: 1.1666666667rem 0;
+    line-height: 1.6rem;
     font-size: 1.1666666667rem;
     color: #9f9fa0; }
 

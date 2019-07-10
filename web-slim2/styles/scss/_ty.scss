@@ -557,8 +557,9 @@ body {
 
     span {
         float: left;
-        height: rem(117);
-        line-height: rem(117);
+        width: rem(380);
+        padding: rem(35) 0;
+        line-height: rem(48);
         font-size: rem(35);
         color: rgba(159, 159, 160, 1);
     }
