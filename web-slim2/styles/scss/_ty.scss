@@ -126,7 +126,7 @@ body {
 
     span {
         color: #666;
-        font-size: rem(16);
+        font-size: rem(18);
         text-align: center;
         position: absolute;
 
@@ -141,7 +141,7 @@ body {
 
     .tip-1 {
         top: rem(40);
-        left: rem(108);
+        left: rem(114);
         width: rem(98);
         height: rem(98);
         border-radius: rem(98);
@@ -157,35 +157,34 @@ body {
 
     .tip-3 {
         bottom: rem(38);
-        left: rem(74);
+        left: rem(78);
         width: rem(98);
         height: rem(98);
         border-radius: rem(98);
     }
 
     .tip-4 {
-        bottom: rem(48);
-        right: rem(35);
-        width: rem(84);
-        height: rem(84);
-        border-radius: rem(84);
+        bottom: rem(40);
+        right: rem(46);
+        width: rem(108);
+        height: rem(108);
+        border-radius: rem(108);
     }
 
     .tip-5 {
-        bottom: rem(158);
+        bottom: rem(148);
         left: 0;
-        width: rem(86);
-        height: rem(86);
-        border-radius: rem(86);
+        width: rem(106);
+        height: rem(106);
+        border-radius: rem(110);
     }
 
     .tip-6 {
-        font-size: rem(14);
-        bottom: rem(178);
+        bottom: rem(170);
         right: 0;
-        width: rem(68);
-        height: rem(68);
-        border-radius: rem(68);
+        width: rem(90);
+        height: rem(90);
+        border-radius: rem(80);
     }
 }
 
