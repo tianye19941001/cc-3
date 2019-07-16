@@ -58,6 +58,10 @@
  	$('.can-open i').on('click', function () {
  		$(this).parent().toggleClass('isHide');
  		$(this).parent().siblings().toggle()
- 	})
+	 })
+	 
+	 if($('.table-bottom .tr').length <= 3) {
+		 $('.table-header').css('padding-right','0')
+	 }
 
  });
