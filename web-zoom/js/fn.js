@@ -5,5 +5,5 @@ window.addEventListener("resize", function() {
 function fnResize(){
     var docWidth = document.documentElement.clientWidth,
             body = document.getElementsByTagName('html')[0];
-    body.style.fontSize = docWidth / 32 + 'px';
+    body.style.fontSize = docWidth / 30 + 'px';
 }

@@ -112,4 +112,16 @@
 	(function init(){
 		animateInit();
 	})();
+
+
+
+	$('.articles .in').height($(window).height())
+
+	$('.articles').swipeUp(function(){
+		$(this).addClass('active');
+	})
+
+	$('.articles .back').click(function(){
+		$('.articles').removeClass('active');
+	})
 });

@@ -6,7 +6,65 @@ body{
   width: 100%;
   height: 100%;
 }
+// 动画
+@keyframes child{
+	0%{ transform: translateX(-10px) }
+	50%{ transform: translateX(10px)}
+	100%{ transform: translateX(-10px)}
+}
 
+@keyframes fushe {
+  0% {-webkit-transform: translate(0px, 0px) rotate(0deg)}
+  2% {-webkit-transform: translate(1.5px, -2.5px) rotate(-1.5deg)}
+  4% {-webkit-transform: translate(-2.5px, 0.5px) rotate(-0.5deg)}
+  6% {-webkit-transform: translate(1.5px, 1.5px) rotate(0.5deg)}
+  8% {-webkit-transform: translate(1.5px, 1.5px) rotate(-0.5deg)}
+  10% {-webkit-transform: translate(1.5px, 0.5px) rotate(0.5deg)}
+  12% {-webkit-transform: translate(0.5px, -1.5px) rotate(-1.5deg)}
+  14% {-webkit-transform: translate(-2.5px, -0.5px) rotate(-0.5deg)}
+  16% {-webkit-transform: translate(0.5px, 1.5px) rotate(-1.5deg)}
+  18% {-webkit-transform: translate(-1.5px, 1.5px) rotate(-0.5deg)}
+  20% {-webkit-transform: translate(0.5px, 1.5px) rotate(0.5deg)}
+  22% {-webkit-transform: translate(-1.5px, 0.5px) rotate(-0.5deg)}
+  24% {-webkit-transform: translate(-2.5px, 1.5px) rotate(-1.5deg)}
+  26% {-webkit-transform: translate(0.5px, 0.5px) rotate(-0.5deg)}
+  28% {-webkit-transform: translate(-0.5px, -2.5px) rotate(-1.5deg)}
+  30% {-webkit-transform: translate(-1.5px, 1.5px) rotate(-1.5deg)}
+  32% {-webkit-transform: translate(0.5px, 0.5px) rotate(-0.5deg)}
+  34% {-webkit-transform: translate(1.5px, -0.5px) rotate(0.5deg)}
+  36% {-webkit-transform: translate(-1.5px, -1.5px) rotate(-0.5deg)}
+  38% {-webkit-transform: translate(-2.5px, -2.5px) rotate(-1.5deg)}
+  40% {-webkit-transform: translate(-1.5px, 0.5px) rotate(-0.5deg)}
+  42% {-webkit-transform: translate(-0.5px, 1.5px) rotate(-1.5deg)}
+  44% {-webkit-transform: translate(-2.5px, -0.5px) rotate(0.5deg)}
+  46% {-webkit-transform: translate(-2.5px, -1.5px) rotate(0.5deg)}
+  48% {-webkit-transform: translate(-2.5px, -2.5px) rotate(0.5deg)}
+  50% {-webkit-transform: translate(0.5px, -1.5px) rotate(-1.5deg)}
+  52% {-webkit-transform: translate(0.5px, 1.5px) rotate(0.5deg)}
+  54% {-webkit-transform: translate(1.5px, -0.5px) rotate(-1.5deg)}
+  56% {-webkit-transform: translate(-1.5px, -1.5px) rotate(-1.5deg)}
+  58% {-webkit-transform: translate(0.5px, 1.5px) rotate(-0.5deg)}
+  60% {-webkit-transform: translate(-0.5px, -0.5px) rotate(0.5deg)}
+  62% {-webkit-transform: translate(0.5px, 1.5px) rotate(-0.5deg)}
+  64% {-webkit-transform: translate(-2.5px, 0.5px) rotate(0.5deg)}
+  66% {-webkit-transform: translate(-0.5px, -2.5px) rotate(0.5deg)}
+  68% {-webkit-transform: translate(-2.5px, -2.5px) rotate(-1.5deg)}
+  70% {-webkit-transform: translate(-1.5px, 0.5px) rotate(-1.5deg)}
+  72% {-webkit-transform: translate(-1.5px, 0.5px) rotate(-0.5deg)}
+  74% {-webkit-transform: translate(-1.5px, 1.5px) rotate(-0.5deg)}
+  76% {-webkit-transform: translate(-1.5px, -2.5px) rotate(0.5deg)}
+  78% {-webkit-transform: translate(-1.5px, -2.5px) rotate(-0.5deg)}
+  80% {-webkit-transform: translate(-0.5px, 1.5px) rotate(-0.5deg)}
+  82% {-webkit-transform: translate(1.5px, -1.5px) rotate(-0.5deg)}
+  84% {-webkit-transform: translate(-0.5px, -1.5px) rotate(-1.5deg)}
+  86% {-webkit-transform: translate(-2.5px, 0.5px) rotate(-0.5deg)}
+  88% {-webkit-transform: translate(-2.5px, -0.5px) rotate(-0.5deg)}
+  90% {-webkit-transform: translate(-0.5px, 0.5px) rotate(-1.5deg)}
+  92% {-webkit-transform: translate(1.5px, -2.5px) rotate(0.5deg)}
+  94% {-webkit-transform: translate(0.5px, 1.5px) rotate(-1.5deg)}
+  96% {-webkit-transform: translate(1.5px, -0.5px) rotate(-1.5deg)}
+  98% {-webkit-transform: translate(-0.5px, 0.5px) rotate(-0.5deg)}
+}
 
 // 手机
 .page {
@@ -19,7 +77,6 @@ body{
   right: 0;
   bottom: 0;
 }
-
 
 .page-1 {
   background-image: url(../images/bg4.png);
@@ -68,6 +125,7 @@ body{
     left: rem(58);
     bottom: rem(10);
     z-index: 5;
+    animation: child 1s ease-in-out infinite;
   }
 
   .child {
@@ -77,6 +135,7 @@ body{
     left: rem(68);
     bottom: rem(190);
     z-index: 5;
+    animation: child 1s ease-in-out infinite;
   }
 
   .bg-bottom {
@@ -87,8 +146,8 @@ body{
     display: block;
     position: absolute;
     width: rem(445);
-    left: rem(112);
-    top: rem(130);
+    left: rem(170);
+    top: rem(140);
     z-index: 7;
   }
 
@@ -108,5 +167,80 @@ body{
     right: rem(70);
     bottom: rem(344);
     z-index: 7;
+    animation: fushe 1s linear infinite;
+  }
+  .articles {
+    position: absolute;
+    height: 0;
+    bottom: 0;
+    left: rem(15);
+    width:rem(720);
+    z-index: 8;
+    transition: all .5s;
+
+    .in {
+      margin-top: rem(-80);
+      width:rem(720);
+      background:rgba(255,255,255,1);
+      box-shadow:0px 0px rem(50) 0px rgba(0, 0, 0, 1);
+      border-radius:rem(16);
+      position: relative;
+      transition: all .5s;
+    }
+
+    h2 {
+      text-align: center;
+      .back {
+        width: rem(50);
+        display: none;
+        opacity: 0;
+        transition: all .5s;
+      }
+
+      .title {
+        width: rem(410);
+        margin-top: rem(-40);
+        transition: all .5s;
+      }
+    }
+    .up {
+      width: rem(19);
+      position: absolute;
+      top: rem(-25);
+      right: rem(26);
+      opacity: 1;
+      transition: all .5s;
+    }
+
+    &.active {
+      bottom: calc(100% - 1rem);
+
+      h2 {
+        height: rem(80);
+        border-bottom: 1px solid rgba(228,228,228,1);
+
+        .title {
+          width: rem(197);
+          margin-top: rem(15);
+        }
+      }
+
+      .back {
+        opacity: 1;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        margin: rem(26) 0 0 rem(32);
+      }
+
+      .up {
+        opacity: 0;
+      }
+
+      .in {
+        margin-top: 0;
+      }
+    }
   }
 }
