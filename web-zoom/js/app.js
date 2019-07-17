@@ -121,7 +121,7 @@
 		$(this).addClass('active');
 	})
 
-	$('.articles .back').click(function(){
+	$('.articles').swipeDown(function(){
 		$('.articles').removeClass('active');
 	})
 });
