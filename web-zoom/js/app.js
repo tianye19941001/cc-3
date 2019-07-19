@@ -114,7 +114,9 @@
 	})();
 
 
+	// 辐射动物园
 
+	var gyList = [0, 2.5, 5, 8, 20, 50, 100, 500]
 	$('.articles .in').height($(window).height())
 
 	$('.articles').swipeUp(function(){
@@ -124,4 +126,59 @@
 	$('.articles').swipeDown(function(){
 		$('.articles').removeClass('active');
 	})
+
+	$('.bottom-line, .page-zoom .bg').swipeRight(function(){
+		var nowClass = $('.page-zoom').attr('class');
+		var newIndex = parseInt(nowClass.slice(-1, nowClass.length)) + 1;
+		if(newIndex > 8) return;
+		changeData(newIndex)
+	})
+
+	$('.bottom-line, .page-zoom .bg').swipeLeft(function(){
+		var nowClass = $('.page-zoom').attr('class');
+		var newIndex = parseInt(nowClass.slice(-1, nowClass.length)) - 1;
+		if(newIndex < 1) return;
+		changeData(newIndex)
+	})
+
+	function changeData(newIndex) {
+		$('.data strong').text(gyList[newIndex -1]);
+		$('.in').hide();
+		$('.in-' + newIndex).show(1000);
+		$('.bg').attr('src', './images/in-' + newIndex + '.jpg');
+		$('.page-zoom').attr('class', 'page page-zoom page-zoom-' + newIndex )
+	}
+
+	var personVideo = $('#person-video').get(0);
+	
+	personVideo.onloadeddata = function() {
+		console.log(11)
+		if (window.orientation === 90 || window.orientation === -90 ){ 
+			console.log("横屏");
+			$('.dialog-person').hide();
+		}
+
+		personVideo.play()
+	personVideo.pause()
+	}
+
+	window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {
+    if (window.orientation === 180 || window.orientation === 0) { 
+			console.log("竖屏");
+			$('.dialog-person').show();
+    } 
+    if (window.orientation === 90 || window.orientation === -90 ){ 
+			console.log("横屏");
+			$('.dialog-person').hide();
+    }
+	}, false);
+	
+	$('.next').on('touchstart', function(){
+		personVideo.play()
+	})
+
+	$('.next').on('touchend', function(){
+		personVideo.pause()
+	})
+
 });
