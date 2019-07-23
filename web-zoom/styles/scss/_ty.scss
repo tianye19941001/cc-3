@@ -332,21 +332,27 @@ body {
   .report-1 {
     background-position: 0 0;
   }
+
   .report-2 {
     background-position: rem(-340) 0;
   }
+
   .report-3 {
     background-position: rem(-340*2) 0;
   }
+
   .report-4 {
     background-position: rem(-340*3) 0;
   }
+
   .report-5 {
     background-position: rem(-340*4) 0;
   }
+
   .report-6 {
     background-position: rem(-340*5) 0;
   }
+
   .report-7 {
     background-position: rem(-340*6) 0;
   }
@@ -654,9 +660,9 @@ body {
         left: 50%;
         transform: translateX(-50%);
         bottom: rem(-36);
-        width:0;
-        height:0;
-        border-left:rem(18) solid transparent;
+        width: 0;
+        height: 0;
+        border-left: rem(18) solid transparent;
         border-right: rem(18) solid transparent;
         border-top: rem(36) solid #545454;
       }
@@ -664,24 +670,36 @@ body {
   }
 }
 
-@for $i from 1 through 8{
+@for $i from 1 through 8 {
   .page-zoom-#{$i} {
     .bottom-line {
-      .boll{
+      .boll {
         left: 3.2rem*$i - 3.2rem;
       }
     }
   }
 }
 
+.video-warpper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0px) rotate(90deg) scale(1.4);
+  // transform-origin: center center;
+}
+
 .video-person {
   background: #000;
+
+  // transform: rotate(90deg);
+  // transform-origin: center center;
   video {
     width: 100%;
     height: 100%;
+
   }
 
-  .dialog-person{
+  .dialog-person {
     background: #3852a2;
     width: 100%;
     height: 100%;
@@ -710,6 +728,7 @@ body {
 
 .page-report-2 {
   overflow: hidden;
+
   .inner-img-1 {
     position: absolute;
     width: rem(3150);
@@ -750,7 +769,8 @@ body {
     border-radius: rem(16);
   }
 
-  .prev, .next {
+  .prev,
+  .next {
     float: left;
     width: rem(255);
     height: rem(90);
@@ -787,6 +807,7 @@ body {
     left: rem(-80);
     bottom: rem(0);
   }
+
   .step-1-inner {
     display: block;
     opacity: 1;
@@ -799,6 +820,7 @@ body {
     left: rem(-1000);
     bottom: rem(-1700);
   }
+
   .step-2-inner {
     display: block;
     opacity: 1;
@@ -812,6 +834,7 @@ body {
     left: rem(-2065);
     bottom: rem(-1460);
   }
+
   .step-3-inner {
     display: block;
     opacity: 1;
@@ -824,11 +847,13 @@ body {
     left: rem(-2065);
     bottom: rem(-135);
   }
+
   .inner-img-2 {
     opacity: 0;
     left: rem(-120);
     bottom: rem(-740);
   }
+
   .step-4-inner {
     display: block;
     opacity: 1;

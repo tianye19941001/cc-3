@@ -15,9 +15,12 @@
   <div class="wappar">
     <section class="page video-person">
       <div class="dialog-person">
-        辐射君正在赶来的路上，请使用横屏模式观看
+        辐射君正在赶来的路上...
       </div>
-      <video id="person-video" src="./video/person-1.mp4" controls x5-playsinline="" playsinline="true" webkit-playsinline="true" x-webkit-airplay="true" x5-video-player-type="h5" x5-video-player-fullscreen="" x5-video-orientation="portraint"></video>
+      <div class="video-warpper">
+        <video id="person-video" src="./video/person-1.mp4" controls x5-playsinline="" playsinline="true" webkit-playsinline="true" x-webkit-airplay="true" x5-video-player-type="h5" x5-video-player-fullscreen="" x5-video-orientation="portraint"></video>
+
+      </div>
 
       <button class="next">下一步</button>
     </section>
@@ -26,6 +29,10 @@
   <script src="js/zepto.min.js"></script>
   <script src="js/touch.js"></script>
   <script src="js/app.js"></script>
+  <script>
+    $('.video-warpper').height($(window).width())
+    $('.video-warpper').width($(window).height())
+  </script>
 </body>
 
 </html>

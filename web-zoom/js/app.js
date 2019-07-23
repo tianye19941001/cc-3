@@ -133,11 +133,11 @@
  	var gyList = [0, 2.5, 5, 8, 20, 50, 100, 500]
  	$('.articles .in').height($(window).height())
 
- 	$('.page-index .articles').swipeUp(function () {
- 		$(this).addClass('active');
+ 	$('.page-index .articles .in').swipeUp(function () {
+ 		$('.articles').addClass('active');
  	})
 
- 	$('.page-index .articles').swipeDown(function () {
+ 	$('.page-index .articles .in').swipeDown(function () {
  		$('.articles').removeClass('active');
  	})
 
@@ -176,10 +176,7 @@
  	if ($('#person-video').length > 0) {
  		personVideo.onloadeddata = function () {
  			console.log(11)
- 			if (window.orientation === 90 || window.orientation === -90) {
- 				console.log("横屏");
- 				$('.dialog-person').hide();
- 			}
+ 			$('.dialog-person').hide();
 
  			personVideo.play()
  			personVideo.pause()
@@ -188,11 +185,9 @@
  		window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function () {
  			if (window.orientation === 180 || window.orientation === 0) {
  				console.log("竖屏");
- 				$('.dialog-person').show();
  			}
  			if (window.orientation === 90 || window.orientation === -90) {
  				console.log("横屏");
- 				$('.dialog-person').hide();
  			}
  		}, false);
 
@@ -209,6 +204,4 @@
 		var index = $(this).data('step');
 		$('.page-report-2').attr('class','page page-report-2 step-inner-' + index);
 	})
-
-
  });
