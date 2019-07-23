@@ -5,7 +5,300 @@
 }
 
 body {
-    background-color: #fff;
-    font-family: "黑体";
+    background-color: #eee;
+    font-family: "微软雅黑";
 }
 
+.report-header {
+    width: 100%;
+    height: auto;
+    padding-bottom: rem(100);
+    margin-bottom: rem(60);
+    background: #fff;
+    box-shadow: 0px rem(6) rem(15) 0px rgba(115, 115, 115, 0.1);
+
+    .logo {
+        display: block;
+        padding: rem(30) rem(45);
+
+        img {
+            width: rem(231);
+        }
+    }
+
+    .header-title {
+        width: rem(1084);
+        height: rem(229);
+        background-image: url(../images/banner.png);
+        background-size: 100% 100%;
+        text-align: center;
+        font-size: rem(76);
+        font-weight: bold;
+        color: rgba(255, 255, 255, 1);
+        line-height: rem(229);
+        display: block;
+        margin-left: rem(20);
+
+        img {
+            vertical-align: rem(-6);
+            width: rem(54);
+            margin-right: rem(28);
+        }
+    }
+}
+
+.report-list-1 {
+    background: #fff;
+    width: rem(1075);
+    margin: 0 auto;
+    box-shadow: 0px rem(6) rem(15) 0px rgba(115, 115, 115, 0.1);
+    border-radius: rem(20);
+
+    ul {
+        padding: rem(80) 0 rem(100);
+    }
+
+    li {
+        width: rem(958);
+        height: rem(258);
+        border-radius: 30px;
+        margin: 0 auto rem(128);
+        background-size: 100% 100%;
+        position: relative;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .l img {
+            position: absolute;
+        }
+
+        .r {
+            width: rem(213+473);
+            height: 100%;
+            line-height: rem(258);
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            font-size: rem(40);
+            color: rgba(255, 255, 255, 1);
+
+            strong {
+                font-size: rem(72);
+                font-weight: bold;
+                margin-right: rem(20);
+            }
+
+            img {
+                float: right;
+                margin: rem(102) rem(89) 0 0;
+                width: rem(37);
+            }
+        }
+    }
+
+    .man {
+        background-image: url(../images/BG-1.png);
+
+        .l {
+            img {
+                width: rem(153);
+                top: rem(26);
+                left: rem(26);
+            }
+        }
+    }
+
+    .woman {
+        background-image: url(../images/BG-2.png);
+
+        .l {
+            img {
+                width: rem(162);
+                top: rem(57);
+                left: rem(21);
+            }
+        }
+    }
+
+    .child {
+        background-image: url(../images/BG-3.png);
+
+        .l {
+            img {
+                width: rem(158);
+                top: rem(56);
+                left: rem(27);
+            }
+        }
+    }
+}
+
+.report-list-2 {
+    background: #fff;
+    width: rem(1075);
+    margin: 0 auto;
+    box-shadow: 0px rem(6) rem(15) 0px rgba(115, 115, 115, 0.1);
+    border-radius: rem(20);
+
+    ul {
+        white-space: nowrap;
+        overflow: scroll;
+        padding: rem(62) rem(45) 0;
+
+        li {
+            display: inline-block;
+            width: rem(340);
+            margin-right: rem(30);
+        }
+
+        .bar {
+            width: 100%;
+            height: rem(420);
+            border-radius: rem(12);
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+        }
+
+        a>span {
+            width: rem(278);
+            height: rem(60);
+            background: rgba(255, 255, 255, 1);
+            border: 1px solid rgba(52, 120, 246, 1);
+            border-radius: rem(60);
+            text-align: center;
+            display: block;
+            margin: rem(32) auto rem(78);
+
+            font-size: rem(36);
+            color: rgba(52, 120, 246, 1);
+        }
+    }
+}
+
+.rec {
+    line-height: 4;
+    display: block;
+    text-align: center;
+    font-size: rem(36);
+    color: rgba(77, 77, 77, 1);
+    opacity: 0.47;
+}
+
+.common-title {
+    margin: 0 rem(60);
+    line-height: rem(110);
+    text-indent: rem(20);
+    border-bottom: 1px solid rgba(240, 240, 240, 1);
+    font-size: rem(42);
+    color: rgba(77, 77, 77, 1);
+}
+
+.common-title-2 {
+    margin: 0 rem(60);
+    line-height: rem(110);
+    text-indent: rem(20);
+    border-bottom: 1px solid rgba(240, 240, 240, 1);
+    font-size: rem(48);
+    font-weight: bold;
+    color: rgba(77, 77, 77, 1);
+    padding-top: rem(10);
+}
+
+.report-list-3 {
+    li {
+        width: rem(1072);
+        display: block;
+        margin: 0 auto rem(47);
+        height: rem(305);
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0px rem(6) rem(15) 0px rgba(115, 115, 115, 0.1);
+        border-radius: rem(20);
+        position: relative;
+    }
+
+    .l {
+        float: left;
+        width: rem(202);
+        height: rem(202);
+        margin: rem(57) 0 0 rem(51);
+
+        img {
+            width: rem(202);
+            height: rem(202);
+        }
+    }
+
+    .r {
+        width: 16rem;
+        float: right;
+        margin-top: rem(70);
+
+        h4 {
+            font-size: rem(55);
+            font-weight: bold;
+            color: rgba(77, 77, 77, 1);
+            line-height: rem(60);
+            margin-bottom: rem(30);
+        }
+
+        p {
+            font-size: rem(36);
+            text-decoration: line-through;
+            color: rgba(77, 77, 77, 1);
+            line-height: rem(60);
+        }
+    }
+
+    .open-btn {
+        display: block;
+        position: absolute;
+        right: rem(35);
+        bottom: rem(80);
+        width: rem(278);
+        height: rem(60);
+        background-image: url(../images/UNLOCK.png);
+        background-size: 100% 100%;
+        text-align: center;
+        font-size: rem(36);
+        color: rgba(255, 255, 255, 1);
+        padding-right: rem(30);
+        box-sizing: border-box;
+    }
+}
+
+.hide-list {
+    display: block;
+    line-height: 2;
+    font-size: rem(36);
+    color: rgba(7, 128, 217, .47);
+    text-align: center;
+
+    img {
+        vertical-align: middle;
+        width: rem(49);
+        margin-left: rem(20);
+        text-align: center;
+    }
+}
+
+.big-btn {
+    display: block;
+    width: rem(990);
+    height: rem(128);
+    line-height: rem(128);
+    background: linear-gradient(0deg, rgba(9, 132, 209, 1), rgba(46, 185, 211, 1));
+    text-align: center;
+    font-size: rem(62);
+    font-weight: bold;
+    color: rgba(255, 255, 255, 1);
+    margin: rem(40) auto;
+}
