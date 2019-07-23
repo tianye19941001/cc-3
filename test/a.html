@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
-<body>
-  <iframe src="./b.html" frameborder="0"></iframe>
+
+<body style="margin:0; padding: 0">
+  <div class="video"></div>
+  <script src="./canvid.js"></script>
+  <script>
+    var canvidControl = canvid({
+      selector: '.video',
+      videos: {
+        clip1: {
+          src: 'myvideo.jpg',
+          frames: 100,
+          cols: 6,
+          loops: 1,
+          onEnd: function () {
+            console.log('clip1 ended.');
+            // canvidControl.play('clip2');
+          }
+        }
+      },
+      width: 667,
+      height: 375,
+      loaded: function () {
+        canvidControl.play('clip1');
+        // reverse playback
+        // canvidControl.play('clip1', true);
+      }
+    });
+  </script>
 </body>
+
 </html>
