@@ -15,13 +15,15 @@
   <div class="wappar">
     <section class="page video-person">
       <div class="dialog-person">
-        辐射君正在赶来的路上...
+          <img src="./images/loading.png" alt="">
       </div>
       <div class="video-warpper">
         <div class="video-con"></div>
       </div>
 
       <button class="next">下一步</button>
+      <button class="restart">再看一次</button>
+      <button class="back">返回</button>
     </section>
   </div>
 
@@ -37,57 +39,87 @@
       selector: '.video-con',
       videos: {
         clip1: {
-          src: './video/person1.jpg',
-          frames: 102,
+          src: './video/person1_Jc.jpg',
+          frames: 70,
           cols: 6,
+          fps:10,
+          loops: 1,
+          onEnd: function () {
+            canvidControl.play('clip1_2');
+            canvidControl.pause();
+          }
+        },
+        clip1_2: {
+          src: './video/person1-2_Jc.jpg',
+          frames: 12,
+          cols: 6,
+          fps:10,
           loops: 1,
           onEnd: function () {
             canvidControl.play('clip2');
           }
         },
         clip2: {
-          src: './video/person2.jpg',
-          frames: 92,
+          src: './video/person2_Jc.jpg',
+          frames: 74,
           cols: 6,
+          fps:10,
           loops: 1,
           onEnd: function () {
             canvidControl.play('clip3');
+            canvidControl.pause();
           }
         },
         clip3: {
-          src: './video/person3.jpg',
-          frames: 98,
+          src: './video/person3_Jc.jpg',
+          frames: 77,
           cols: 6,
+          fps:10,
           loops: 1,
           onEnd: function () {
             canvidControl.play('clip4');
           }
         },
         clip4: {
-          src: './video/person3-2.jpg',
-          frames: 95,
+          src: './video/person3-2_Jc.jpg',
+          frames: 50,
           cols: 6,
+          fps:10,
+          loops: 1,
+          onEnd: function () {
+            canvidControl.play('clip4_2');
+            canvidControl.pause();
+          }
+        },
+        clip4_2: {
+          src: './video/person3-3_Jc.jpg',
+          frames: 27,
+          cols: 6,
+          fps:10,
           loops: 1,
           onEnd: function () {
             canvidControl.play('clip5');
           }
         },
         clip5: {
-          src: './video/person4.jpg',
-          frames: 97,
+          src: './video/person4_Jc.jpg',
+          frames: 78,
           cols: 6,
+          fps:10,
           loops: 1,
           onEnd: function () {
             canvidControl.play('clip6');
           }
         },
         clip6: {
-          src: './video/person5.jpg',
-          frames: 97,
+          src: './video/person5_Jc.jpg',
+          frames: 96,
           cols: 6,
+          fps:10,
           loops: 1,
           onEnd: function () {
-            canvidControl.play('clip1');
+            $('.restart, .back').show();
+            canvidControl.pause();
           }
         }
       },
@@ -95,18 +127,27 @@
       height: $(window).width(),
       loaded: function () {
         canvidControl.play('clip1');
-        canvidControl.pause()
         $('.dialog-person').hide();
       }
     });
 
-    $('.next').on('touchstart', function () {
-      canvidControl.resume()
- 		})
+    // $('.next').on('touchstart', function () {
+    //   canvidControl.resume()
+ 		// })
 
- 		$('.next').on('touchend', function () {
-      canvidControl.pause()
- 		})
+ 		$('.next').on('click', function () {
+      canvidControl.resume()
+    })
+    
+    $('.restart').click(function(){
+      $('.restart, .back').hide();
+      canvidControl.play('clip1');
+    })
+
+    $('.back').click(function(){
+      window.history.go(-1);
+    })
+
   </script>
 </body>
 

@@ -13,74 +13,186 @@
 </head>
 
 <body>
-    <!-- <div class="wappar">
-    <section class="page video-person">
-      <div class="dialog-person">
-        辐射君正在赶来的路上，请使用横屏模式观看
-      </div>
-      <video id="person-video" src="./video/person-1.mp4" controls x5-playsinline="" playsinline="true" webkit-playsinline="true" x-webkit-airplay="true" x5-video-player-type="h5" x5-video-player-fullscreen="" x5-video-orientation="portraint"></video>
+    <div class="wappar">
+        <section class="page video-person">
+            <div class="dialog-person">
+                <img src="./images/loading-2.png" alt="">
+            </div>
+            <div class="report-video"></div>
+        </section>
 
-      <button class="next">下一步</button>
-    </section>
-  </div> -->
-    </div>
-    <section class="page page-report-2 step-inner-1">
-        <img class="inner-img-1" src="./images/repoort-inner-1.jpg" alt="">
-        <img class="inner-img-2" src="./images/repoort-inner-2.jpg" alt="">
+        <section class="page page-report-2 step-inner-1" style="display: none">
+            <img class="inner-img-1" src="./images/repoort-inner-1.jpg" alt="">
+            <img class="inner-img-2" src="./images/repoort-inner-2.jpg" alt="">
 
-        <div class="step step-1-inner">
-            <div class="white-inner">
-                <p>今年我坐了<input type="text">次飞机</p>
-                <p>每次平均飞<input type="text">小时&emsp;</p>
+            <div class="step step-1-inner">
+                <div class="white-inner">
+                    <p>今年我坐了<input type="text">次飞机</p>
+                    <p>每次平均飞<input type="text">小时&emsp;</p>
+                </div>
+                <span data-step="2" class="next next-2">下一步</span>
             </div>
-            <span data-step="2" class="next next-2">下一步</span>
-        </div>
-        <div class="step step-2-inner">
-            <span data-step="1" class="prev">上一步</span>
-            <span data-step="3" class="next">下一步</span>
-        </div>
-        <div class="step step-3-inner">
-            <div class="white-inner">
-                <p>我每天平均抽<input type="text">根烟</p>
+            <div class="step step-2-inner">
+                <span data-step="1" class="prev">上一步</span>
+                <span data-step="3" class="next">下一步</span>
             </div>
-            <span data-step="2" class="prev">上一步</span>
-            <span data-step="4" class="next">下一步</span>
-        </div>
-        <div class="step step-4-inner">
-            <div class="white-inner">
-                <p>我每天平均外出<input type="text">小时</p>
+            <div class="step step-3-inner">
+                <div class="white-inner">
+                    <p>我每天平均抽<input type="text">根烟</p>
+                </div>
+                <span data-step="2" class="prev">上一步</span>
+                <span data-step="4" class="next">下一步</span>
             </div>
-            <span data-step="3" class="prev">上一步</span>
-            <span data-step="5" class="next">下一步</span>
-        </div>
-        <div class="step step-5-inner">
-            <div class="white-inner">
-                <p>我平均每做<input type="text">次X光片</p>
+            <div class="step step-4-inner">
+                <div class="white-inner">
+                    <p>我每天平均外出<input type="text">小时</p>
+                </div>
+                <span data-step="3" class="prev">上一步</span>
+                <span data-step="5" class="next">下一步</span>
             </div>
-            <span data-step="4" class="prev">上一步</span>
-            <span data-step="6" class="next">下一步</span>
-        </div>
-        <div class="step step-6-inner">
-            <div class="white-inner">
-                <p>我每天平均做<input type="text">小时公交</p>
-                <p>我每天平均做<input type="text">小时地铁</p>
+            <div class="step step-5-inner">
+                <div class="white-inner">
+                    <p>我平均每做<input type="text">次X光片</p>
+                </div>
+                <span data-step="4" class="prev">上一步</span>
+                <span data-step="6" class="next">下一步</span>
             </div>
-            <span data-step="5" class="prev">上一步</span>
-            <span data-step="7" class="next">下一步</span>
-        </div>
-        <div class="step step-7-inner">
-            <div class="white-inner">
-                <p>我每年平均泡<input type="text">次温泉</p>
+            <div class="step step-6-inner">
+                <div class="white-inner">
+                    <p>我每天平均做<input type="text">小时公交</p>
+                    <p>我每天平均做<input type="text">小时地铁</p>
+                </div>
+                <span data-step="5" class="prev">上一步</span>
+                <span data-step="7" class="next">下一步</span>
             </div>
-            <span data-step="6" class="prev">上一步</span>
-            <span class="next">下一步</span>
-        </div>
-    </section>
+            <div class="step step-7-inner">
+                <div class="white-inner">
+                    <p>我每年平均泡<input type="text">次温泉</p>
+                </div>
+                <span data-step="6" class="prev">上一步</span>
+                <span class="next">下一步</span>
+            </div>
+        </section>
     </div>
+
 
     <script src="js/zepto.min.js"></script>
     <script src="js/touch.js"></script>
+    <script src="js/canvid.js"></script>
     <script src="js/app.js"></script>
+    <script>
+        var canvidControl = canvid({
+            selector: '.report-video',
+            videos: {
+                clip1: {
+                    src: './video/report-1.jpg',
+                    frames: 98,
+                    cols: 6,
+                    fps:10,
+                    loops: 1,
+                    onEnd: function () {
+                        canvidControl.play('clip2');
+                    }
+                },
+                clip2: {
+                    src: './video/report-2-2.jpg',
+                    frames: 49,
+                    cols: 6,
+                    fps:10,
+                    loops: 1,
+                    onEnd: function () {
+                        canvidControl.play('clip3');
+                    }
+                },
+                clip3: {
+                    src: './video/report-2.jpg',
+                    frames: 49,
+                    cols: 6,
+                    fps:10,
+                    loops: 1,
+                    onEnd: function () {
+                        canvidControl.play('clip4');
+                    }
+                },
+                clip4: {
+                    src: './video/report-3.jpg',
+                    frames: 77,
+                    cols: 6,
+                    fps:10,
+                    loops: 1,
+                    onEnd: function () {
+                        canvidControl.play('clip5');
+                    }
+                },
+                clip5: {
+                    src: './video/report-3-2.jpg',
+                    frames: 49,
+                    cols: 6,
+                    fps:10,
+                    loops: 1,
+                    onEnd: function () {
+                        canvidControl.play('clip6');
+                    }
+                },
+                clip6: {
+                    src: './video/report-4.jpg',
+                    frames: 70,
+                    cols: 6,
+                    fps:10,
+                    loops: 1,
+                    onEnd: function () {
+                        canvidControl.play('clip7');
+                    }
+                },
+                clip7: {
+                    src: './video/report-5.jpg',
+                    frames: 70,
+                    cols: 6,
+                    fps:10,
+                    loops: 1,
+                    onEnd: function () {
+                        canvidControl.play('clip8');
+                    }
+                },
+                clip8: {
+                    src: './video/report-5-2.jpg',
+                    frames: 49,
+                    cols: 6,
+                    fps:10,
+                    loops: 1,
+                    onEnd: function () {
+                        canvidControl.play('clip9');
+                    }
+                },
+                clip9: {
+                    src: './video/report-6.jpg',
+                    frames: 74,
+                    cols: 6,
+                    fps:10,
+                    loops: 1,
+                    onEnd: function () {
+                        $('.video-person').remove();
+                        $('.page-report-2').show();
+                    }
+                }
+            },
+            width: $(window).width(),
+            height: $(window).height(),
+            loaded: function () {
+                canvidControl.play('clip1');
+                canvidControl.pause();
+                $('.dialog-person').hide();
+            }
+        });
+
+        $('.report-video').on('touchstart', function () {
+            canvidControl.resume();
+        })
+
+        $('.report-video').on('touchend', function () {
+            canvidControl.pause();
+        })
+    </script>
 </body>
 
 </html>
