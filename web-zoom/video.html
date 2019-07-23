@@ -18,8 +18,7 @@
         辐射君正在赶来的路上...
       </div>
       <div class="video-warpper">
-        <video id="person-video" src="./video/person-1.mp4" controls x5-playsinline="" playsinline="true" webkit-playsinline="true" x-webkit-airplay="true" x5-video-player-type="h5" x5-video-player-fullscreen="" x5-video-orientation="portraint"></video>
-
+        <div class="video-con"></div>
       </div>
 
       <button class="next">下一步</button>
@@ -28,10 +27,86 @@
 
   <script src="js/zepto.min.js"></script>
   <script src="js/touch.js"></script>
+  <script src="js/canvid.js"></script>
   <script src="js/app.js"></script>
   <script>
     $('.video-warpper').height($(window).width())
     $('.video-warpper').width($(window).height())
+
+    var canvidControl = canvid({
+      selector: '.video-con',
+      videos: {
+        clip1: {
+          src: './video/person1.jpg',
+          frames: 102,
+          cols: 6,
+          loops: 1,
+          onEnd: function () {
+            canvidControl.play('clip2');
+          }
+        },
+        clip2: {
+          src: './video/person2.jpg',
+          frames: 92,
+          cols: 6,
+          loops: 1,
+          onEnd: function () {
+            canvidControl.play('clip3');
+          }
+        },
+        clip3: {
+          src: './video/person3.jpg',
+          frames: 98,
+          cols: 6,
+          loops: 1,
+          onEnd: function () {
+            canvidControl.play('clip4');
+          }
+        },
+        clip4: {
+          src: './video/person3-2.jpg',
+          frames: 95,
+          cols: 6,
+          loops: 1,
+          onEnd: function () {
+            canvidControl.play('clip5');
+          }
+        },
+        clip5: {
+          src: './video/person4.jpg',
+          frames: 97,
+          cols: 6,
+          loops: 1,
+          onEnd: function () {
+            canvidControl.play('clip6');
+          }
+        },
+        clip6: {
+          src: './video/person5.jpg',
+          frames: 97,
+          cols: 6,
+          loops: 1,
+          onEnd: function () {
+            canvidControl.play('clip1');
+          }
+        }
+      },
+      width: $(window).height(),
+      height: $(window).width(),
+      loaded: function () {
+        canvidControl.play('clip1');
+        canvidControl.pause()
+        $('.dialog-person').hide();
+      }
+    });
+
+    $('.next').on('touchstart', function () {
+      canvidControl.resume()
+ 		})
+
+ 		$('.next').on('touchend', function () {
+      canvidControl.pause()
+ 		})
   </script>
 </body>
 
