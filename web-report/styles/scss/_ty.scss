@@ -166,6 +166,24 @@ body {
                 left: 0;
                 bottom: 0;
             }
+
+            h3 {
+                padding: rem(65) rem(20) rem(15);
+                font-size: rem(36);
+                color: rgba(255, 248, 248, 1);
+                position: relative;
+                z-index: 3;
+                white-space: normal
+            }
+
+            span {
+                display: block;
+                padding: 0 rem(20);
+                font-size: rem(30);
+                color: rgba(255, 248, 248, 1);
+                position: relative;
+                z-index: 3;
+            }
         }
 
         a>span {
@@ -237,6 +255,20 @@ body {
         }
     }
 
+    .l {
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: rem(59);
+            height: rem(79);
+            background-image: url(../images/LOCK.png);
+            background-size: 100%;
+            top: rem(119);
+            left: rem(126);
+        }
+    }
+
     .r {
         width: 16rem;
         float: right;
@@ -300,5 +332,5 @@ body {
     font-size: rem(62);
     font-weight: bold;
     color: rgba(255, 255, 255, 1);
-    margin: rem(40) auto;
+    margin: rem(100) auto rem(80);
 }

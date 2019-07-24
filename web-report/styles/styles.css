@@ -565,6 +565,20 @@ body {
         position: absolute;
         left: 0;
         bottom: 0; }
+      .report-list-2 ul .bar h3 {
+        padding: 1.4444444444rem 0.4444444444rem 0.3333333333rem;
+        font-size: 0.8rem;
+        color: #fff8f8;
+        position: relative;
+        z-index: 3;
+        white-space: normal; }
+      .report-list-2 ul .bar span {
+        display: block;
+        padding: 0 0.4444444444rem;
+        font-size: 0.6666666667rem;
+        color: #fff8f8;
+        position: relative;
+        z-index: 3; }
     .report-list-2 ul a > span {
       width: 6.1777777778rem;
       height: 1.3333333333rem;
@@ -620,6 +634,16 @@ body {
   .report-list-3 .l img {
     width: 4.4888888889rem;
     height: 4.4888888889rem; }
+.report-list-3 .l:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 1.3111111111rem;
+  height: 1.7555555556rem;
+  background-image: url(../images/LOCK.png);
+  background-size: 100%;
+  top: 2.6444444444rem;
+  left: 2.8rem; }
 .report-list-3 .r {
   width: 16rem;
   float: right;
@@ -672,6 +696,6 @@ body {
   font-size: 1.3777777778rem;
   font-weight: bold;
   color: white;
-  margin: 0.8888888889rem auto; }
+  margin: 2.2222222222rem auto 1.7777777778rem; }
 
 /*# sourceMappingURL=styles.css.map */
