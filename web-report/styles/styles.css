@@ -617,62 +617,64 @@ body {
   color: #4d4d4d;
   padding-top: 0.2222222222rem; }
 
-.report-list-3 li {
-  width: 23.8222222222rem;
-  display: block;
-  margin: 0 auto 1.0444444444rem;
-  height: 6.7777777778rem;
-  background: white;
-  box-shadow: 0px 0.1333333333rem 0.3333333333rem 0px rgba(115, 115, 115, 0.1);
-  border-radius: 0.4444444444rem;
-  position: relative; }
-.report-list-3 .l {
-  float: left;
-  width: 4.4888888889rem;
-  height: 4.4888888889rem;
-  margin: 1.2666666667rem 0 0 1.1333333333rem; }
-  .report-list-3 .l img {
+.report-list-3 {
+  padding-bottom: 5.5555555556rem; }
+  .report-list-3 li {
+    width: 23.8222222222rem;
+    display: block;
+    margin: 0 auto 1.0444444444rem;
+    height: 6.7777777778rem;
+    background: white;
+    box-shadow: 0px 0.1333333333rem 0.3333333333rem 0px rgba(115, 115, 115, 0.1);
+    border-radius: 0.4444444444rem;
+    position: relative; }
+  .report-list-3 .l {
+    float: left;
     width: 4.4888888889rem;
-    height: 4.4888888889rem; }
-.report-list-3 .l:before {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 1.3111111111rem;
-  height: 1.7555555556rem;
-  background-image: url(../images/LOCK.png);
-  background-size: 100%;
-  top: 2.6444444444rem;
-  left: 2.8rem; }
-.report-list-3 .r {
-  width: 16rem;
-  float: right;
-  margin-top: 1.5555555556rem; }
-  .report-list-3 .r h4 {
-    font-size: 1.2222222222rem;
-    font-weight: bold;
-    color: #4d4d4d;
-    line-height: 1.3333333333rem;
-    margin-bottom: 0.6666666667rem; }
-  .report-list-3 .r p {
+    height: 4.4888888889rem;
+    margin: 1.2666666667rem 0 0 1.1333333333rem; }
+    .report-list-3 .l img {
+      width: 4.4888888889rem;
+      height: 4.4888888889rem; }
+  .report-list-3 .l:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1.3111111111rem;
+    height: 1.7555555556rem;
+    background-image: url(../images/LOCK.png);
+    background-size: 100%;
+    top: 2.6444444444rem;
+    left: 2.8rem; }
+  .report-list-3 .r {
+    width: 16rem;
+    float: right;
+    margin-top: 1.5555555556rem; }
+    .report-list-3 .r h4 {
+      font-size: 1.2222222222rem;
+      font-weight: bold;
+      color: #4d4d4d;
+      line-height: 1.3333333333rem;
+      margin-bottom: 0.6666666667rem; }
+    .report-list-3 .r p {
+      font-size: 0.8rem;
+      text-decoration: line-through;
+      color: #4d4d4d;
+      line-height: 1.3333333333rem; }
+  .report-list-3 .open-btn {
+    display: block;
+    position: absolute;
+    right: 0.7777777778rem;
+    bottom: 1.7777777778rem;
+    width: 6.1777777778rem;
+    height: 1.3333333333rem;
+    background-image: url(../images/UNLOCK.png);
+    background-size: 100% 100%;
+    text-align: center;
     font-size: 0.8rem;
-    text-decoration: line-through;
-    color: #4d4d4d;
-    line-height: 1.3333333333rem; }
-.report-list-3 .open-btn {
-  display: block;
-  position: absolute;
-  right: 0.7777777778rem;
-  bottom: 1.7777777778rem;
-  width: 6.1777777778rem;
-  height: 1.3333333333rem;
-  background-image: url(../images/UNLOCK.png);
-  background-size: 100% 100%;
-  text-align: center;
-  font-size: 0.8rem;
-  color: white;
-  padding-right: 0.6666666667rem;
-  box-sizing: border-box; }
+    color: white;
+    padding-right: 0.6666666667rem;
+    box-sizing: border-box; }
 
 .hide-list {
   display: block;
@@ -687,6 +689,8 @@ body {
     text-align: center; }
 
 .big-btn {
+  position: fixed;
+  bottom: 1.7777777778rem;
   display: block;
   width: 22rem;
   height: 2.8444444444rem;
@@ -696,6 +700,7 @@ body {
   font-size: 1.3777777778rem;
   font-weight: bold;
   color: white;
-  margin: 2.2222222222rem auto 1.7777777778rem; }
+  left: 50%;
+  transform: translateX(-50%); }
 
 /*# sourceMappingURL=styles.css.map */
