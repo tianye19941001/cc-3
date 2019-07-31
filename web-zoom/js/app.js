@@ -10,7 +10,7 @@
 				$('.page-1 .report').attr('class', 'report report-7');
 				count ++;
 			} else {
-				$('.page-1 .report').attr('class', 'report report-' + count%30);
+				$('.page-1 .report').attr('class', 'report report-' + count%100);
 				count ++;
 			}
 		}, 100)
@@ -86,5 +86,9 @@
 	$('.step .next, .step .prev').click(function(){
 		var index = $(this).data('step');
 		$('.page-report-2').attr('class','page page-report-2 step-inner-' + index);
+	})
+
+	document.querySelector('body').addEventListener('touchmove', function(e) {
+    e.preventDefault();
 	})
  });

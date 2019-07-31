@@ -28,8 +28,8 @@
 
             <div class="step step-1-inner">
                 <div class="white-inner">
-                    <p>今年我坐了<input type="text">次飞机</p>
-                    <p>每次平均飞<input type="text">小时&emsp;</p>
+                    <p>今年我坐了<input type="number">次飞机</p>
+                    <p>每次平均飞<input type="number">小时&emsp;</p>
                 </div>
                 <span data-step="2" class="next next-2">下一步</span>
             </div>
@@ -39,36 +39,36 @@
             </div>
             <div class="step step-3-inner">
                 <div class="white-inner">
-                    <p>我每天平均抽<input type="text">根烟</p>
+                    <p>我每天平均抽<input type="number">根烟</p>
                 </div>
                 <span data-step="2" class="prev">上一步</span>
                 <span data-step="4" class="next">下一步</span>
             </div>
             <div class="step step-4-inner">
                 <div class="white-inner">
-                    <p>我每天平均外出<input type="text">小时</p>
+                    <p>我每天平均外出<input type="number">小时</p>
                 </div>
                 <span data-step="3" class="prev">上一步</span>
                 <span data-step="5" class="next">下一步</span>
             </div>
             <div class="step step-5-inner">
                 <div class="white-inner">
-                    <p>我平均每做<input type="text">次X光片</p>
+                    <p>我平均每做<input type="number">次X光片</p>
                 </div>
                 <span data-step="4" class="prev">上一步</span>
                 <span data-step="6" class="next">下一步</span>
             </div>
             <div class="step step-6-inner">
                 <div class="white-inner">
-                    <p>我每天平均做<input type="text">小时公交</p>
-                    <p>我每天平均做<input type="text">小时地铁</p>
+                    <p>我每天平均做<input type="number">小时公交</p>
+                    <p>我每天平均做<input type="number">小时地铁</p>
                 </div>
                 <span data-step="5" class="prev">上一步</span>
                 <span data-step="7" class="next">下一步</span>
             </div>
             <div class="step step-7-inner">
                 <div class="white-inner">
-                    <p>我每年平均泡<input type="text">次温泉</p>
+                    <p>我每年平均泡<input type="number">次温泉</p>
                 </div>
                 <span data-step="6" class="prev">上一步</span>
                 <span class="btn">完成</span>
@@ -89,7 +89,7 @@
                     src: './video/report-1.jpg',
                     frames: 98,
                     cols: 6,
-                    fps:15,
+                    fps: 20,
                     loops: 1,
                     onEnd: function () {
                         canvidControl.play('clip2');
@@ -99,7 +99,7 @@
                     src: './video/report-2-2.jpg',
                     frames: 49,
                     cols: 6,
-                    fps:15,
+                    fps: 20,
                     loops: 1,
                     onEnd: function () {
                         canvidControl.play('clip3');
@@ -109,7 +109,7 @@
                     src: './video/report-2.jpg',
                     frames: 49,
                     cols: 6,
-                    fps:15,
+                    fps: 20,
                     loops: 1,
                     onEnd: function () {
                         canvidControl.play('clip4');
@@ -119,7 +119,7 @@
                     src: './video/report-3.jpg',
                     frames: 77,
                     cols: 6,
-                    fps:15,
+                    fps: 20,
                     loops: 1,
                     onEnd: function () {
                         canvidControl.play('clip5');
@@ -129,7 +129,7 @@
                     src: './video/report-3-2.jpg',
                     frames: 49,
                     cols: 6,
-                    fps:15,
+                    fps: 20,
                     loops: 1,
                     onEnd: function () {
                         canvidControl.play('clip6');
@@ -139,7 +139,7 @@
                     src: './video/report-4.jpg',
                     frames: 70,
                     cols: 6,
-                    fps:15,
+                    fps: 20,
                     loops: 1,
                     onEnd: function () {
                         canvidControl.play('clip7');
@@ -149,7 +149,7 @@
                     src: './video/report-5.jpg',
                     frames: 70,
                     cols: 6,
-                    fps:15,
+                    fps: 20,
                     loops: 1,
                     onEnd: function () {
                         canvidControl.play('clip8');
@@ -159,7 +159,7 @@
                     src: './video/report-5-2.jpg',
                     frames: 49,
                     cols: 6,
-                    fps:15,
+                    fps: 20,
                     loops: 1,
                     onEnd: function () {
                         canvidControl.play('clip9');
@@ -169,7 +169,7 @@
                     src: './video/report-6.jpg',
                     frames: 74,
                     cols: 6,
-                    fps:15,
+                    fps: 20,
                     loops: 1,
                     onEnd: function () {
                         $('.video-person').remove();
