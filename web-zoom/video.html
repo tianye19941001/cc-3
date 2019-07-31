@@ -14,6 +14,7 @@
 <body>
   <div class="wappar">
     <section class="page video-person">
+      <img id="back-icon" src="./images/back-icon.png" alt="">
       <div class="dialog-person">
           <img src="./images/loading.png" alt="">
       </div>
@@ -45,8 +46,7 @@
           fps:10,
           loops: 1,
           onEnd: function () {
-            canvidControl.play('clip1_2');
-            canvidControl.pause();
+            canvidControl.play('clip6');
           }
         },
         clip1_2: {
@@ -67,7 +67,6 @@
           loops: 1,
           onEnd: function () {
             canvidControl.play('clip3');
-            canvidControl.pause();
           }
         },
         clip3: {
@@ -88,7 +87,6 @@
           loops: 1,
           onEnd: function () {
             canvidControl.play('clip4_2');
-            canvidControl.pause();
           }
         },
         clip4_2: {
@@ -119,6 +117,7 @@
           loops: 1,
           onEnd: function () {
             $('.restart, .back').show();
+            $('.next').hide();
             canvidControl.pause();
           }
         }
@@ -127,21 +126,24 @@
       height: $(window).width(),
       loaded: function () {
         canvidControl.play('clip1');
+        canvidControl.pause()
         $('.dialog-person').hide();
+        $('#back-icon').addClass('video-back');
       }
     });
 
-    // $('.next').on('touchstart', function () {
-    //   canvidControl.resume()
- 		// })
-
- 		$('.next').on('click', function () {
+ 		$('.next').on('touchstart', function () {
       canvidControl.resume()
+    })
+    $('.next').on('touchend', function () {
+      canvidControl.pause()
     })
     
     $('.restart').click(function(){
       $('.restart, .back').hide();
+      $('.next').show();
       canvidControl.play('clip1');
+      canvidControl.pause()
     })
 
     $('.back').click(function(){

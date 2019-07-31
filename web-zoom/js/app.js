@@ -2,15 +2,15 @@
 
  	// 辐射动物园
 	// repoort动画
-	var timer = null;
+	var timer = null, timer2 = null;
 	var count = 1;
 	window.onload = function(){
 		timer = setInterval(function() {
-			if(count == 8){
-				timer = null;
-				return
+			if(count%100 > 7){
+				$('.page-1 .report').attr('class', 'report report-7');
+				count ++;
 			} else {
-				$('.page-1 .report').attr('class', 'report report-' + count);
+				$('.page-1 .report').attr('class', 'report report-' + count%30);
 				count ++;
 			}
 		}, 100)
@@ -18,7 +18,7 @@
  	var gyList = [0, 2.5, 5, 8, 20, 50, 100, 500]
  	$('.articles .in').height($(window).height())
 
- 	$('.page-index .articles .in').swipeUp(function () {
+ 	$('.page-index').swipeUp(function () {
  		$('.articles').addClass('active');
  	})
 
@@ -30,16 +30,24 @@
  		$('.articles').toggleClass('active');
 	 })
 	 
-	 $('#back-list').click(function(){
+	 $('#back-list, #back-icon').click(function(){
 		 window.history.go(-1)
 	 })
 
  	$('.bottom-line, .page-zoom .bg').swipeRight(function () {
  		var nowClass = $('.page-zoom').attr('class');
- 		var newIndex = parseInt(nowClass.slice(-1, nowClass.length)) + 1;
+		 var newIndex = parseInt(nowClass.slice(-1, nowClass.length)) + 1;
  		if (newIndex > 8) return;
  		changeData(newIndex)
- 	})
+	 });
+	 
+	 $('#add').click(function(){
+		$('.page-zoom .bg').trigger('swipeRight')
+	 })
+
+	 $('#reduce').click(function(){
+		$('.page-zoom .bg').trigger('swipeLeft')
+	 })
 
  	$('.bottom-line, .page-zoom .bg').swipeLeft(function () {
  		var nowClass = $('.page-zoom').attr('class');
@@ -60,9 +68,7 @@
 
  	if ($('#person-video').length > 0) {
  		personVideo.onloadeddata = function () {
- 			console.log(11)
  			$('.dialog-person').hide();
-
  			personVideo.play()
  			personVideo.pause()
  		}
