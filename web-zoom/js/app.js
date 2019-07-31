@@ -18,8 +18,8 @@
  	var gyList = [0, 2.5, 5, 8, 20, 50, 100, 500]
  	$('.articles .in').height($(window).height())
 
- 	$('.page-index').swipeUp(function () {
- 		$('.articles').addClass('active');
+ 	$('.page-index').swipeUp(function (e) {
+		$('.articles').addClass('active');
  	})
 
  	$('.page-index .articles .in').swipeDown(function () {
@@ -88,7 +88,19 @@
 		$('.page-report-2').attr('class','page page-report-2 step-inner-' + index);
 	})
 
-	document.querySelector('body').addEventListener('touchmove', function(e) {
-    e.preventDefault();
+	$()
+
+	document.body.addEventListener('touchmove', function(e) {
+		if($('.articles').hasClass('active')) return
+		if(e._isScroller) return;
+		e.preventDefault();
+	}, {
+		passive: false
+	});
+
+	$('body').swipeUp(function(e){
+		e.preventDefault();
+	}, {
+		passive: false
 	})
  });
