@@ -1,0 +1,215 @@
+.report-new-tabs {
+
+  background: linear-gradient(-90deg, rgba(255, 192, 162, .1) 0%, rgba(255, 165, 123, .1) 100%);
+  height: rem(80);
+  line-height: rem(80);
+  overflow: hidden;
+  border-radius: rem(20) rem(20) 0 0;
+
+  span {
+    background: #FEE3D6;
+    float: left;
+    width: 50%;
+    text-align: center;
+  }
+
+  em {
+    font-size: rem(36);
+    font-weight: 600;
+    color: rgba(1, 1, 1, 1);
+    background: linear-gradient(-90deg, rgba(255, 165, 123, 1) 0%, rgba(255, 127, 70, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .active {
+    background: transparent;
+  }
+}
+
+.report-new-tabs-box {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+.rec-food {
+  padding: rem(36);
+  color: #45875E;
+  font-size: rem(25);
+  color: #000;
+
+  .top {
+    overflow: hidden;
+    margin-bottom: rem(40);
+
+    strong {
+      margin-bottom: rem(20);
+      display: block;
+      font-weight: bold;
+    }
+
+    p {
+      width: rem(360);
+      float: right;
+    }
+  }
+
+  img {
+    float: left;
+    width: rem(185);
+    height: rem(185);
+    border-radius: rem(185);
+  }
+}
+
+.report-bottom-btn {
+  display: block;
+  width: rem(520);
+  text-align: center;
+  height: rem(65);
+  line-height: rem(65);
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px rem(4) rem(10) 0px rgba(115, 115, 115, 0.1);
+  font-size:remn(36);
+  color:rgba(77,77,77,1);
+  overflow: hidden;
+  margin: 0 auto rem(70);
+  border-radius: rem(65);
+}
+
+.mt70 {
+  margin-top: 70px;
+}
+
+.sport-report, .fat-report {
+  .sport-progress.style-1 {
+      p span:first-child {
+          color: #000
+      }
+
+      .line .self-progress {
+          margin-left: 0;
+          color: #fff;
+          background: linear-gradient(90deg, rgba(255, 165, 123, 1) 0%, rgba(255, 139, 123, 1) 100%);
+          width: 50%;
+      }
+  }
+
+  .sport-progress.style-2 {
+      p span:nth-child(2) {
+          color: #000
+      }
+
+      .line .self-progress {
+          margin-left: 50%;
+          color: #fff;
+          background: linear-gradient(90deg, rgba(193, 228, 155, 1) 0%, rgba(124, 213, 145, 1) 100%);
+          width: 50%;
+      }
+  }
+
+  .sport-progress-2.style-1 {
+      p span:first-child {
+          color: #000
+      }
+
+      .line .self-progress {
+          margin-left: 0;
+          color: #fff;
+          background: linear-gradient(90deg, rgba(255, 165, 123, 1) 0%, rgba(255, 139, 123, 1) 100%);
+          width: 33.33%;
+      }
+  }
+
+  .sport-progress-2.style-2 {
+      p span:nth-child(2) {
+          color: #000
+      }
+
+      .line .self-progress {
+          margin-left: 33.33%;
+          color: #fff;
+          background: linear-gradient(90deg, rgba(193, 228, 155, 1) 0%, rgba(124, 213, 145, 1) 100%);
+          width: 33.33%;
+      }
+  }
+
+  .sport-progress-2.style-3 {
+      p span:last-child {
+          color: #000
+      }
+
+      .line .self-progress {
+          margin-left: 66.66%;
+          color: #fff;
+          background: linear-gradient(90deg, rgba(140, 221, 255, 1) 0%, rgba(113, 200, 255, 1) 100%);
+          width: 33.33%;
+      }
+  }
+}
+
+.fat-report {
+  .report-header h1 {
+      color:rgba(98,185,194,1);
+      background: linear-gradient(0deg, rgba(98,185,194,1) 0%, rgba(98,185,194,1) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
+
+  .report-title {
+      background: #b9ede9;
+
+      span {
+          background: linear-gradient(0deg, rgba(98,185,194,1) 0%, rgba(98,185,194,1) 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent
+      }
+  }
+
+  .sport-table {
+      .tr {
+          background: rgba(255, 248, 248, 1);
+
+          &:first-child {
+              background: linear-gradient(90deg, rgba(255, 148, 173, 1) 0%, rgba(255, 186, 194, 1) 100%);
+          }
+      }
+  }
+
+  .table-2 {
+      .tr {
+          position: relative;
+
+          .th,
+          .td {
+              width: 50%;
+          }
+
+          .td:last-child {
+              float: right;
+              padding: rem(12);
+              text-align: justify;
+          }
+
+          .td:first-child {
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translate(0, -50%)
+          }
+      }
+  }
+
+  p.sp-1 {
+      color: #FF98B0;
+      text-align: center;
+  }
+
+  p.sp-2 em {
+      color: rgba(49, 186, 80, .8);
+      text-align: center;
+  }
+}
