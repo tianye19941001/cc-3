@@ -7,6 +7,9 @@
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
     <meta name="format-detection" content="telephone=no">
     <meta name="format-detection" content="address=no">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Document</title>
     <link rel="stylesheet" href="styles/styles.css">
     <script src="js/fn.js"></script>
@@ -18,8 +21,12 @@
         <section class="page video-person oh">
             <div class="dialog-person">
                 <img src="./images/loading-2.png" alt="">
+                <p class="num-warp"><span class="num">0</span>%</p>
             </div>
-            <div class="report-video"></div>
+            <div class="report-video">
+                <img class="poster" src="./video/poster.jpeg" alt="">
+                <video id="byl_video" webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="true" width="750" height="1468" preload="auto" src="./video/report.mp4" poster="./video/poster.jpeg"></video>
+            </div>
         </section>
 
         <form class="page page-report-2 step-inner-1" style="display: none">
@@ -81,119 +88,6 @@
     <script src="js/touch.js"></script>
     <script src="js/canvid.js"></script>
     <script src="js/app.js"></script>
-    <script>
-        var canvidControl = canvid({
-            selector: '.report-video',
-            videos: {
-                clip1: {
-                    src: './video/report-1.jpg',
-                    frames: 98,
-                    cols: 6,
-                    fps: 20,
-                    loops: 1,
-                    onEnd: function () {
-                        canvidControl.play('clip2');
-                    }
-                },
-                clip2: {
-                    src: './video/report-2-2.jpg',
-                    frames: 49,
-                    cols: 6,
-                    fps: 20,
-                    loops: 1,
-                    onEnd: function () {
-                        canvidControl.play('clip3');
-                    }
-                },
-                clip3: {
-                    src: './video/report-2.jpg',
-                    frames: 49,
-                    cols: 6,
-                    fps: 20,
-                    loops: 1,
-                    onEnd: function () {
-                        canvidControl.play('clip4');
-                    }
-                },
-                clip4: {
-                    src: './video/report-3.jpg',
-                    frames: 77,
-                    cols: 6,
-                    fps: 20,
-                    loops: 1,
-                    onEnd: function () {
-                        canvidControl.play('clip5');
-                    }
-                },
-                clip5: {
-                    src: './video/report-3-2.jpg',
-                    frames: 49,
-                    cols: 6,
-                    fps: 20,
-                    loops: 1,
-                    onEnd: function () {
-                        canvidControl.play('clip6');
-                    }
-                },
-                clip6: {
-                    src: './video/report-4.jpg',
-                    frames: 70,
-                    cols: 6,
-                    fps: 20,
-                    loops: 1,
-                    onEnd: function () {
-                        canvidControl.play('clip7');
-                    }
-                },
-                clip7: {
-                    src: './video/report-5.jpg',
-                    frames: 70,
-                    cols: 6,
-                    fps: 20,
-                    loops: 1,
-                    onEnd: function () {
-                        canvidControl.play('clip8');
-                    }
-                },
-                clip8: {
-                    src: './video/report-5-2.jpg',
-                    frames: 49,
-                    cols: 6,
-                    fps: 20,
-                    loops: 1,
-                    onEnd: function () {
-                        canvidControl.play('clip9');
-                    }
-                },
-                clip9: {
-                    src: './video/report-6.jpg',
-                    frames: 74,
-                    cols: 6,
-                    fps: 20,
-                    loops: 1,
-                    onEnd: function () {
-                        $('.video-person').remove();
-                        $('.page-report-2').show();
-                    }
-                }
-            },
-            width: $(window).width(),
-            height: $(window).height(),
-            loaded: function () {
-                canvidControl.play('clip1');
-                canvidControl.pause();
-                $('.dialog-person').hide();
-            }
-        });
-
-        $('.report-video').on('touchstart', function () {
-            canvidControl.resume();
-        })
-
-        $('.report-video').on('touchend', function () {
-            canvidControl.pause();
-        })
-    </script>
 </body>
 
 </html>

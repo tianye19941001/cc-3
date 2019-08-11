@@ -38,7 +38,7 @@ a:active{color: #df1830;}
 .no_unl { text-decoration: none }
 /*POSITION
 -------------------------------------------------------------- */
-.tl { text-align: left }
+.tl { text-align: left !important }
 .tc { text-align: center }
 .tr { text-align: right }
 .bc { margin-left: auto; margin-right: auto }

@@ -22,7 +22,8 @@
 		$('.articles').addClass('active');
  	})
 
- 	$('.page-index .articles .in').swipeDown(function () {
+ 	$('.page-index .articles .in').swipeDown(function (e) {
+		e.stopPropagation()
  		$('.articles').removeClass('active');
  	})
 
@@ -88,19 +89,70 @@
 		$('.page-report-2').attr('class','page page-report-2 step-inner-' + index);
 	})
 
-	$()
-
-	document.body.addEventListener('touchmove', function(e) {
-		if($('.articles').hasClass('active')) return
-		if(e._isScroller) return;
-		e.preventDefault();
-	}, {
-		passive: false
-	});
+	// document.getElementById('articles').addEventListener('touchmove', function(e) {
+	// 	e.stopPropagation()	
+	// });
 
 	$('body').swipeUp(function(e){
 		e.preventDefault();
 	}, {
 		passive: false
 	})
- });
+
+	// 报告
+	var video = document.getElementById('byl_video');
+
+	if($(video).length > 0){
+		
+		setInterval(function(){
+			var nowText = Number($('.num-warp .num').text());
+			if(nowText >= 100) {
+				$('.dialog-person').hide()
+			}
+			$('.num-warp .num').text(nowText + 1)
+		}, 20)
+
+		video.addEventListener('loadedmetadata',function(){
+			$('.num-warp .num').text(100)
+			$(video).trigger('click');
+			video.play();
+			video.pause();
+		});
+
+		document.addEventListener("WeixinJSBridgeReady", function() {
+			video.play();
+			video.pause();
+		}, false);
+	
+		video.play();
+		video.pause();
+
+		document.body.addEventListener('click', function(e) {
+			if($('.video-person').length) video.play();
+		});
+		
+		document.body.addEventListener('touchstart', function(e) {
+			$('.poster').hide()
+			if($('.video-person').length) video.play();
+		});
+
+		document.body.addEventListener('touchend', function(e) {
+			if($('.video-person').length) video.pause();
+		});
+
+		video.addEventListener('ended', function(e){
+			$('.video-person').remove()
+			$('.step-inner-1').show()
+		})
+	}
+
+
+	document.body.addEventListener('touchmove', function(e) {
+		// if($('.articles').hasClass('active')) return
+		if(e._isScroller) return;
+		e.preventDefault();
+	}, {
+		passive: false
+	});
+
+});
