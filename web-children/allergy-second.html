@@ -8,7 +8,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="format-detection" content="address=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta http-equiv="Cache-Control" content="no-store"/>
+    <meta http-equiv="Cache-Control" content="no-store" />
     <title>Document</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/swiper.min.css">
@@ -23,15 +23,15 @@
 
 
     <div class="report-div second-top-div">
-            <div class="report-title"><span>哮喘</span><img class="second-top" src="./images/new/6-icon-1.png"></div>
+        <div class="report-title"><span>哮喘</span><img class="second-top" src="./images/new/6-icon-1.png"></div>
 
         <div class="second-precent">
             <div class="percent-warp">
-                <canvas data-percent="66" class="circleRun" data-run="0" id="canvasThree" amout="1000"
-                    nowData="1000"></canvas>
+                <canvas class="circleRun" data-run="0" id="canvasThree" amout="1000" nowData="1000"></canvas>
             </div>
             <div class="in">
-                <p class="num"><strong>3</strong><em>.03倍</em></p>
+                <!-- 评分倍数填入自动计算 -->
+                <p id="num" class="num" data-num="0.9"></p>
                 <button>高</button>
             </div>
         </div>
@@ -42,7 +42,6 @@
 
     <div class="report-div">
         <div class="report-title"><span>简介</span> </div>
-
         <div class="sport-text">
             <p>
                 花粉过敏是一种常见的过敏性疾病，且发病率有逐年上升的趋势。花粉之所以会引起人体过敏，主要是由于花粉颗粒携带了能引起过敏的抗原决定簇。花粉过敏典型的症状如打喷嚏、清水样鼻涕、鼻、眼、耳痒，可伴有呼吸困难或荨麻疹、湿疹。
@@ -113,24 +112,37 @@
 
         <div class="sport-text">
             <p>
-                1.Ramasamy A, Curjuric I, Coin L J, et al.A genome-wide meta-analysis of genetic variants associated with allergic rhinitis and grass sensitization and their interaction with birth order[J]. Journal of Allergy and Clinical Immunology, 2011, 128(5):996-1005.<br />
-                2.Luyster F S, Jr S P, Zee P C, et al. Sleep: a health imperative.[J]. Sleep, 2016, 35(6):727-734.                <br />
+                1.Ramasamy A, Curjuric I, Coin L J, et al.A genome-wide meta-analysis of genetic variants associated
+                with allergic rhinitis and grass sensitization and their interaction with birth order[J]. Journal of
+                Allergy and Clinical Immunology, 2011, 128(5):996-1005.<br />
+                2.Luyster F S, Jr S P, Zee P C, et al. Sleep: a health imperative.[J]. Sleep, 2016, 35(6):727-734.
+                <br />
             </p>
         </div>
     </div>
 
     <a class="report-bottom-btn mt70" href="">下一项：皮肤抗炎能力 </a>
-	<a class="report-bottom-btn" href="">返回:过敏风险</a>
+    <a class="report-bottom-btn" href="">返回:过敏风险</a>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script type="text/javascript" src="js/zcircleMove.js"></script>
     <script src="js/app.js"></script>
     <script>
+        var numData = $('#num').data('num');
+        var numArr = String(numData).split('.');
+        var percent = 20;
+
+        if (numArr.length == 2 && numArr[0] != '0') {
+            $('#num').html('<strong>' + numArr[0] + '</strong><em>' + numArr[1] + '倍</em>')
+        } else {
+            $('#num').html('<strong>' + numData + '<em>倍</em></strong>')
+        }
+
         // 综合评分最大的圆圈
         runCircle({
             obj: 'canvasThree',
-            percent: $('#canvasThree').data('percent') / 100,
+            percent: numData / 3,
             circleBottomColor: "#F0F0F0", //圆环底色
             innerColorStart: '#fdc36a', //内部圆环 渐变色
             innerColorEnd: '#fdb849',

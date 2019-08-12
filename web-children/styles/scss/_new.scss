@@ -258,6 +258,21 @@
 }
 
 // allergy
+// fat&magic
+.allergy-report {
+  .progress-ing .progress-1, .progress-ing .progress-2 {
+    background: linear-gradient(90deg, rgba(140, 221, 255, 1) 0%, rgba(113, 200, 255, 1) 100%);
+  }
+  .progress-ing .progress-3 {
+    background: linear-gradient(90deg, rgba(193, 228, 155, 1) 0%, rgba(124, 213, 145, 1) 100%);
+  }
+  .progress-ing .progress-4 {
+    background: linear-gradient(90deg, #FFF08C 0%, #FFD572 100%);
+  }
+  .progress-ing .progress-5 {
+    background: linear-gradient(90deg, rgba(255, 165, 123, 1) 0%, rgba(255, 139, 123, 1) 100%);
+  }
+}
 .allergy-report {
   .sport-show .r h3 em {
     float: right;
@@ -327,6 +342,31 @@
 
 // sleep
 .sleep-report {
+  .progress-ing span {
+    text-align: right;
+    box-sizing: border-box;
+    padding-right: rem(36);
+  }
+  .line .self-progress {
+    text-align: right;
+    box-sizing: border-box;
+    padding-right: rem(36);
+    color: #fff;
+  }
+  .progress-ing .progress-1, .line .progress-1{
+    width: 33%;
+    background: linear-gradient(90deg, rgba(140, 221, 255, 1) 0%, rgba(113, 200, 255, 1) 100%);
+  }
+  .progress-ing .progress-2, .line .progress-2{
+    width: 66%;
+    background: linear-gradient(90deg, rgba(193, 228, 155, 1) 0%, rgba(124, 213, 145, 1) 100%);
+  }
+  .progress-ing .progress-3, .line .progress-3{
+    width: 100%;
+    background: linear-gradient(90deg, rgba(255, 165, 123, 1) 0%, rgba(255, 139, 123, 1) 100%);
+  }
+}
+.sleep-report {
   .report-header h1 {
     color: rgba(1, 1, 1, 1);
     background: linear-gradient(-90deg, rgba(37, 171, 138, 1) 0.9765625%, rgba(35, 192, 153, 1) 100%);
@@ -355,10 +395,10 @@
   }
 
   p.sp-1 {
-    color: rgba(98, 185, 194, 1);
+    color: #6CD062;
     text-align: left;
     margin-bottom: 0;
-    padding-top: rem(50);
+    padding-top: rem(40);
   }
 
   p.sp-2 em {
