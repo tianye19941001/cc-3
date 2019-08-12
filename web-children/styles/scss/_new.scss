@@ -85,8 +85,19 @@
 }
 
 // fat&magic
-.fat-report,
-.magic-report {
+.fat-report {
+  .sport-show .r .progress span:first-child.active {
+    background: linear-gradient(90deg, rgba(140, 221, 255, 1) 0%, rgba(113, 200, 255, 1) 100%);
+  }
+
+  .sport-show .r .progress span:last-child.active {
+    background: linear-gradient(90deg, rgba(255, 165, 123, 1) 0%, rgba(255, 139, 123, 1) 100%);
+  }
+
+  .sport-show .r .progress-3 span:nth-child(2).active {
+    background: linear-gradient(90deg, rgba(193, 228, 155, 1) 0%, rgba(124, 213, 145, 1) 100%);
+  }
+
   .sport-progress.style-1 {
     p span:first-child {
       color: #000
@@ -95,7 +106,7 @@
     .line .self-progress {
       margin-left: 0;
       color: #fff;
-      background: linear-gradient(90deg, rgba(255, 165, 123, 1) 0%, rgba(255, 139, 123, 1) 100%);
+      background: linear-gradient(90deg, rgba(140, 221, 255, 1) 0%, rgba(113, 200, 255, 1) 100%);
       width: 50%;
     }
   }
@@ -108,7 +119,7 @@
     .line .self-progress {
       margin-left: 50%;
       color: #fff;
-      background: linear-gradient(90deg, rgba(193, 228, 155, 1) 0%, rgba(124, 213, 145, 1) 100%);
+      background: linear-gradient(90deg, rgba(255, 165, 123, 1) 0%, rgba(255, 139, 123, 1) 100%);
       width: 50%;
     }
   }
@@ -121,7 +132,7 @@
     .line .self-progress {
       margin-left: 0;
       color: #fff;
-      background: linear-gradient(90deg, rgba(255, 165, 123, 1) 0%, rgba(255, 139, 123, 1) 100%);
+      background: linear-gradient(90deg, rgba(140, 221, 255, 1) 0%, rgba(113, 200, 255, 1) 100%);
       width: 33.33%;
     }
   }
@@ -147,11 +158,13 @@
     .line .self-progress {
       margin-left: 66.66%;
       color: #fff;
-      background: linear-gradient(90deg, rgba(140, 221, 255, 1) 0%, rgba(113, 200, 255, 1) 100%);
+      background: linear-gradient(90deg, rgba(255, 165, 123, 1) 0%, rgba(255, 139, 123, 1) 100%);
       width: 33.33%;
     }
   }
 }
+
+
 
 // fat
 .fat-report {
@@ -260,19 +273,25 @@
 // allergy
 // fat&magic
 .allergy-report {
-  .progress-ing .progress-1, .progress-ing .progress-2 {
+
+  .progress-ing .progress-1,
+  .progress-ing .progress-2 {
     background: linear-gradient(90deg, rgba(140, 221, 255, 1) 0%, rgba(113, 200, 255, 1) 100%);
   }
+
   .progress-ing .progress-3 {
     background: linear-gradient(90deg, rgba(193, 228, 155, 1) 0%, rgba(124, 213, 145, 1) 100%);
   }
+
   .progress-ing .progress-4 {
     background: linear-gradient(90deg, #FFF08C 0%, #FFD572 100%);
   }
+
   .progress-ing .progress-5 {
     background: linear-gradient(90deg, rgba(255, 165, 123, 1) 0%, rgba(255, 139, 123, 1) 100%);
   }
 }
+
 .allergy-report {
   .sport-show .r h3 em {
     float: right;
@@ -347,25 +366,33 @@
     box-sizing: border-box;
     padding-right: rem(36);
   }
+
   .line .self-progress {
     text-align: right;
     box-sizing: border-box;
     padding-right: rem(36);
     color: #fff;
   }
-  .progress-ing .progress-1, .line .progress-1{
+
+  .progress-ing .progress-1,
+  .line .progress-1 {
     width: 33%;
     background: linear-gradient(90deg, rgba(140, 221, 255, 1) 0%, rgba(113, 200, 255, 1) 100%);
   }
-  .progress-ing .progress-2, .line .progress-2{
+
+  .progress-ing .progress-2,
+  .line .progress-2 {
     width: 66%;
     background: linear-gradient(90deg, rgba(193, 228, 155, 1) 0%, rgba(124, 213, 145, 1) 100%);
   }
-  .progress-ing .progress-3, .line .progress-3{
+
+  .progress-ing .progress-3,
+  .line .progress-3 {
     width: 100%;
     background: linear-gradient(90deg, rgba(255, 165, 123, 1) 0%, rgba(255, 139, 123, 1) 100%);
   }
 }
+
 .sleep-report {
   .report-header h1 {
     color: rgba(1, 1, 1, 1);
@@ -416,4 +443,29 @@
       }
     }
   }
+}
+
+.nutrition-report .self-progress.w1 {
+  width: 20%;
+  background: linear-gradient(90deg, rgba(140, 221, 255, 1) 0%, rgba(113, 200, 255, 1) 100%);
+}
+
+.nutrition-report .self-progress.w2 {
+  width: 40%;
+  background: linear-gradient(90deg, rgba(140, 221, 255, 1) 0%, rgba(113, 200, 255, 1) 100%);
+}
+
+.nutrition-report .self-progress.w3 {
+  width: 60%;
+  background: linear-gradient(90deg, rgba(193, 228, 155, 1) 0%, rgba(124, 213, 145, 1) 100%);
+}
+
+.nutrition-report .self-progress.w4 {
+  width: 80%;
+  background: linear-gradient(90deg, rgba(255, 165, 123, 1) 0%, rgba(255, 139, 123, 1) 100%);
+}
+
+.nutrition-report .self-progress.w5 {
+  width: 100%;
+  background: linear-gradient(90deg, rgba(255, 165, 123, 1) 0%, rgba(255, 139, 123, 1) 100%);
 }

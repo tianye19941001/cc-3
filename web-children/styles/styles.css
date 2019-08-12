@@ -1346,37 +1346,37 @@ p.sp-2 {
   color: #fff !important;
   background: linear-gradient(90deg, #ffa57b 0%, #ff8b7b 100%) !important; }
 
-.sport-report .sport-progress.style-1 p span:first-child {
+.sport-report .sport-progress.style-1 p span:first-child, .magic-report .sport-progress.style-1 p span:first-child {
   color: #000; }
-.sport-report .sport-progress.style-1 .line .self-progress {
+.sport-report .sport-progress.style-1 .line .self-progress, .magic-report .sport-progress.style-1 .line .self-progress {
   margin-left: 0;
   color: #fff;
   background: linear-gradient(90deg, #ffa57b 0%, #ff8b7b 100%);
   width: 50%; }
-.sport-report .sport-progress.style-2 p span:nth-child(2) {
+.sport-report .sport-progress.style-2 p span:nth-child(2), .magic-report .sport-progress.style-2 p span:nth-child(2) {
   color: #000; }
-.sport-report .sport-progress.style-2 .line .self-progress {
+.sport-report .sport-progress.style-2 .line .self-progress, .magic-report .sport-progress.style-2 .line .self-progress {
   margin-left: 50%;
   color: #fff;
   background: linear-gradient(90deg, #c1e49b 0%, #7cd591 100%);
   width: 50%; }
-.sport-report .sport-progress-2.style-1 p span:first-child {
+.sport-report .sport-progress-2.style-1 p span:first-child, .magic-report .sport-progress-2.style-1 p span:first-child {
   color: #000; }
-.sport-report .sport-progress-2.style-1 .line .self-progress {
+.sport-report .sport-progress-2.style-1 .line .self-progress, .magic-report .sport-progress-2.style-1 .line .self-progress {
   margin-left: 0;
   color: #fff;
   background: linear-gradient(90deg, #ffa57b 0%, #ff8b7b 100%);
   width: 33.33%; }
-.sport-report .sport-progress-2.style-2 p span:nth-child(2) {
+.sport-report .sport-progress-2.style-2 p span:nth-child(2), .magic-report .sport-progress-2.style-2 p span:nth-child(2) {
   color: #000; }
-.sport-report .sport-progress-2.style-2 .line .self-progress {
+.sport-report .sport-progress-2.style-2 .line .self-progress, .magic-report .sport-progress-2.style-2 .line .self-progress {
   margin-left: 33.33%;
   color: #fff;
   background: linear-gradient(90deg, #c1e49b 0%, #7cd591 100%);
   width: 33.33%; }
-.sport-report .sport-progress-2.style-3 p span:last-child {
+.sport-report .sport-progress-2.style-3 p span:last-child, .magic-report .sport-progress-2.style-3 p span:last-child {
   color: #000; }
-.sport-report .sport-progress-2.style-3 .line .self-progress {
+.sport-report .sport-progress-2.style-3 .line .self-progress, .magic-report .sport-progress-2.style-3 .line .self-progress {
   margin-left: 66.66%;
   color: #fff;
   background: linear-gradient(90deg, #8cddff 0%, #71c8ff 100%);
@@ -1542,50 +1542,46 @@ p.sp-2 {
 .mt70 {
   margin-top: 70px; }
 
-.fat-report .sport-progress.style-1 p span:first-child,
-.magic-report .sport-progress.style-1 p span:first-child {
+.fat-report .sport-show .r .progress span:first-child.active {
+  background: linear-gradient(90deg, #8cddff 0%, #71c8ff 100%); }
+.fat-report .sport-show .r .progress span:last-child.active {
+  background: linear-gradient(90deg, #ffa57b 0%, #ff8b7b 100%); }
+.fat-report .sport-show .r .progress-3 span:nth-child(2).active {
+  background: linear-gradient(90deg, #c1e49b 0%, #7cd591 100%); }
+.fat-report .sport-progress.style-1 p span:first-child {
   color: #000; }
-.fat-report .sport-progress.style-1 .line .self-progress,
-.magic-report .sport-progress.style-1 .line .self-progress {
+.fat-report .sport-progress.style-1 .line .self-progress {
   margin-left: 0;
   color: #fff;
-  background: linear-gradient(90deg, #ffa57b 0%, #ff8b7b 100%);
+  background: linear-gradient(90deg, #8cddff 0%, #71c8ff 100%);
   width: 50%; }
-.fat-report .sport-progress.style-2 p span:nth-child(2),
-.magic-report .sport-progress.style-2 p span:nth-child(2) {
+.fat-report .sport-progress.style-2 p span:nth-child(2) {
   color: #000; }
-.fat-report .sport-progress.style-2 .line .self-progress,
-.magic-report .sport-progress.style-2 .line .self-progress {
+.fat-report .sport-progress.style-2 .line .self-progress {
   margin-left: 50%;
   color: #fff;
-  background: linear-gradient(90deg, #c1e49b 0%, #7cd591 100%);
+  background: linear-gradient(90deg, #ffa57b 0%, #ff8b7b 100%);
   width: 50%; }
-.fat-report .sport-progress-2.style-1 p span:first-child,
-.magic-report .sport-progress-2.style-1 p span:first-child {
+.fat-report .sport-progress-2.style-1 p span:first-child {
   color: #000; }
-.fat-report .sport-progress-2.style-1 .line .self-progress,
-.magic-report .sport-progress-2.style-1 .line .self-progress {
+.fat-report .sport-progress-2.style-1 .line .self-progress {
   margin-left: 0;
   color: #fff;
-  background: linear-gradient(90deg, #ffa57b 0%, #ff8b7b 100%);
+  background: linear-gradient(90deg, #8cddff 0%, #71c8ff 100%);
   width: 33.33%; }
-.fat-report .sport-progress-2.style-2 p span:nth-child(2),
-.magic-report .sport-progress-2.style-2 p span:nth-child(2) {
+.fat-report .sport-progress-2.style-2 p span:nth-child(2) {
   color: #000; }
-.fat-report .sport-progress-2.style-2 .line .self-progress,
-.magic-report .sport-progress-2.style-2 .line .self-progress {
+.fat-report .sport-progress-2.style-2 .line .self-progress {
   margin-left: 33.33%;
   color: #fff;
   background: linear-gradient(90deg, #c1e49b 0%, #7cd591 100%);
   width: 33.33%; }
-.fat-report .sport-progress-2.style-3 p span:last-child,
-.magic-report .sport-progress-2.style-3 p span:last-child {
+.fat-report .sport-progress-2.style-3 p span:last-child {
   color: #000; }
-.fat-report .sport-progress-2.style-3 .line .self-progress,
-.magic-report .sport-progress-2.style-3 .line .self-progress {
+.fat-report .sport-progress-2.style-3 .line .self-progress {
   margin-left: 66.66%;
   color: #fff;
-  background: linear-gradient(90deg, #8cddff 0%, #71c8ff 100%);
+  background: linear-gradient(90deg, #ffa57b 0%, #ff8b7b 100%);
   width: 33.33%; }
 
 .fat-report .report-header h1 {
@@ -1644,7 +1640,8 @@ p.sp-2 {
   .magic-report .open-div h2 i {
     background-image: url(../images/new/4-up.png); }
 
-.allergy-report .progress-ing .progress-1, .allergy-report .progress-ing .progress-2 {
+.allergy-report .progress-ing .progress-1,
+.allergy-report .progress-ing .progress-2 {
   background: linear-gradient(90deg, #8cddff 0%, #71c8ff 100%); }
 .allergy-report .progress-ing .progress-3 {
   background: linear-gradient(90deg, #c1e49b 0%, #7cd591 100%); }
@@ -1700,13 +1697,16 @@ p.sp-2 {
   box-sizing: border-box;
   padding-right: 1.2rem;
   color: #fff; }
-.sleep-report .progress-ing .progress-1, .sleep-report .line .progress-1 {
+.sleep-report .progress-ing .progress-1,
+.sleep-report .line .progress-1 {
   width: 33%;
   background: linear-gradient(90deg, #8cddff 0%, #71c8ff 100%); }
-.sleep-report .progress-ing .progress-2, .sleep-report .line .progress-2 {
+.sleep-report .progress-ing .progress-2,
+.sleep-report .line .progress-2 {
   width: 66%;
   background: linear-gradient(90deg, #c1e49b 0%, #7cd591 100%); }
-.sleep-report .progress-ing .progress-3, .sleep-report .line .progress-3 {
+.sleep-report .progress-ing .progress-3,
+.sleep-report .line .progress-3 {
   width: 100%;
   background: linear-gradient(90deg, #ffa57b 0%, #ff8b7b 100%); }
 
@@ -1738,5 +1738,25 @@ p.sp-2 {
   background: linear-gradient(-90deg, rgba(58, 238, 193, 0.15), rgba(43, 219, 175, 0.15)); }
   .sleep-report .open-div h2 i {
     background-image: url(../images/new/4-up.png); }
+
+.nutrition-report .self-progress.w1 {
+  width: 20%;
+  background: linear-gradient(90deg, #8cddff 0%, #71c8ff 100%); }
+
+.nutrition-report .self-progress.w2 {
+  width: 40%;
+  background: linear-gradient(90deg, #8cddff 0%, #71c8ff 100%); }
+
+.nutrition-report .self-progress.w3 {
+  width: 60%;
+  background: linear-gradient(90deg, #c1e49b 0%, #7cd591 100%); }
+
+.nutrition-report .self-progress.w4 {
+  width: 80%;
+  background: linear-gradient(90deg, #ffa57b 0%, #ff8b7b 100%); }
+
+.nutrition-report .self-progress.w5 {
+  width: 100%;
+  background: linear-gradient(90deg, #ffa57b 0%, #ff8b7b 100%); }
 
 /*# sourceMappingURL=styles.css.map */
