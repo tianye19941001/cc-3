@@ -1,11 +1,119 @@
 @charset "utf-8";
 
-.oh{ overflow: hidden; }
-body{ background-color: #fff; font-family: "黑体"; min-width: 1300px; }
+.oh {
+  overflow: hidden;
+}
+
+body {
+  background-color: #fefbf4;
+  font-family: "微软雅黑";
+  padding-bottom: rem(150);
+}
+
+.index-header {
+  height: rem(480);
+  width: 100%;
+  background-image: url(../images/BANNER.png);
+  background-size: cover;
+  position: relative;
+
+  img {
+    width: rem(312);
+    position: absolute;
+    top: rem(92);
+    left: rem(44);
+  }
+
+  h1 {
+    font-family: Verdana;
+    font-size: rem(60);
+    position: absolute;
+    left: rem(44);
+    color: #fff;
+    bottom: rem(120);
+  }
+}
+
+.content {
+  width: rem(846);
+  margin: rem(150) 0 0 rem(165);
 
 
-// 手机
-.phone{ display: none; }
-@media screen and (min-width:1px) and (max-width:1019px){
-	
+  li {
+    width: rem(846);
+    height: rem(268);
+    background-size: 100% 100%;
+    position: relative;
+    margin-bottom: rem(40);
+  }
+
+  .icon {
+    width: rem(320);
+    height: rem(320);
+    border-radius: 50%;
+    position: absolute;
+    display: block;
+    left: rem(-130);
+    top: 50%;
+    transform: translateY(-51.5%);
+  }
+
+  h2 {
+    padding-left: rem(160);
+    padding-top: rem(64);
+    font-size: rem(46);
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 0px rem(7) rem(5) rgba(60, 60, 59, 0.5);
+    margin-bottom: rem(6);
+  }
+
+  strong {
+    position: absolute;
+    top: rem(65);
+    right: rem(56);
+    font-size: rem(46);
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 0px rem(7) rem(5) rgba(60, 60, 59, 0.5);
+  }
+
+  p {
+    padding-left: rem(160);
+    font-size: rem(33);
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 0px rem(7) rem(5) rgba(60, 60, 59, 0.5);
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .tab1 {
+    background-image: url(../images/PRO-BG1.png);
+  }
+
+  .tab2 {
+    background-image: url(../images/PRO-BG2.png);
+  }
+
+  .tab3 {
+    background-image: url(../images/PRO-BG3.png);
+  }
+
+  .tab4 {
+    background-image: url(../images/PRO-BG4.png);
+  }
+
+  .tab5 {
+    background-image: url(../images/PRO-BG5.png);
+  }
+
+  .tab6 {
+    background-image: url(../images/PRO-BG6.png);
+  }
+
+  .tab7 {
+    background-image: url(../images/PRO-BG7.png);
+  }
+
+  .tab8 {
+    background-image: url(../images/PRO-BG8.png);
+  }
 }

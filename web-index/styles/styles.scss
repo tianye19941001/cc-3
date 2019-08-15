@@ -2,11 +2,10 @@
 /* svn相对地址 */
 /* 项目下建立文本或者其他说明 本产品的产品及其对接的相关人员 */
 @function rem($px){
-	@return $px*(1/20)*1rem;
+	@return $px*(1/30)*1rem;
 }
 @import "scss/base";
 @import "img";
 @import "font";
-@import "scss/animation";
 @import "scss/ty";
 

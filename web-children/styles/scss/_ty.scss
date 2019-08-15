@@ -1558,3 +1558,9 @@ p.sp-2 {
         }
     }
 }
+
+.report-new-tabs-box:nth-child(2) {
+    .top p {
+        padding-top: rem(30);
+    }
+}
