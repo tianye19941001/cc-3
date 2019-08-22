@@ -1,54 +1,55 @@
  $(document).ready(function () {
 
  	// 辐射动物园
-	// repoort动画
-	var timer = null, timer2 = null;
-	var count = 1;
-	window.onload = function(){
-		timer = setInterval(function() {
-			if(count%100 > 7){
-				$('.page-1 .report').attr('class', 'report report-7');
-				count ++;
-			} else {
-				$('.page-1 .report').attr('class', 'report report-' + count%100);
-				count ++;
-			}
-		}, 100)
-	}
+ 	// repoort动画
+ 	var timer = null,
+ 		timer2 = null;
+ 	var count = 1;
+ 	window.onload = function () {
+ 		timer = setInterval(function () {
+ 			if (count % 100 > 7) {
+ 				$('.page-1 .report').attr('class', 'report report-7');
+ 				count++;
+ 			} else {
+ 				$('.page-1 .report').attr('class', 'report report-' + count % 100);
+ 				count++;
+ 			}
+ 		}, 100)
+ 	}
  	var gyList = [0, 2.5, 5, 8, 20, 50, 100, 500]
  	$('.articles .in').height($(window).height())
 
  	$('.page-index').swipeUp(function (e) {
-		$('.articles').addClass('active');
+ 		$('.articles').addClass('active');
  	})
 
  	$('.page-index .articles .in').swipeDown(function (e) {
-		e.stopPropagation()
+ 		e.stopPropagation()
  		$('.articles').removeClass('active');
  	})
 
  	$('.page-index .articles h2').click(function () {
  		$('.articles').toggleClass('active');
-	 })
-	 
-	 $('#back-list, #back-icon').click(function(){
-		 window.history.go(-1)
-	 })
+ 	})
+
+ 	$('#back-list, #back-icon').click(function () {
+ 		window.history.go(-1)
+ 	})
 
  	$('.bottom-line, .page-zoom .bg').swipeRight(function () {
  		var nowClass = $('.page-zoom').attr('class');
-		 var newIndex = parseInt(nowClass.slice(-1, nowClass.length)) + 1;
+ 		var newIndex = parseInt(nowClass.slice(-1, nowClass.length)) + 1;
  		if (newIndex > 8) return;
  		changeData(newIndex)
-	 });
-	 
-	 $('#add').click(function(){
-		$('.page-zoom .bg').trigger('swipeRight')
-	 })
+ 	});
 
-	 $('#reduce').click(function(){
-		$('.page-zoom .bg').trigger('swipeLeft')
-	 })
+ 	$('#add').click(function () {
+ 		$('.page-zoom .bg').trigger('swipeRight')
+ 	})
+
+ 	$('#reduce').click(function () {
+ 		$('.page-zoom .bg').trigger('swipeLeft')
+ 	})
 
  	$('.bottom-line, .page-zoom .bg').swipeLeft(function () {
  		var nowClass = $('.page-zoom').attr('class');
@@ -83,76 +84,150 @@
  			}
  		}, false);
  	}
-	
-	$('.step .next, .step .prev').click(function(){
-		var index = $(this).data('step');
-		$('.page-report-2').attr('class','page page-report-2 step-inner-' + index);
-	})
 
-	// document.getElementById('articles').addEventListener('touchmove', function(e) {
-	// 	e.stopPropagation()	
-	// });
+ 	$('.step .next, .step .prev').click(function () {
+ 		var index = $(this).data('step');
+ 		$('.page-report-2').attr('class', 'page page-report-2 step-inner-' + index);
+ 	})
 
-	$('body').swipeUp(function(e){
-		e.preventDefault();
-	}, {
-		passive: false
-	})
+ 	// document.getElementById('articles').addEventListener('touchmove', function(e) {
+ 	// 	e.stopPropagation()	
+ 	// });
 
-	// 报告
-	var video = document.getElementById('byl_video');
+ 	$('body').swipeUp(function (e) {
+ 		e.preventDefault();
+ 	}, {
+ 		passive: false
+ 	})
 
-	if($(video).length > 0){
-		
-		setInterval(function(){
-			var nowText = Number($('.num-warp .num').text());
-			if(nowText >= 100) {
-				$('.dialog-person').hide()
-			}
-			$('.num-warp .num').text(nowText + 1)
-		}, 20)
+ 	// 报告
+ 	var video = document.getElementById('byl_video');
 
-		video.addEventListener('loadedmetadata',function(){
-			$('.num-warp .num').text(100)
-			$(video).trigger('click');
-			video.play();
-			video.pause();
-		});
+ 	if ($(video).length > 0) {
+ 		videoInter = setInterval(function () {
+ 			var nowText = Number($('.num-warp .num').text());
+ 			if (nowText >= 100) {
+ 				$('.dialog-person').hide()
+ 				$('.report-next').show()
 
-		document.addEventListener("WeixinJSBridgeReady", function() {
-			video.play();
-			video.pause();
-		}, false);
-	
-		video.play();
-		video.pause();
+ 				clearInterval(videoInter)
+ 			}
+ 			$('.num-warp .num').text(nowText + 1)
+ 		}, 20)
 
-		document.body.addEventListener('click', function(e) {
-			if($('.video-person').length) video.play();
-		});
-		
-		document.body.addEventListener('touchstart', function(e) {
-			$('.poster').hide()
-			if($('.video-person').length) video.play();
-		});
+ 		video.addEventListener('loadedmetadata', function () {
+ 			$('.num-warp .num').text(100)
+ 			$('#byl_video')[0].play()
+ 			$('#byl_video')[0].pause()
+ 		});
 
-		document.body.addEventListener('touchend', function(e) {
-			if($('.video-person').length) video.pause();
-		});
+ 		$('.report-next').click(function () {
+ 			$(this).hide()
+ 		})
 
-		video.addEventListener('ended', function(e){
-			$('.video-person').remove()
-			$('.step-inner-1').show()
-		})
-	}
+ 		document.addEventListener("WeixinJSBridgeReady", function () {
+ 			video.play();
+ 			video.pause();
+ 		}, false);
 
+ 		video.play();
+ 		video.pause();
 
-	document.body.addEventListener('touchmove', function(e) {
-		// if($('.articles').hasClass('active')) return
-		if(e._isScroller) return;
-		e.preventDefault();
-	}, {
-		passive: false
-	});
+ 		document.body.addEventListener('click', function (e) {
+ 			if ($('.video-person').length) video.play(), video.pause();
+ 		});
 
-});
+ 		document.body.addEventListener('touchstart', function (e) {
+ 			$('.poster').hide()
+
+ 			if ($('.video-person').length) $('#byl_video')[0].play();
+ 		});
+
+ 		document.body.addEventListener('touchend', function (e) {
+ 			if ($('.video-person').length) video.pause();
+ 		});
+
+ 		video.addEventListener('ended', function (e) {
+ 			$('.video-person').remove()
+ 			$('.step-inner-1').show()
+ 		})
+ 	}
+
+ 	var video2 = document.getElementById('byl_video2');
+
+ 	if ($(video2).length > 0) {
+ 		numInter = setInterval(function () {
+ 			var nowText = Number($('.num-warp .num').text());
+ 			if (nowText >= 100) {
+ 				$('.dialog-person').hide();
+ 				$('.next').show();
+ 				clearInterval(numInter);
+ 			}
+ 			$('.num-warp .num').text(nowText + 1)
+ 		}, 20)
+
+ 		video2.addEventListener('loadedmetadata', function () {
+ 			$('.num-warp .num').text(100)
+ 			$('#byl_video2')[0].play()
+ 			video2.pause();
+ 		});
+
+ 		document.addEventListener("WeixinJSBridgeReady", function () {
+ 			video2.play();
+ 			video2.pause();
+ 		}, false);
+
+ 		video2.play();
+ 		video2.pause();
+
+ 		$('.next').on('touchstart', function () {
+ 			video2.play();
+ 		})
+
+ 		$('.next').on('click', function () {
+ 			$(this).addClass('next-2');
+ 		})
+
+ 		document.body.addEventListener('click', function (e) {
+ 			if ($('.video-person').length) video2.play(), video2.pause();
+ 		});
+
+ 		document.body.addEventListener('touchstart', function (e) {
+ 			$('.poster').hide()
+
+ 			if ($('.video-person').length) $('#byl_video')[0].play();
+ 		});
+
+ 		document.body.addEventListener('touchend', function (e) {
+ 			if ($('.video-person').length) video2.pause();
+ 		});
+
+ 		video2.addEventListener('ended', function (e) {
+ 			video2.pause();
+ 			$('.next').hide();
+ 			$('.restart, .back').show();
+ 		})
+
+ 		$('.restart').click(function (e) {
+ 			e.stopPropagation()
+ 			$('.restart, .back').hide();
+ 			video2.play()
+ 			setTimeout(function () {
+ 				video2.pause()
+ 			}, 1000)
+ 			$('.next').show();
+ 		})
+
+ 		$('.back').click(function () {
+ 			window.history.go(-1);
+ 		})
+ 	}
+
+ 	document.body.addEventListener('touchmove', function (e) {
+ 		if (e._isScroller) return;
+ 		e.preventDefault();
+ 	}, {
+ 		passive: false
+ 	});
+
+ });

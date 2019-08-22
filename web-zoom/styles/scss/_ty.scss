@@ -685,11 +685,9 @@ body {
 }
 
 .video-warpper {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate3d(-50%, -50%, 0px) rotate(90deg);
-  // transform-origin: center center;
+  video {
+    display: block;
+  }
 }
 
 .video-person {
@@ -720,26 +718,36 @@ body {
   }
 
   .next {
-    background: #316b33;
+    background: url(../images/start.png);
+    background-size: rem(300) rem(133);
+    background-position: 0 0;
     position: absolute;
-    left: 0;
-    bottom: 0;
-    width: rem(100);
-    height: rem(100);
+    left: rem(20);
+    bottom: rem(100);
+    width: rem(150);
+    height: rem(133);
     border: 0;
     color: #fff;
     font-size: rem(24);
     outline: none;
     user-select: none;
     transform: rotate(90deg);
+    z-index: 9;
+    display: none;
+    animation: btn 0.5s step-start infinite ;
+  }
+  .next-2 {
+    background: url(../images/btn.png);
+    background-size: rem(300) rem(133);
+    background-position: 0 0;
   }
 
   .restart {
     background: transparent;
     position: absolute;
     left: 18%;
-    bottom: 12rem;
-    width: 2.5rem;
+    top: 35.2rem;
+    width: 3.5rem;
     height: 6rem;
     border: 0;
     color: transparent;
@@ -747,21 +755,23 @@ body {
     outline: none;
     user-select: none;
     display: none;
+    z-index: 9;
   }
 
   .back {
     background: transparent;
     position: absolute;
     left: 18%;
-    bottom: 5rem;
+    top: 42.2rem;
     border: 0;
     color: transparent;
     font-size: 0.96rem;
     outline: none;
     user-select: none;
-    width: 2.5rem;
+    width: 3.5rem;
     height: 6rem;
     display: none;
+    z-index: 9;
   }
 }
 
@@ -974,7 +984,6 @@ body {
 .video-person #back-icon.video-back {
   left: auto;
   right: rem(40);
-  transform: rotate(90deg)
 }
 
 #add {
@@ -1011,4 +1020,22 @@ body {
   color: #fff;
   font-weight: bold;
   font-size: rem(40);
+}
+
+.video-person .report-next {
+  transform: rotate(0);
+  left: 50%;
+  margin-left: rem(-75);
+}
+
+@keyframes btn {
+  0% {
+    background-position: rem(-150) 0;
+  }
+  50% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: rem(-150) 0;
+  }
 }

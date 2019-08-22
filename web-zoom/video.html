@@ -17,12 +17,16 @@
       <img id="back-icon" src="./images/back-icon.png" alt="">
       <div class="dialog-person">
           <img src="./images/loading.png" alt="">
+          <p class="num-warp"><span class="num">0</span>%</p>
       </div>
       <div class="video-warpper">
-        <div class="video-con"></div>
+          <div class="report-video">
+              <img class="poster" src="./images/loading.png" alt="">
+              <video id="byl_video2" webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="true" width="750" height="1468" preload="auto" src="./video/all.mp4" poster="./images/loading.png"></video>
+          </div>
       </div>
 
-      <button class="next">下一步</button>
+      <button class="next"></button>
       <button class="restart">再看一次</button>
       <button class="back">返回</button>
     </section>
@@ -33,122 +37,122 @@
   <script src="js/canvid.js"></script>
   <script src="js/app.js"></script>
   <script>
-    $('.video-warpper').height($(window).width())
-    $('.video-warpper').width($(window).height())
+    $('.video-warpper, .video-warpper video').height($(window).height())
+    $('.video-warpper, .video-warpper video').width($(window).width())
 
-    var canvidControl = canvid({
-      selector: '.video-con',
-      videos: {
-        clip1: {
-          src: './video/person1_Jc.jpg',
-          frames: 70,
-          cols: 6,
-          fps:8,
-          loops: 1,
-          onEnd: function () {
-            canvidControl.play('clip6');
-          }
-        },
-        clip1_2: {
-          src: './video/person1-2_Jc.jpg',
-          frames: 12,
-          cols: 6,
-          fps:8,
-          loops: 1,
-          onEnd: function () {
-            canvidControl.play('clip2');
-          }
-        },
-        clip2: {
-          src: './video/person2_Jc.jpg',
-          frames: 74,
-          cols: 6,
-          fps:8,
-          loops: 1,
-          onEnd: function () {
-            canvidControl.play('clip3');
-          }
-        },
-        clip3: {
-          src: './video/person3_Jc.jpg',
-          frames: 77,
-          cols: 6,
-          fps:8,
-          loops: 1,
-          onEnd: function () {
-            canvidControl.play('clip4');
-          }
-        },
-        clip4: {
-          src: './video/person3-2_Jc.jpg',
-          frames: 50,
-          cols: 6,
-          fps:8,
-          loops: 1,
-          onEnd: function () {
-            canvidControl.play('clip4_2');
-          }
-        },
-        clip4_2: {
-          src: './video/person3-3_Jc.jpg',
-          frames: 27,
-          cols: 6,
-          fps:8,
-          loops: 1,
-          onEnd: function () {
-            canvidControl.play('clip5');
-          }
-        },
-        clip5: {
-          src: './video/person4_Jc.jpg',
-          frames: 78,
-          cols: 6,
-          fps:8,
-          loops: 1,
-          onEnd: function () {
-            canvidControl.play('clip6');
-          }
-        },
-        clip6: {
-          src: './video/person5_Jc.jpg',
-          frames: 96,
-          cols: 6,
-          fps:8,
-          loops: 1,
-          onEnd: function () {
-            $('.restart, .back').show();
-            $('.next').hide();
-            canvidControl.pause();
-          }
-        }
-      },
-      width: $(window).height(),
-      height: $(window).width(),
-      loaded: function () {
-        canvidControl.play('clip1');
-        canvidControl.pause()
-        $('.dialog-person').hide();
-        $('#back-icon').addClass('video-back');
-      }
-    });
+    // var canvidControl = canvid({
+    //   selector: '.video-con',
+    //   videos: {
+    //     clip1: {
+    //       src: './video/person1_Jc.jpg',
+    //       frames: 70,
+    //       cols: 6,
+    //       fps:8,
+    //       loops: 1,
+    //       onEnd: function () {
+    //         canvidControl.play('clip6');
+    //       }
+    //     },
+    //     clip1_2: {
+    //       src: './video/person1-2_Jc.jpg',
+    //       frames: 12,
+    //       cols: 6,
+    //       fps:8,
+    //       loops: 1,
+    //       onEnd: function () {
+    //         canvidControl.play('clip2');
+    //       }
+    //     },
+    //     clip2: {
+    //       src: './video/person2_Jc.jpg',
+    //       frames: 74,
+    //       cols: 6,
+    //       fps:8,
+    //       loops: 1,
+    //       onEnd: function () {
+    //         canvidControl.play('clip3');
+    //       }
+    //     },
+    //     clip3: {
+    //       src: './video/person3_Jc.jpg',
+    //       frames: 77,
+    //       cols: 6,
+    //       fps:8,
+    //       loops: 1,
+    //       onEnd: function () {
+    //         canvidControl.play('clip4');
+    //       }
+    //     },
+    //     clip4: {
+    //       src: './video/person3-2_Jc.jpg',
+    //       frames: 50,
+    //       cols: 6,
+    //       fps:8,
+    //       loops: 1,
+    //       onEnd: function () {
+    //         canvidControl.play('clip4_2');
+    //       }
+    //     },
+    //     clip4_2: {
+    //       src: './video/person3-3_Jc.jpg',
+    //       frames: 27,
+    //       cols: 6,
+    //       fps:8,
+    //       loops: 1,
+    //       onEnd: function () {
+    //         canvidControl.play('clip5');
+    //       }
+    //     },
+    //     clip5: {
+    //       src: './video/person4_Jc.jpg',
+    //       frames: 78,
+    //       cols: 6,
+    //       fps:8,
+    //       loops: 1,
+    //       onEnd: function () {
+    //         canvidControl.play('clip6');
+    //       }
+    //     },
+    //     clip6: {
+    //       src: './video/person5_Jc.jpg',
+    //       frames: 96,
+    //       cols: 6,
+    //       fps:8,
+    //       loops: 1,
+    //       onEnd: function () {
+    //         $('.restart, .back').show();
+    //         $('.next').hide();
+    //         canvidControl.pause();
+    //       }
+    //     }
+    //   },
+    //   width: $(window).height(),
+    //   height: $(window).width(),
+    //   loaded: function () {
+    //     canvidControl.play('clip1');
+    //     canvidControl.pause()
+    //     $('.dialog-person').hide();
+    //     $('#back-icon').addClass('video-back');
+    //   }
+    // });
 
- 		$('.next').on('touchstart', function () {
-      canvidControl.resume()
-    })
-    $('.next').on('touchend', function () {
-      canvidControl.pause()
-    })
+ 		// $('.next').on('touchstart', function () {
+    //   canvidControl.resume()
+    // })
+    // $('.next').on('touchend', function () {
+    //   canvidControl.pause()
+    // })
     
-    $('.restart').click(function(){
-      $('.restart, .back').hide();
-      $('.next').show();
-      canvidControl.play('clip1');
-      canvidControl.pause()
-    })
+    // $('.restart').click(function(){
+    //   $('.restart, .back').hide();
+    //   $('.next').show();
+    //   canvidControl.play('clip1');
+    //   canvidControl.pause()
+    // })
 
-    $('.back').click(function(){
-      window.history.go(-1);
-    })
+    // $('.back').click(function(){
+    //   window.history.go(-1);
+    // })
 
   </script>
 </body>
