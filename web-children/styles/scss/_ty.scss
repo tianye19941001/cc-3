@@ -593,6 +593,7 @@ p.sp-2 {
     img {
         width: rem(140);
         height: rem(140);
+        border-radius: 50%;
     }
 
     p {
@@ -1556,5 +1557,11 @@ p.sp-2 {
         tr td:nth-child(2) {
             background: #e9a8e1;
         }
+    }
+}
+
+.report-new-tabs-box:nth-child(2) {
+    .top p {
+        padding-top: rem(30);
     }
 }
