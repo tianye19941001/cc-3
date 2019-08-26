@@ -22,7 +22,7 @@
       <div class="video-warpper">
           <div class="report-video">
               <img class="poster" src="./images/loading.png" alt="">
-              <video id="byl_video2" webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="true" width="750" height="1468" preload="auto" src="./video/all.mp4" poster="./images/loading.png"></video>
+              <video id="byl_video2" style="object-fit:fill" webkit-playsinline="true" x-webkit-airplay="true" playsinline="true"  x5-video-player-type="h5" x5-video-player-fullscreen="true" width="750" height="1468" preload="auto" src="./video/all.mp4" poster="./images/loading.png"></video>
           </div>
       </div>
 
@@ -37,8 +37,8 @@
   <script src="js/canvid.js"></script>
   <script src="js/app.js"></script>
   <script>
-    $('.video-warpper, .video-warpper video').height($(window).height())
-    $('.video-warpper, .video-warpper video').width($(window).width())
+    $('.video-warpper, .video-warpper video').height('100%')
+    $('.video-warpper, .video-warpper video').width('100%')
 
     // var canvidControl = canvid({
     //   selector: '.video-con',
