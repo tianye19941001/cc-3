@@ -32,127 +32,25 @@
     </section>
   </div>
 
+  <!-- 隐藏音乐播放 -->
+  <audio style="display:none; height: 0" id="bg-music" preload="auto" src="./video/video.mp3" loop="loop"></audio>
+
   <script src="js/zepto.min.js"></script>
   <script src="js/touch.js"></script>
   <script src="js/canvid.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/music.js"></script>
   <script>
     $('.video-warpper, .video-warpper video').height('100%')
     $('.video-warpper, .video-warpper video').width('100%')
 
-    // var canvidControl = canvid({
-    //   selector: '.video-con',
-    //   videos: {
-    //     clip1: {
-    //       src: './video/person1_Jc.jpg',
-    //       frames: 70,
-    //       cols: 6,
-    //       fps:8,
-    //       loops: 1,
-    //       onEnd: function () {
-    //         canvidControl.play('clip6');
-    //       }
-    //     },
-    //     clip1_2: {
-    //       src: './video/person1-2_Jc.jpg',
-    //       frames: 12,
-    //       cols: 6,
-    //       fps:8,
-    //       loops: 1,
-    //       onEnd: function () {
-    //         canvidControl.play('clip2');
-    //       }
-    //     },
-    //     clip2: {
-    //       src: './video/person2_Jc.jpg',
-    //       frames: 74,
-    //       cols: 6,
-    //       fps:8,
-    //       loops: 1,
-    //       onEnd: function () {
-    //         canvidControl.play('clip3');
-    //       }
-    //     },
-    //     clip3: {
-    //       src: './video/person3_Jc.jpg',
-    //       frames: 77,
-    //       cols: 6,
-    //       fps:8,
-    //       loops: 1,
-    //       onEnd: function () {
-    //         canvidControl.play('clip4');
-    //       }
-    //     },
-    //     clip4: {
-    //       src: './video/person3-2_Jc.jpg',
-    //       frames: 50,
-    //       cols: 6,
-    //       fps:8,
-    //       loops: 1,
-    //       onEnd: function () {
-    //         canvidControl.play('clip4_2');
-    //       }
-    //     },
-    //     clip4_2: {
-    //       src: './video/person3-3_Jc.jpg',
-    //       frames: 27,
-    //       cols: 6,
-    //       fps:8,
-    //       loops: 1,
-    //       onEnd: function () {
-    //         canvidControl.play('clip5');
-    //       }
-    //     },
-    //     clip5: {
-    //       src: './video/person4_Jc.jpg',
-    //       frames: 78,
-    //       cols: 6,
-    //       fps:8,
-    //       loops: 1,
-    //       onEnd: function () {
-    //         canvidControl.play('clip6');
-    //       }
-    //     },
-    //     clip6: {
-    //       src: './video/person5_Jc.jpg',
-    //       frames: 96,
-    //       cols: 6,
-    //       fps:8,
-    //       loops: 1,
-    //       onEnd: function () {
-    //         $('.restart, .back').show();
-    //         $('.next').hide();
-    //         canvidControl.pause();
-    //       }
-    //     }
-    //   },
-    //   width: $(window).height(),
-    //   height: $(window).width(),
-    //   loaded: function () {
-    //     canvidControl.play('clip1');
-    //     canvidControl.pause()
-    //     $('.dialog-person').hide();
-    //     $('#back-icon').addClass('video-back');
-    //   }
-    // });
-
- 		// $('.next').on('touchstart', function () {
-    //   canvidControl.resume()
-    // })
-    // $('.next').on('touchend', function () {
-    //   canvidControl.pause()
-    // })
-    
-    // $('.restart').click(function(){
-    //   $('.restart, .back').hide();
-    //   $('.next').show();
-    //   canvidControl.play('clip1');
-    //   canvidControl.pause()
-    // })
-
-    // $('.back').click(function(){
-    //   window.history.go(-1);
-    // })
+    document.body.addEventListener('touchmove', function (evt) {
+ 			if (!evt._isScroller) {
+ 				evt.preventDefault();
+ 			}
+ 		}, {
+ 			passive: false
+ 		});
 
   </script>
 </body>
