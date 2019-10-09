@@ -355,6 +355,7 @@
       text-shadow: rem(2) rem(3) rem(10) rgba(255, 136, 159, 0.5);
       background: transparent;
       height: auto;
+      line-height: 1;
     }
   }
 }
@@ -372,6 +373,8 @@
     box-sizing: border-box;
     padding-right: rem(36);
     color: #fff;
+    line-height: 1.333rem;
+    font-size: 0.75rem;
   }
 
   .progress-ing .progress-1,
@@ -468,4 +471,8 @@
 .nutrition-report .self-progress.w5 {
   width: 100%;
   background: linear-gradient(90deg, rgba(255, 165, 123, 1) 0%, rgba(255, 139, 123, 1) 100%);
+}
+
+.logo2 {
+  left: 8.5rem;
 }
