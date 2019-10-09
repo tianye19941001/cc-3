@@ -25,7 +25,9 @@
             </div>
             <div class="report-video">
                 <img class="poster" src="./video/poster.jpeg" alt="">
-                <video id="byl_video" webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="true" width="750" height="1468" preload="auto" src="./video/report.mp4" poster="./video/poster.jpeg"></video>
+                <video id="byl_video" webkit-playsinline="true" x-webkit-airplay="true" playsinline="true"
+                    x5-video-player-type="h5" x5-video-player-fullscreen="true" width="750" height="1468" preload="auto"
+                    src="./video/report.mp4" poster="./video/poster.jpeg"></video>
             </div>
 
             <button class="next report-next"></button>
@@ -84,12 +86,23 @@
             </div>
         </form>
     </div>
-
+    <!-- 隐藏音乐播放 -->
+    <audio style="display:none; height: 0" id="bg-music" preload="auto" src="./video/report.mp3" loop="loop"></audio>
 
     <script src="js/zepto.min.js"></script>
     <script src="js/touch.js"></script>
     <script src="js/canvid.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/music.js"></script>
+    <script>
+        document.body.addEventListener('touchmove', function (evt) {
+            if (!evt._isScroller) {
+                evt.preventDefault();
+            }
+        }, {
+            passive: false
+        });
+    </script>
 </body>
 
 </html>
