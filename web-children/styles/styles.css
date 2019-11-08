@@ -462,8 +462,7 @@ body {
   display: block; }
 .index-header h1 {
   position: absolute;
-  left: 0;
-  width: 100%;
+  left: 1.5333333333rem;
   top: 3.6666666667rem;
   text-align: center;
   font-size: 1.8333333333rem;
