@@ -24,13 +24,11 @@
  	})
 
  	$('.page-index .articles .in').swipeDown(function (e) {
- 		console.log(e.target)
  		e.stopPropagation()
  		$('.articles').removeClass('active');
  	})
 
  	$('.page-index .article-list').swipeDown(function (e) {
- 		console.log(e.target)
  		e.stopPropagation()
  	})
 
@@ -95,10 +93,6 @@
  		var index = $(this).data('step');
  		$('.page-report-2').attr('class', 'page page-report-2 step-inner-' + index);
  	})
-
- 	// document.getElementById('articles').addEventListener('touchmove', function(e) {
- 	// 	e.stopPropagation()	
- 	// });
 
  	$('body').swipeUp(function (e) {
  		e.preventDefault();

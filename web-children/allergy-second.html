@@ -31,7 +31,7 @@
             </div>
             <div class="in">
                 <!-- 评分倍数填入自动计算 -->
-                <p id="num" class="num" data-num="0.9"></p>
+                <p id="num" class="num" data-num="5"></p>
                 <button>高</button>
             </div>
         </div>
@@ -133,16 +133,32 @@
         var numArr = String(numData).split('.');
         var percent = 20;
 
-        if (numArr.length == 2 && numArr[0] != '0') {
-            $('#num').html('<strong>' + numArr[0] + '</strong><em>' + numArr[1] + '倍</em>')
+        if (numArr.length == 2) {
+            $('#num').html('<strong>' + numArr[0] + '</strong><em>.' + numArr[1] + '倍</em>')
         } else {
             $('#num').html('<strong>' + numData + '<em>倍</em></strong>')
         }
 
+        if (numData <= 0.3) {
+            percent = 0.2;
+        } else if (numData > 0.3 && numData <= 0.8) {
+            percent = 0.4;
+        } else if (numData > 0.8 && numData <= 0.95) {
+            percent = 0.45;
+        } else if (numData > 0.95 && numData <= 1.05) {
+            percent = 0.5;
+        } else if (numData > 1.05 && numData <= 1.3) {
+            percent = 0.6;
+        } else if (numData > 1.3 && numData < 3) {
+            percent = 0.75;
+        } else {
+            percent = 0.85;
+        };
+
         // 综合评分最大的圆圈
         runCircle({
             obj: 'canvasThree',
-            percent: numData / 3,
+            percent: percent,
             circleBottomColor: "#F0F0F0", //圆环底色
             innerColorStart: '#fdc36a', //内部圆环 渐变色
             innerColorEnd: '#fdb849',

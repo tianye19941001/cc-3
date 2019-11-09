@@ -18,6 +18,7 @@
 <body>
     <div class="wappar">
         <img id="back-icon" src="./images/back-icon.png" alt="">
+        <span id="skip">跳过</span>
         <section class="page video-person oh">
             <div class="dialog-person">
                 <img src="./images/loading-2.png" alt="">
@@ -39,8 +40,8 @@
 
             <div class="step step-1-inner">
                 <div class="white-inner">
-                    <p>今年我坐了<input type="text">次飞机</p>
-                    <p>每次平均飞<input type="text">小时&emsp;</p>
+                    <p>今年我坐了<input type="number">次飞机</p>
+                    <p>每次平均飞<input type="number">小时&emsp;</p>
                 </div>
                 <span data-step="2" class="next next-2">下一步</span>
             </div>
@@ -50,39 +51,39 @@
             </div>
             <div class="step step-3-inner">
                 <div class="white-inner">
-                    <p>我每天平均抽<input type="text">根烟</p>
+                    <p>我每天平均抽<input type="number">根烟</p>
                 </div>
                 <span data-step="2" class="prev">上一步</span>
                 <span data-step="4" class="next">下一步</span>
             </div>
             <div class="step step-4-inner">
                 <div class="white-inner">
-                    <p>我每天平均外出<input type="text">小时</p>
+                    <p>我每天平均外出<input type="number">小时</p>
                 </div>
                 <span data-step="3" class="prev">上一步</span>
                 <span data-step="5" class="next">下一步</span>
             </div>
             <div class="step step-5-inner">
                 <div class="white-inner">
-                    <p>我平均每做<input type="text">次X光片</p>
+                    <p>我平均每做<input type="number">次X光片</p>
                 </div>
                 <span data-step="4" class="prev">上一步</span>
                 <span data-step="6" class="next">下一步</span>
             </div>
             <div class="step step-6-inner">
                 <div class="white-inner">
-                    <p>我每天平均做<input type="text">小时公交</p>
-                    <p>我每天平均做<input type="text">小时地铁</p>
+                    <p>我每天平均做<input type="number">小时公交</p>
+                    <p>我每天平均做<input type="number">小时地铁</p>
                 </div>
                 <span data-step="5" class="prev">上一步</span>
                 <span data-step="7" class="next">下一步</span>
             </div>
             <div class="step step-7-inner">
                 <div class="white-inner">
-                    <p>我每年平均泡<input type="text">次温泉</p>
+                    <p>我每年平均泡<input type="number">次温泉</p>
                 </div>
                 <span data-step="6" class="prev">上一步</span>
-                <span class="btn">完成</span>
+                <span class="btn" style="float: right;">完成</span>
             </div>
         </form>
     </div>
@@ -102,6 +103,12 @@
         }, {
             passive: false
         });
+
+        $('#skip').click(function(){
+            $(this).hide()
+            $('.video-person').remove()
+ 			$('.step-inner-1').show()
+        })
     </script>
 </body>
 
