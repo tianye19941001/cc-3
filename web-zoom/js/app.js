@@ -270,6 +270,16 @@
  		}, {
  			passive: false
  		});
- 	}
-
+	 }
+	 
+	 function kickBack() {
+		setTimeout(() => {
+		  window.scrollTo(0, document.body.scrollTop + 1);
+		  document.body.scrollTop >= 1 && window.scrollTo(0, document.body.scrollTop - 1);  
+		}, 10)
+	  }
+	 
+	  $('.step-inner-1 input').on('blur', function(){
+		  kickBack()
+	  })
  });

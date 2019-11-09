@@ -12,7 +12,16 @@ body {
 
 }
 
-* {
+// [contenteditable="true"], input, textarea {
+//   -webkit-user-select: auto!important;
+//   -khtml-user-select: auto!important;
+//   -moz-user-select: auto!important;
+//   -ms-user-select: auto!important;
+//   -o-user-select: auto!important;
+//   user-select: auto!important;
+// }
+
+i, img, button {
   user-select: none
 }
 
@@ -761,7 +770,8 @@ body {
     user-select: none;
     display: none;
     z-index: 9;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    white-space: nowrap;
     transform: rotate(90deg);
     border-radius: 4px;
   }
@@ -773,7 +783,8 @@ body {
     bottom: 12%;
     border: 0;
     color: #333;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    white-space: nowrap;
     outline: none;
     user-select: none;
     width: 6rem;
@@ -852,6 +863,7 @@ body {
     background: transparent;
     border-bottom: 2px solid #333;
     text-align: center;
+    color: #333;
   }
 
   .next {
