@@ -9,78 +9,83 @@
 	<meta name="format-detection" content="address=no">
 	<title>Document</title>
 	<link rel="stylesheet" href="styles/styles.css">
-	<link rel="stylesheet" href="styles/idangerous.swiper.css">
 	<script src="js/fn.js"></script>
 </head>
 
 <body>
 	<header>
-		<a class="back-icon" href=""><i></i></a>
+		<a class="back-icon" href=""><img src="./images/back.png" alt=""></a>
 		<h1>问卷调查</h1>
-		<a class="qus-icon" href=""><i></i></a>
+		<a class="qus-icon" href=""><img src="./images/qus.png" alt=""></a>
 	</header>
 	<div class="main-body">
-		<div data-step="0" class="inner-body">
+		<div data-step="0" class="inner-body" style="display: none;">
 			<br><br><br>
-			<p>请您花费3~5分钟时间填写问卷，</p>
-			<p>对您的膳食营养素摄入情况做评估，</p>
-			<p>然后综合基因检测结果，</p>
-			<p>给您定制营养品。</p>
-			<br>
-			<p>您也可以直接下单，</p>
-			<p>根据基因检测结果，给您定制营养品。</p>
+			<p class="p1">请您花费3~5分钟时间填写问卷，</p>
+			<p class="p2">对您的膳食营养素摄入情况做评估，</p>
+			<p class="p2">然后综合基因检测结果，</p>
+			<p class="p2">给您定制营养品。</p>
+			<br><br>
+			<p class="p3">您也可以直接下单，</p>
+			<p class="p2">根据基因检测结果，给您定制营养品。</p>
+			<br><br><br><br>
 			<div class="btns">
-				<a class="btn-1" href="">饮食评估</a>
-				<a class="btn-2" href="">下单定制</a>
+				<a class="btn-1" href=""> <img src="./images/TEST2.png" alt=""> 饮食评估</a>
+				<a class="btn-2" href=""> <img src="./images/buy1.png" alt=""> 下单定制</a>
 			</div>
 		</div>
 
-		<div data-step="1" class="inner-body">
-			<br>
-			<p>PERSONALIZE</p>
-			<p>YOUR</p>
-			<p>HEALTH</p>
-			<hr>
-			<ul>
-				<li>问卷由OmicsFit<br />注册营养师团队设计<br ></li>
-				<li>采用国际营养学界主流的远程饮<br />食信息收集和营养评估法--<br /><em>食物频率问卷法（FFQs）</em><br ></li>
-				<li>填写问卷大约需要3~5分钟</li>
+		<div data-step="1" class="inner-body" style="display: none;">
+			<br><br>
+			<p class="p4">PERSONALIZE</p>
+			<p class="p4">YOUR</p>
+			<p class="p4">HEALTH</p><hr /><br>
+			<p class="p5">您的饮食评估问卷</p>
+			<ul class="head-ul">
+				<li class="p6">问卷由OmicsFit<br />注册营养师团队设计<br /> </li>
+				<li class="p6">采用国际营养学界主流的远程饮<br />食信息收集和营养评估法--<br /><em>食物频率问卷法（FFQs）</em><br ></li>
+				<li class="p6">填写问卷大约需要3~5分钟</li>
 			</ul>
-			
-			<div class="btns">
-				<a class="btn-3" href="">开始答题</a>
+			<br>
+			<div class="btns btns2">
+				<a class="btn-1" href="">开始答题</a>
 			</div>
 		</div>
 
-		<div data-step="2" class="inner-body">
-			<img src="./images/back.png" alt="">
+		<div data-step="2" class="inner-body" style="display: none;">
+			<img class="houzi" src="./images/houzi.png" alt="">
 		</div>
 
-		<div data-step="3" class="inner-body">
+		<div data-step="3" class="inner-body"  style="display: none;">
 			<br><br>
-			<p>姓名</p>
+			<p class="p7">姓名</p>
 			<br><br>
-			<p>该称呼将出现在您的营养建议和产品包装上</p>
+			<p class="p8">该称呼将出现在您的营养建议和产品包装上</p><br >
 			<div class="name-bar">
-				<p>您好，<br />&emsp; <span><input type="text" /></span></p>
-				<p>个性化定制健康</p>
-				<p>您的每日营养素补充配方，不单独销售</p>
-				<p>包装日期:<span>2020/02/14</span>请在180日内食用</p>
+				<p class="name">您好，<span><input type="text" /></span></p>
+				<p class="about1">个性化定制健康</p>
+				<p class="about2">您的每日营养素补充配方，不单独销售</p>
+				<p class="about3">包装日期: <span>2020/02/14</span> 请在180日内食用</p>
+			</div>
+			<br >
+			<br >
+			<div class="btns btns2">
+				<a class="btn-1" href="">确定</a>
 			</div>
 		</div>
 
-		<div data-step="4" class="inner-body">
+		<div data-step="4" class="inner-body" style="display: none">
 			<br><br>
-			<img src="./images/ICON1.png" alt="">
-			<p>您好，韩梅梅</p>
-			<p>您的个性化健康之旅开始了</p>
-			<p>请选择</p>
-			<p>与<span>您的</span>实际情况<span>最接近</span>的选项</p>
+			<img class="head-icon" src="./images/ICON1.png" alt=""><br />
+			<p class="p9">您好，姓名</p>
+			<p class="p10">您的个性化健康之旅开始了</p><br /><br /><br />
+			<p class="p11">请选择</p><br />
+			<p class="p12">与<span class="p11">您的</span>实际情况<span class="p11">最接近</span>的选项</p>
 		</div>
 
-		<div data-step="5" class="inner-body qus-body">
+		<div data-step="5" class="inner-body qus-body" style="display: none;">
 			<div class="nav-list">
-				<span>营养目标<i></i></span>
+				<span class="active">营养目标<i></i></span>
 				<span>饮食方式<i></i></span>
 				<span>营养状况<i></i></span>
 			</div>
@@ -93,13 +98,13 @@
 
 		<div data-step="6" class="inner-body">
 			<br><br>
-			<img src="./images/ICON1.png" alt="">
+			<img class="head-icon" src="./images/ICON1.png" alt="">
 			<br><br>
-			<p>感谢您耐心作答</p>
+			<p class="p13">感谢您耐心作答</p>
 			<br><br><br><br><br><br>
-			<p>现在可以定制专属您的营养品啦</p>
-			<br><br><br><br><br><br>
-			<a class="btn-3" id="submit" href=""><i></i>下单定制</a>
+			<p class="p14">现在可以定制专属您的营养品啦</p>
+			<br><br><br><br><br>
+			<p class="btns btns2"><a class="btn-1 h90" id="submit" href=""> <img src="./images/ICON31.png" alt=""> 下单定制</a></p>
 		</div>
 	</div>
 	<script src="./js/zepto.min.js"></script>
