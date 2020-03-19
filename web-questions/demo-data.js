@@ -415,12 +415,7 @@ var questionData = {
                 value: 2,
                 text: '哺乳期',
                 icon: './images/ICON23.png'
-            },
-            {
-                value: 3,
-                text: '都不是',
-                isBottom: true
-            }, // 增加isBottom参数会放在底部作为选项
+            }
         ],
     }, {
         title: '现在是否有以下疾病或症状？',
