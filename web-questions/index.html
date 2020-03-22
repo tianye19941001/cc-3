@@ -13,13 +13,13 @@
 </head>
 
 <body>
-	<header>
+	<!-- <header>
 		<a class="back-icon" href=""><img src="./images/back.png" alt=""></a>
 		<h1>问卷调查</h1>
 		<a class="qus-icon" href=""><img src="./images/qus.png" alt=""></a>
-	</header>
+	</header> -->
 	<div class="main-body">
-		<div data-step="0" class="inner-body" style="display: none;">
+		<div data-step="0" class="inner-body active">
 			<br><br><br>
 			<p class="p1">请您花费3~5分钟时间填写问卷，</p>
 			<p class="p2">对您的膳食营养素摄入情况做评估，</p>
@@ -30,7 +30,7 @@
 			<p class="p2">根据基因检测结果，给您定制营养品。</p>
 			<br><br><br><br>
 			<div class="btns">
-				<a class="btn-1" href=""> <img src="./images/TEST2.png" alt=""> 饮食评估</a>
+				<a class="btn-1 next-normal"> <img src="./images/TEST2.png" alt=""> 饮食评估</a>
 				<a class="btn-2" href=""> <img src="./images/buy1.png" alt=""> 下单定制</a>
 			</div>
 		</div>
@@ -47,58 +47,68 @@
 				<li class="p6">填写问卷大约需要3~5分钟</li>
 			</ul>
 			<br>
-			<div class="btns btns2">
-				<a class="btn-1" href="">开始答题</a>
+			<div class="btns btns2 delay-ans">
+				<a class="btn-1 next-normal">开始答题</a>
 			</div>
 		</div>
 
-		<div data-step="2" class="inner-body" style="display: none;">
+		<div data-step="2" class="inner-body auto-next" style="display: none;">
 			<img class="houzi" src="./images/houzi.png" alt="">
+			<div class="btns" style="display: none;">
+				<a class="btn-1 next-normal">继续</a>
+			</div>
 		</div>
 
-		<div data-step="3" class="inner-body"  style="display: none;">
+		<div data-step="3" class="inner-body needbac"  style="display: none;">
 			<br><br>
 			<p class="p7">姓名</p>
 			<br><br>
 			<p class="p8">该称呼将出现在您的营养建议和产品包装上</p><br >
 			<div class="name-bar">
-				<p class="name">您好，<span><input type="text" /></span></p>
+				<p class="name">您好，<span><input id="name" type="text" /></span></p>
 				<p class="about1">个性化定制健康</p>
 				<p class="about2">您的每日营养素补充配方，不单独销售</p>
 				<p class="about3">包装日期: <span>2020/02/14</span> 请在180日内食用</p>
 			</div>
 			<br >
 			<br >
-			<div class="btns btns2">
-				<a class="btn-1" href="">确定</a>
+			<div class="btns btns2" style="display: none;">
+				<a class="btn-1  next-normal">确定</a>
 			</div>
 		</div>
 
-		<div data-step="4" class="inner-body" style="display: none">
+		<div data-step="4" class="inner-body  auto-next" style="display: none">
 			<br><br>
 			<img class="head-icon" src="./images/ICON1.png" alt=""><br />
-			<p class="p9">您好，姓名</p>
+			<p class="p9">您好，<span id="name-is"></span></p>
 			<p class="p10">您的个性化健康之旅开始了</p><br /><br /><br />
 			<p class="p11">请选择</p><br />
 			<p class="p12">与<span class="p11">您的</span>实际情况<span class="p11">最接近</span>的选项</p>
+			<div class="btns" style="display: none;">
+				<a class="btn-1 next-normal">继续</a>
+			</div>
 		</div>
 
-		<div data-step="5" class="inner-body qus-body">
-			<div class="nav-list" style="display: none;">
-				<span class="active">营养目标<i></i></span>
+		<div data-step="5" class="inner-body qus-body" style="display: none">
+			<div class="nav-list">
+				<span>营养目标<i></i></span>
 				<span>饮食方式<i></i></span>
 				<span>营养状况<i></i></span>
 			</div>
-			<ul class="ques-list-1"></ul>
+			<ul class="ques-list ques-list-1"></ul>
 
-			<ul class="ques-list-2"></ul>
+			<ul class="ques-list ques-list-2"></ul>
 
-			<ul class="ques-list-3"></ul>
+			<ul class="ques-list ques-list-3"></ul>
 
-			<div class="progress">
-				<span> &lt;上一题 </span>
-				<span class="in"><i></i></span>
-				<span>100%</span>
+			<div class="progress" style="display: none;">
+				<span class="prev"> &lt; 上一题 </span>
+				<span class="in"><i></i></span> 
+				<span class="num">100%</span>
+			</div>
+
+			<div class="btns" style="display: none;">
+				<a class="btn-1 next-normal">继续</a>
 			</div>
 		</div>
 
@@ -110,11 +120,30 @@
 			<br><br><br><br><br><br>
 			<p class="p14">现在可以定制专属您的营养品啦</p>
 			<br><br><br><br><br>
-			<p class="btns btns2"><a class="btn-1 h90" id="submit" href=""> <img src="./images/ICON31.png" alt=""> 下单定制</a></p>
+			<p class="btns btns2"><a class="btn-1 h90" id="submit"> <img src="./images/ICON31.png" alt=""> 下单定制</a></p>
 		</div>
 	</div>
 	<script src="./js/zepto.min.js"></script>
 	<script src="./demo-data.js"></script>
 	<script src="./js/app.js"></script>
+	<script>
+		initData(questionData) // 初始化数据的函数调用
+
+		$('#submit').click(function(){
+			var param = getAllData() //获取最终问卷数据
+			console.log(param)
+		})
+
+		function callBackJump(data, jumpName) {
+			// data：本题选择的数据 jumpName：跳转到的题目
+			console.log(data, jumpName)
+			jumpQus(jumpName); // 这个函数会进行跳题可
+		}
+
+		// questionData 选项参数中的
+
+		// 跳题不支持多选题的跳题
+		// 进入题目后可通过 jumpQus(name) 来进行手动跳题
+	</script>
 </body>
 </html>

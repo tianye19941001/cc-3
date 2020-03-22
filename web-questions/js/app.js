@@ -1,4 +1,5 @@
- initData(questionData)
+ var qusLen = 1;
+ var jumpRemember = {}
 
  function initData(data) {
  	var listData_1 = data.list1;
@@ -10,6 +11,22 @@
  	initList(listData_1, wapDom_1)
  	initList(listData_2, wapDom_2)
  	initList(listData_3, wapDom_3)
+
+ 	qusLen = listData_1.length + listData_2.length + listData_3.length;
+ 	$('.progress .num').text(parseInt(100 / qusLen) + '%')
+ 	$('.progress .in i').css({
+ 		width: parseInt(100 / qusLen) + '%'
+ 	})
+ }
+
+ function jumpQus(name, isBack) {
+	var from = $('.ques-list>.active').find('.choose-data-inp').attr('name');
+	if(!isBack) {
+		jumpRemember[name] = from
+	} else {
+		jumpRemember[isBack] = null
+	}
+	gotoQus($('.qus-' + name))
  }
 
  function initList(data, wapDom) {
@@ -37,7 +54,7 @@
  }
 
  function initRadioDom(data, type) {
- 	var liDom = $('<li><input class="choose-data-inp" name="' + data.name + '" type="hidden" /><br /><br /></li>');
+ 	var liDom = $('<li class="qus-' + data.name + '"><input class="choose-data-inp" name="' + data.name + '" type="hidden" /><br /><br /></li>');
  	var imgDom = $('<img class="icon-dom" src="' + data.icon + '" /><br ><br >');
  	var titleDom = $('<h3>' + data.title + '' + (type == 'check' ? (data.title.length > 16 ? '' : '<br>') + '<em class="more">可多选</em>' : '') + '</h3><br ><br ><br >');
 
@@ -64,6 +81,11 @@
  		} else {
  			dom = $('<li data-val="' + item.value + '"><i></i><span>' + item.text + '</span></li>')
  		}
+
+ 		if (item.jump) {
+ 			dom.attr('data-jump', item.jump)
+ 		}
+
  		ulDom.append(dom);
  	})
 
@@ -80,8 +102,177 @@
  	return liDom;
  }
 
+ function getAllData() {
+ 	var param = {
+ 		name: $('#name').val(),
+ 		qus: {}
+ 	}
+
+ 	$('.choose-data-inp').each(function () {
+ 		var inpName = $(this).attr('name');
+ 		var val = $(this).val();
+ 		param.qus[inpName] = val;
+ 	})
+ 	return param
+ }
+
+ function gotoQus(qusDom, domNow, type) {
+ 	if (qusDom.length == 0 && !type) {
+ 		var nextList = domNow.parents('.ques-list').next();
+ 		if (nextList.hasClass('progress')) {
+ 			$('.qus-body .btn-1').trigger('touchend')
+ 		} else {
+ 			domNow.hide().removeClass('active');
+ 			var index = $('.ques-list').index(domNow.parents('.ques-list'));
+ 			$('.progress').hide();
+			 $('.nav-list').show().find('.active').removeClass('active')
+			 $('.nav-list span').eq(index + 1).addClass('active');
+ 			setTimeout(function () {
+ 				$('.nav-list').hide();
+ 				$('.progress').show();
+ 				var dom = nextList.children('li').eq(0)
+ 				dom.show();
+ 				setTimeout(function () {
+ 					dom.addClass('active');
+ 					countProgress()
+ 				}, 10)
+
+ 			}, 1500)
+ 		}
+ 	} else if (qusDom.length == 0 && type == 'prev') {
+ 		var prevList = domNow.parents('.ques-list').prev();
+ 		if (prevList.hasClass('nav-list')) {
+ 			alert('已经是第一题了！')
+ 		} else {
+ 			domNow.hide().removeClass('active');
+			 var index = $('.ques-list').index(domNow.parents('.ques-list'));
+ 			$('.progress').hide();
+			 $('.nav-list').show().find('.active').removeClass('active')
+			 $('.nav-list span').eq(index - 1).addClass('active');
+ 			setTimeout(function () {
+ 				$('.nav-list').hide();
+ 				$('.progress').show();
+ 				var dom = prevList.children('li').eq(prevList.children('li').length - 1)
+ 				dom.show();
+ 				setTimeout(function () {
+ 					dom.addClass('active');
+ 					countProgress()
+ 				}, 10)
+ 			}, 1500)
+ 		}
+ 	} else {
+		var index = $('.ques-list').index(qusDom.parents('.ques-list'));
+		$('.nav-list span').removeClass('active').eq(index).addClass('active');
+ 		$('.ques-list>li').hide().removeClass('active');
+ 		qusDom.show();
+ 		setTimeout(function () {
+ 			qusDom.addClass('active')
+ 			countProgress()
+ 		}, 10)
+ 	}
+ }
+
+ function countProgress() {
+ 	var num;
+ 	$('.ques-list > li').each(function (index) {
+ 		if (!$(this).hasClass('active')) return;
+ 		if (index == ($('.ques-list > li').length - 1)) {
+ 			num = '100%';
+ 		} else {
+ 			num = parseInt((index + 1) / $('.ques-list > li').length * 100) + '%'
+ 		}
+ 	})
+
+ 	$('.progress .num').text(num);
+ 	$('.progress .in i').css({
+ 		width: num
+ 	})
+ }
+
 
  $(document).ready(function () {
+ 	$('.next-normal').on('touchend', function () {
+ 		$(this).parents('.inner-body').removeClass('active').hide().next().show().addClass('active');
+ 		if ($(this).parents('.inner-body').next().hasClass('auto-next')) {
+ 			var dom = $(this).parents('.inner-body').next();
+ 			setTimeout(function () {
+ 				dom.find('.next-normal').trigger('touchend')
+ 			}, 2000)
+		 }
+		 
+		 if ($(this).parents('.inner-body').next().hasClass('needbac')) {
+			 $('.main-body').addClass('bac')
+		 }
+
+ 		if ($(this).parents('.inner-body').next().hasClass('qus-body')) {
+ 			var dom = $(this).parents('.inner-body').next();
+ 			dom.find('.nav-list span').eq(0).addClass('active');
+ 			setTimeout(function () {
+ 				dom.find('.nav-list').hide();
+ 				$('.progress').show();
+ 				$('.ques-list-1>li').eq(0).show().addClass('active');
+ 			}, 1500)
+ 		}
+ 	})
+
+ 	$('.radio-ul li, .single-ul li, .icon-ul li').on('click', function () {
+		 var qusDom = $(this).parents('li');
+		 var value = $(this).data('val');
+ 		qusDom.find('.choose-data-inp').val(value)
+ 		$(this).addClass('active').siblings().removeClass('active')
+
+ 		var jump = $(this).data('jump');
+
+ 		setTimeout(function () {
+ 			if (jump) {
+				var name = qusDom.find('.choose-data-inp').attr('name');
+				if (callBackJump) callBackJump({[name]: value}, jump)
+ 			} else {
+ 				gotoQus(qusDom.next(), qusDom)
+ 			}
+
+ 		}, 300)
+ 	})
+
+ 	$('.check-ul li').on('click', function () {
+ 		var qusDom = $(this).parents('li');
+ 		$(this).toggleClass('active');
+ 		var arr = [];
+ 		$(this).parent().find('li').each(function () {
+ 			if ($(this).hasClass('active')) {
+ 				arr.push($(this).data('val'))
+ 			}
+ 		})
+
+ 		qusDom.find('.btn-1').text(arr.length == 0 ? '无' : '确定')
+ 		qusDom.find('.choose-data-inp').val(arr.join(','))
+	 })
+
+ 	$('.ques-list li .btn-1').on('click', function () {
+ 		var qusDom = $(this).parents('li');
+ 		gotoQus(qusDom.next(), qusDom)
+ 	})
+
+ 	$('.progress .prev').on('click', function () {
+		 var domNow = $('.ques-list>li.active');
+		 var from = domNow.find('.choose-data-inp').attr('name');
+		 if(jumpRemember[from]) {
+			 jumpQus(jumpRemember[from], from)
+			 return
+		 }
+ 		gotoQus(domNow.prev(), domNow, 'prev')
+ 	})
+
+ 	$('#name').on('input', function () {
+ 		var btns = $(this).parents('.inner-body').find('.btns');
+ 		if ($(this).val() == '') {
+ 			btns.hide();
+ 		} else {
+ 			$('#name-is').text($(this).val())
+ 			btns.show();
+ 		}
+ 	})
+
  	// 动画延时函数
  	function adddelay(obj, time) {
  		if (obj.length > 0) {

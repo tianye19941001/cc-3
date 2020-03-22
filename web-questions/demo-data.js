@@ -4,6 +4,7 @@ var questionData = {
         icon: './images/ICON4.png', // 顶部icon url
         type: 1, // type表示多选单选 1：简单单选 2：简单多选 3：两个大圆形按钮单选 5：带小icon单选
         name: 'question1', // 数据提交参数名
+        // desc: '题目介绍文案',
         choose: [ //选项
             {
                 value: 0,
@@ -11,7 +12,8 @@ var questionData = {
             },
             {
                 value: 1,
-                text: '每年会有几次'
+                text: '每年会有几次',
+                jump: 'question7' // 选择此项会跳转到的题目名
             },
             {
                 value: 2,
@@ -19,7 +21,8 @@ var questionData = {
             },
             {
                 value: 3,
-                text: '一两个星期就有一次'
+                text: '一两个星期就有一次',
+                jump: 'question3'
             }
         ]
     }, {

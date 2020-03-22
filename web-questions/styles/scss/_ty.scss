@@ -10,6 +10,16 @@ body {
     color: #333;
 }
 
+.inner-body {
+    opacity: 0;
+    transition: all 1s;
+    height: 0;
+
+    &.active {
+        opacity: 1;
+    }
+}
+
 .p1 {
     font-size: rem(40);
 }
@@ -135,10 +145,13 @@ header {
     box-sizing: border-box;
     padding: 0 rem(60);
     height: auto;
-    background-image: url(../images/HEAD-BG2.png);
     background-size: 100% auto;
     background-repeat: no-repeat;
     min-height: rem(1000);
+
+    &.bac {
+        background-image: url(../images/HEAD-BG2.png);
+    }
 }
 
 .btns {
@@ -232,6 +245,7 @@ header {
         font-size: rem(28);
         padding: rem(73) rem(20) 0;
     }
+
     .about2 {
         font-size: rem(24);
         padding: rem(10) rem(20) 0;
@@ -264,20 +278,23 @@ header {
     box-sizing: border-box;
     padding: 0 rem(30);
     left: 0;
+
     span {
         display: block;
         width: 33.33%;
         font-size: rem(40);
+        transition: all .9s;
     }
 
     i {
         display: block;
-        margin:  0 auto;
+        margin: 0 auto;
         width: rem(26);
         height: rem(26);
         border: rem(3) solid #333;
         border-radius: rem(30);
         margin-top: rem(28);
+        transition: all .9s;
     }
 
     .active {
@@ -285,7 +302,7 @@ header {
         font-weight: bold;
         margin-top: rem(-4);
 
-        i{
+        i {
             width: rem(38);
             height: rem(38);
             border: rem(4) solid #333;
@@ -311,10 +328,23 @@ h3 {
     }
 }
 
-.radio-ul, .icon-ul {
+.ques-list {
+    >li {
+        display: none;
+        opacity: 0;
+        transition: all 1.5s;
+    }
+
+    >li.active {
+        opacity: 1;
+    }
+}
+
+.radio-ul,
+.icon-ul {
     width: rem(480);
     display: block;
-    margin:  0 auto;
+    margin: 0 auto;
 
     li {
         width: rem(480);
@@ -381,7 +411,7 @@ h3 {
 .check-ul {
     width: rem(536);
     display: flex;
-    margin:  0 auto;
+    margin: 0 auto;
     justify-content: space-between;
     flex-wrap: wrap;
 
@@ -430,7 +460,7 @@ h3 {
 .single-ul {
     width: rem(360);
     display: flex;
-    margin:  0 auto;
+    margin: 0 auto;
     justify-content: space-between;
     flex-wrap: wrap;
 
@@ -456,4 +486,59 @@ h3 {
     position: fixed;
     bottom: rem(50);
     text-align: center;
+
+    .in {
+        display: inline-block;
+        height: rem(26);
+        width: rem(480);
+        background-color: #e4e4e4;
+        border-radius: rem(26);
+        overflow: hidden;
+        vertical-align: middle;
+    }
+
+    i {
+        width: 5%;
+        display: block;
+        height: 100%;
+        background-color: #fe8f4f;
+        transition: all .5s;
+    }
+}
+
+.head-ul {
+    li {
+        transition: all 1s;
+        transform: translateX(100%);
+        opacity: 0;
+        &:nth-child(1) {
+            transition-delay: 1s
+        }
+        &:nth-child(2) {
+            transition-delay: 2s
+        }
+        &:nth-child(3) {
+            transition-delay: 3s
+        }
+    }
+}
+
+.delay-ans {
+    transition: all 1s;
+    transform: translateX(100%);
+    opacity: 0;
+    transition-delay: 4s
+}
+
+.active {
+    .head-ul {
+        li {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    .delay-ans {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
