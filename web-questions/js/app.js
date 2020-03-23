@@ -191,7 +191,7 @@
 
 
  $(document).ready(function () {
- 	$('.next-normal').on('touchend', function () {
+ 	$('body').on('touchend', '.next-normal',function () {
  		$(this).parents('.inner-body').removeClass('active').hide().next().show().addClass('active');
  		if ($(this).parents('.inner-body').next().hasClass('auto-next')) {
  			var dom = $(this).parents('.inner-body').next();
@@ -215,7 +215,7 @@
  		}
  	})
 
- 	$('.radio-ul li, .single-ul li, .icon-ul li').on('click', function () {
+ 	$('body').on('click', '.radio-ul li, .single-ul li, .icon-ul li', function () {
 		 var qusDom = $(this).parents('li');
 		 var value = $(this).data('val');
  		qusDom.find('.choose-data-inp').val(value)
@@ -224,17 +224,17 @@
  		var jump = $(this).data('jump');
 
  		setTimeout(function () {
- 			if (jump) {
+ 			// if (jump) {
 				var name = qusDom.find('.choose-data-inp').attr('name');
 				if (callBackJump) callBackJump({[name]: value}, jump)
- 			} else {
- 				gotoQus(qusDom.next(), qusDom)
- 			}
+ 			// } else {
+ 				// gotoQus(qusDom.next(), qusDom)
+ 			// }
 
  		}, 300)
  	})
 
- 	$('.check-ul li').on('click', function () {
+ 	$('body').on('click', '.check-ul li',function () {
  		var qusDom = $(this).parents('li');
  		$(this).toggleClass('active');
  		var arr = [];
@@ -248,12 +248,12 @@
  		qusDom.find('.choose-data-inp').val(arr.join(','))
 	 })
 
- 	$('.ques-list li .btn-1').on('click', function () {
+ 	$('body').on('click', '.ques-list li .btn-1',function () {
  		var qusDom = $(this).parents('li');
  		gotoQus(qusDom.next(), qusDom)
  	})
 
- 	$('.progress .prev').on('click', function () {
+ 	$('body').on('click', '.progress .prev', function () {
 		 var domNow = $('.ques-list>li.active');
 		 var from = domNow.find('.choose-data-inp').attr('name');
 		 if(jumpRemember[from]) {
@@ -317,5 +317,5 @@
 
  	(function init() {
  		animateInit();
- 	})();
+	 })();
  });

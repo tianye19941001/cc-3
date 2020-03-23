@@ -39,7 +39,7 @@
 			<br><br>
 			<p class="p4">PERSONALIZE</p>
 			<p class="p4">YOUR</p>
-			<p class="p4">HEALTH</p><hr /><br>
+			<p class="p4">HEALTH</p><hr /><br>
 			<p class="p5">您的饮食评估问卷</p>
 			<ul class="head-ul">
 				<li class="p6">问卷由OmicsFit<br />注册营养师团队设计<br /> </li>
@@ -59,13 +59,13 @@
 			</div>
 		</div>
 
-		<div data-step="3" class="inner-body needbac"  style="display: none;">
+		<div data-step="3" class="inner-body needbac  auto-next"  style="display: none;">
 			<br><br>
 			<p class="p7">姓名</p>
 			<br><br>
 			<p class="p8">该称呼将出现在您的营养建议和产品包装上</p><br >
 			<div class="name-bar">
-				<p class="name">您好，<span><input id="name" type="text" /></span></p>
+				<p class="name">您好，<br>&emsp;&emsp;<span>韩丽</span></p>
 				<p class="about1">个性化定制健康</p>
 				<p class="about2">您的每日营养素补充配方，不单独销售</p>
 				<p class="about3">包装日期: <span>2020/02/14</span> 请在180日内食用</p>
@@ -137,7 +137,7 @@
 		function callBackJump(data, jumpName) {
 			// data：本题选择的数据 jumpName：跳转到的题目
 			console.log(data, jumpName)
-			jumpQus(jumpName); // 这个函数会进行跳题可
+			// jumpQus(jumpName); // 这个函数会进行跳题可
 		}
 
 		// questionData 选项参数中的
@@ -145,5 +145,6 @@
 		// 跳题不支持多选题的跳题
 		// 进入题目后可通过 jumpQus(name) 来进行手动跳题
 	</script>
+
 </body>
 </html>
