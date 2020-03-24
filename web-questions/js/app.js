@@ -80,7 +80,11 @@
  			dom = $('<li data-val="' + item.value + '"><i></i><span class="img"><img src="' + item.icon + '"/></span><span>' + item.text + '</span></li>')
  		} else {
  			dom = $('<li data-val="' + item.value + '"><i></i><span>' + item.text + '</span></li>')
- 		}
+		 }
+		 
+		 if(type == 'check' && item.text.length > 6) {
+			 dom.css({width: '100%'})
+		 }
 
  		if (item.jump) {
  			dom.attr('data-jump', item.jump)
@@ -203,6 +207,10 @@
 		 if ($(this).parents('.inner-body').next().hasClass('needbac')) {
 			 $('.main-body').addClass('bac')
 		 }
+
+		 if ($(this).parents('.inner-body').next().hasClass('last-page')) {
+			if (callBackLast) callBackLast()
+		}
 
  		if ($(this).parents('.inner-body').next().hasClass('qus-body')) {
  			var dom = $(this).parents('.inner-body').next();

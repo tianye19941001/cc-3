@@ -112,7 +112,7 @@
 			</div>
 		</div>
 
-		<div data-step="6" class="inner-body" style="display: none;">
+		<div data-step="6" class="inner-body last-page" style="display: none;">
 			<br><br>
 			<img class="head-icon" src="./images/ICON1.png" alt="">
 			<br><br>
@@ -138,6 +138,10 @@
 			// data：本题选择的数据 jumpName：跳转到的题目
 			console.log(data, jumpName)
 			// jumpQus(jumpName); // 这个函数会进行跳题可
+		}
+
+		function callBackLast () {
+			alert('结束答题')
 		}
 
 		// questionData 选项参数中的
