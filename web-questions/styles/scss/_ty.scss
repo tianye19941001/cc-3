@@ -602,7 +602,7 @@ h3 {
 
     li {
         width: rem(160);
-        height: rem(160+118);
+        height: rem(160+130);
         font-size: rem(20);
         line-height: rem(25);
         align-self: flex-start;
@@ -617,7 +617,9 @@ h3 {
         p {
             width: 8.4rem;
             margin-left: -0.88rem;
-            white-space: nowrap;
+            line-height: rem(26);
+            max-height: rem(52);
+            word-break: break-all;
         }
 
         &:nth-child(3n-1) {
