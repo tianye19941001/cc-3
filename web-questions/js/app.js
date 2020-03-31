@@ -223,7 +223,7 @@
  		}
  	})
 
- 	$('body').on('click', '.radio-ul li, .single-ul li, .icon-ul li', function () {
+ 	$('body').on('touchend', '.radio-ul li, .single-ul li, .icon-ul li', function () {
 		 var qusDom = $(this).parents('li');
 		 var value = $(this).data('val');
  		qusDom.find('.choose-data-inp').val(value)
@@ -242,7 +242,7 @@
  		}, 300)
  	})
 
- 	$('body').on('click', '.check-ul li',function () {
+ 	$('body').on('touchend', '.check-ul li',function () {
  		var qusDom = $(this).parents('li');
  		$(this).toggleClass('active');
  		var arr = [];
@@ -256,12 +256,12 @@
  		qusDom.find('.choose-data-inp').val(arr.join(','))
 	 })
 
- 	$('body').on('click', '.ques-list li .btn-1',function () {
+ 	$('body').on('touchend', '.ques-list li .btn-1',function () {
  		var qusDom = $(this).parents('li');
  		gotoQus(qusDom.next(), qusDom)
  	})
 
- 	$('body').on('click', '.progress .prev', function () {
+ 	$('body').on('touchend', '.progress .prev', function () {
 		 var domNow = $('.ques-list>li.active');
 		 var from = domNow.find('.choose-data-inp').attr('name');
 		 if(jumpRemember[from]) {

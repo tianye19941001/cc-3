@@ -155,15 +155,20 @@ header {
 }
 
 .btns {
-    width: 100%;
+    width: rem(740);
+    position: relative;
+    left: 50%;
+    margin-left: rem(-370);
     padding-bottom: rem(100);
+    text-align: center;
 
     .btn-1 {
-        float: left;
+        display: inline-block;
     }
 
     .btn-2 {
-        float: right;
+        display: inline-block;
+        margin-left: rem(50);
     }
 }
 
@@ -177,7 +182,7 @@ header {
 
 .btn-1,
 .btn-2 {
-    width: rem(290);
+    width: rem(280);
     height: rem(74);
     line-height: rem(74);
     background-image: linear-gradient(90deg, #fe9f74 0%, #fe873c 100%);
@@ -353,7 +358,7 @@ h3 {
         box-sizing: border-box;
         border-radius: rem(85);
         background-color: #fff;
-        margin-bottom: rem(34);
+        margin-bottom: rem(30);
         padding-left: rem(34);
         font-size: rem(30);
 
@@ -484,7 +489,7 @@ h3 {
 
 .progress {
     position: fixed;
-    bottom: rem(50);
+    bottom: rem(20);
     text-align: center;
 
     .in {
@@ -530,7 +535,7 @@ h3 {
     transition: all 1s;
     transform: translateX(100%);
     opacity: 0;
-    transition-delay: 4s
+    transition-delay: 4s;
 }
 
 .active {
