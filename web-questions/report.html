@@ -12,35 +12,36 @@
     <script src="js/fn.js"></script>
 </head>
 
-<body>
+<body class="bg-gray">
     <div class="report-head">
         <img src="./images/report/headbg.png" alt="">
     </div>
 
     <div class="report-div">
-        <h2 class="report-title">您的免疫力平衡指数</h2>
+        <h2 class="report-title"><span>您的免疫力平衡指数</span></h2>
         <div class="progress-pic">
             <div class="in">
                 <img class="bac" src="./images/report/dataround.png" alt="">
                 <i class="point"></i>
+                <span class="num">78</span>
+                <span class="text">免疫中等</span>
+                <span class="text-2">评估时间：2020.04.01 </span>
             </div>
-            <span class="num">78</span>
-            <span class="text">免疫中等</span>
-            <span class="text">评估时间：2020.04.01 </span>
         </div>
-
-        <p class="p1">您的免疫力综合指数为78，免疫力较强，高于82%的用户。</p>
+        <p class="r-p1">您的免疫力综合指数为78，免疫力较强，高于82%的用户。</p>
     </div>
 
     <div class="report-div">
-        <h2 class="report-title">您的每日营养补充方案</h2>
+        <h2 class="report-title"><span>您的每日营养补充方案</span></h2>
         <div class="card-warp">
+            
             <div class="card-in">
-                <p class="p1">您好，<br/>&emsp;&nbsp;韩梅梅</p>
+                <img src="./images/report/healthpro.png" alt="">
+                <p class="p1">您好，<br />&emsp;&nbsp;韩梅梅</p>
                 <p>包装日期:<span>2020/02/14</span>请在180日内食用</p>
             </div>
-            <div class="table">
-                <h2>营养成分表</h2>
+            <h2>营养成分表</h2>
+            <div class="table-2">
                 <div class="th">
                     <span>营养成分</span>
                     <span>含量/颗</span>
@@ -61,9 +62,9 @@
         </div>
     </div>
 
-    <div class="report-div">
+    <div class="report-div report-div-2">
         <h2 class="report-title">您的核心补充营养素</h2>
-        
+
         <div class="warp-2">
             <div class="head-img">
                 <img src="./images/report/W-A.png" alt="">
@@ -78,7 +79,7 @@
                 <span>低</span>
                 <span>高</span>
             </div>
-            <div class="detial">
+            <div class="r-p1">
                 9.10%的用户和你一样，<br>
                 您对维生素A的需求比一般人群<em>高</em>
             </div>
@@ -216,7 +217,8 @@
         </div>
     </div>
 
-    <div class="report-div">
+    <div class="report-div report-div-2">
+        <h2 class="report-title"><span>您的饮食和生活方式建议</span></h2>
         <div class="warp-2">
             <h4><img src="./images/report/icon-01.png" alt="">饮食评分</h4>
 
@@ -230,7 +232,7 @@
                     <button>正常</button>
                 </div>
             </div>
-            <p class="text">您的饮食综合评分为78分，优于43%用户</p>
+            <p class="r-p1">您的饮食综合评分为78分，优于43%用户</p>
 
             <hr />
 
@@ -262,17 +264,17 @@
             <div class="db-img">
                 <img src="./images/report/pic-01.png" alt="">
             </div>
-                                        
+
             <p class="gn">您对[谷物]过敏，影响您的食物多样性 </p>
             <p class="gn">请多选择富含[B族维生素]的食物或补充剂 </p>
         </div>
 
         <div class="warp-2">
-            <h4><img src="./images/report/icon-10.png" alt="">运动   <span>防劳损</span></h4>
+            <h4><img src="./images/report/icon-10.png" alt="">运动 <span>防劳损</span></h4>
             <div class="db-img">
                 <img src="./images/report/pic-02.png" alt="">
             </div>
-                                        
+
             <p class="gn">您对[谷物]过敏，影响您的食物多样性 </p>
             <p class="gn">请多选择富含[B族维生素]的食物或补充剂 </p>
         </div>
@@ -282,7 +284,7 @@
             <div class="db-img">
                 <img src="./images/report/pic-03.png" alt="">
             </div>
-                                        
+
             <p class="gn">您对[谷物]过敏，影响您的食物多样性 </p>
             <p class="gn">请多选择富含[B族维生素]的食物或补充剂 </p>
         </div>
@@ -297,8 +299,8 @@
             obj: 'canvasThree',
             percent: $('#canvasThree').data('percent') / 100,
             circleBottomColor: "#F0F0F0", //圆环底色
-            innerColorStart: '#FF94AD', //内部圆环 渐变色
-            innerColorEnd: '#FFBAC2',
+            innerColorStart: '#FF9494', //内部圆环 渐变色
+            innerColorEnd: '#FF9494',
             lineW1: 8
         });
     </script>
