@@ -201,7 +201,7 @@
  			var dom = $(this).parents('.inner-body').next();
  			setTimeout(function () {
  				dom.find('.next-normal').trigger('touchend')
- 			}, 2000)
+ 			}, 3000)
 		 }
 		 
 		 if ($(this).parents('.inner-body').next().hasClass('needbac')) {
