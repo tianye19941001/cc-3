@@ -297,7 +297,7 @@ canvas {
     }
 }
 
-.gn {
+.gn p{
     width: rem(554);
     font-size: rem(25);
     color: rgba(64, 64, 64, 1);
@@ -311,7 +311,7 @@ canvas {
         width: rem(10);
         height: rem(10);
         background: rgba(255, 128, 71, 1);
-        border-radius: 50%;
+        border-radius: rem(10);
         position: absolute;
         left: rem(-16);
         top: rem(12);

@@ -326,4 +326,13 @@
  	(function init() {
  		animateInit();
 	 })();
+
+	 if($('.progress-pic .num').length > 0) {
+		var roundData = $('.progress-pic .num').text();
+		var deg = (roundData - 55) * (18 / 4);
+		$('.progress-pic .point').css('transform', 'rotate('+ deg +'deg)')
+	 }
+
+	 $('.move-latter').addClass('active');
+	 
  });

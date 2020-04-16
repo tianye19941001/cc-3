@@ -15,8 +15,16 @@ body {
     transition: all 1s;
     height: 0;
 
+    &:first-child {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        overflow: hidden;
+    }
+
     &.active {
         opacity: 1;
+        height: auto;
     }
 }
 
@@ -107,8 +115,6 @@ hr {
     margin: 0;
     background-color: #333333;
 }
-
-
 
 header {
     height: rem(80);
@@ -543,6 +549,18 @@ h3 {
     transition-delay: 4s;
 }
 
+.move-latter {
+    transition: all 1s;
+    transform: translateX(100%);
+    opacity: 0;
+    transition-delay: 1s;
+
+    &.active {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 .active {
     .head-ul {
         li {
@@ -556,7 +574,7 @@ h3 {
         opacity: 1;
     }
 
-    .delay-ans {
+    .delay-ans  {
         transform: translateX(0);
         opacity: 1;
     }
@@ -864,8 +882,9 @@ h3 {
         border-radius: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
+        background: rgba(255, 148, 148, 1);
         background: linear-gradient(-45deg, rgba(255, 148, 148, 1) 0%, rgba(255, 194, 186, 1) 100%);
-        ;
+        background: -webkit-linear-gradient(-45deg, rgba(255, 148, 148, 1) 0%, rgba(255, 194, 186, 1) 100%);
 
         .num {
             padding-top: rem(24);
