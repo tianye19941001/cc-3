@@ -490,6 +490,7 @@ a:active {
     color: #010101;
     background: -webkit-gradient(linear, right top, left top, from(#ffa57b), to(#ff7f46));
     background: linear-gradient(-90deg, #ffa57b 0%, #ff7f46 100%);
+    font-weight: bold;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
 
@@ -688,7 +689,7 @@ canvas {
   line-height: 1.6rem;
   position: relative;
   margin: 0 auto;
-  margin-bottom: 1.6rem; }
+  margin-bottom: 0.8rem; }
   .gn p::before {
     content: '';
     width: 0.4rem;
@@ -1500,5 +1501,4 @@ h3 {
     display: block;
     margin: 0 auto;
     padding: 0; }
-
 /*# sourceMappingURL=styles.css.map */

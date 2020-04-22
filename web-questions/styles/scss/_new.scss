@@ -31,6 +31,7 @@
         font-size: rem(36);
         color: rgba(1, 1, 1, 1);
         background: linear-gradient(-90deg, rgba(255, 165, 123, 1) 0%, rgba(255, 127, 70, 1) 100%);
+        font-weight: bold;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
@@ -304,7 +305,7 @@ canvas {
     line-height: rem(40);
     position: relative;
     margin: 0 auto;
-    margin-bottom: rem(40);
+    margin-bottom: rem(20);
 
     &::before {
         content: '';
