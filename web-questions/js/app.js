@@ -333,6 +333,10 @@
 		$('.progress-pic .point').css('transform', 'rotate('+ deg +'deg)')
 	 }
 
-	 $('.move-latter').addClass('active');
+	 $('.move-latter').eq(0).addClass('active');
+
+	 setTimeout(function(){
+		$('.move-latter').eq(1).addClass('active');
+	 },1000)
 	 
  });
