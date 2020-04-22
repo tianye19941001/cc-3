@@ -51,7 +51,7 @@ body {
     background-size: 100% 100%;
     font-size: rem(28);
     font-weight: 600;
-    color: rgba(14, 155, 252, 1);
+    color: #fff ;
     line-height: rem(68);
     text-align: center;
     margin: rem(24) auto;
@@ -84,9 +84,9 @@ body {
     height: rem(77);
     text-align: center;
     line-height: rem(77);
-    background: rgba(230, 241, 252, 1);
+    background: #ffad87;
     font-size: rem(30);
-    color: rgba(86, 86, 86, 1);
+    color: #fff;
     border-radius: rem(77);
 }
 
@@ -107,7 +107,7 @@ body {
     li {
         width: rem(606);
         height: rem(126);
-        background: rgba(238, 250, 254, 1);
+        background: #fff6f2;
         box-shadow: 0px rem(4) rem(10) 0px rgba(115, 115, 115, 0.1);
         border-radius: rem(50);
         margin-bottom: rem(50);
@@ -137,7 +137,7 @@ body {
             height: rem(100);
             right: rem(-20);
             top: rem(10);
-            background: linear-gradient(-45deg, rgba(161, 219, 255, 1) 0%, rgba(198, 246, 255, 1) 100%);
+            background: #ffad87;
             box-shadow: 0px 0px rem(10) rem(10) rgba(0, 0, 0, 0.05);
             border-radius: 50%;
 
