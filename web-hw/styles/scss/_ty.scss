@@ -704,15 +704,21 @@ p.sp-2 {
         }
 
         .tip-4 {
-            left: rem(310);
+            left: rem(255);
             right: auto;
-            top: rem(62+24);
+            top: rem(10+24);
             border-radius: rem(25) rem(25) rem(25) 0;
         }
 
         .tip-5 {
-            left: rem(332);
-            top: rem(165+24);
+            left: rem(331);
+            top: rem(114+24);
+            border-radius: rem(25) rem(25) rem(25) 0;
+        }
+
+        .tip-6 {
+            left: rem(311);
+            top: rem(217+24);
             border-radius: rem(25) rem(25) rem(25) 0;
         }
 
