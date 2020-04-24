@@ -517,9 +517,11 @@ body {
     .self-progress {
         float: left;
         height: rem(40);
+        line-height: rem(40);
         background: linear-gradient(90deg, rgba(140, 221, 255, 1) 0%, rgba(113, 200, 255, 1) 100%);
         border-radius: rem(20);
         margin-bottom: rem(5);
+        text-align: center;
     }
 }
 
@@ -629,7 +631,7 @@ p.sp-2 {
         .td {
             display: block;
             float: left;
-            width: 25%;
+            width: 33.33%;
             line-height: rem(40);
             font-size: rem(24);
             color: rgba(0, 0, 0, .64);
@@ -733,6 +735,7 @@ p.sp-2 {
 
     .sport-progress {
         .self-progress {
+            
             background: linear-gradient(90deg, rgba(255, 165, 123, 1) 0%, rgba(255, 139, 123, 1) 100%);
         }
     }
@@ -888,6 +891,11 @@ p.sp-2 {
 .style-red {
     color: #fff !important;
     background: linear-gradient(90deg, rgba(255, 165, 123, 1) 0%, rgba(255, 139, 123, 1) 100%) !important;
+}
+
+.style-yellow {
+    color: #fff !important;
+    background: linear-gradient(90deg, #FFF08C 0%, #FFD572 100%) !important;
 }
 
 // 单独添加表格部分
