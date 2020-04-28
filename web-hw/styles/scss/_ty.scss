@@ -37,7 +37,7 @@ body {
         background-size: 100% 100%;
         background-image: url(../images/icon1-9.png);
         text-align: center;
-        font-style: normal;
+        font-style: normal !important;
         color: #fff;
         line-height: 1.5;
         margin: rem(10) 0;
@@ -605,6 +605,14 @@ p.sp-2 {
 
 .sport-text {
     padding: rem(30) rem(30) 0;
+
+    em, i {
+        font-style: italic;
+    }
+
+    strong {
+        font-weight: bold;
+    }
 }
 
 .sport-table {
