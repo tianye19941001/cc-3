@@ -1685,9 +1685,9 @@ h3 {
     text-align: center;
     color: #f1779c;
     font-size: 0.88rem; }
-    .bottom-list a:first-child {
-      background-color: #ff9267;
-      color: #fff; }
+  .bottom-list .active {
+    background-color: #ff9267;
+    color: #fff; }
   .bottom-list img {
     vertical-align: middle;
     height: 1.6rem;

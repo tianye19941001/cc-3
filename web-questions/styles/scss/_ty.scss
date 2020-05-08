@@ -1160,11 +1160,11 @@ h3 {
         text-align: center;
         color: #f1779c;
         font-size: rem(22);
-        
-        &:first-child {
-            background-color: #ff9267;
-            color: #fff;
-        }
+    }
+
+    .active {
+        background-color: #ff9267;
+        color: #fff;
     }
 
     img {
