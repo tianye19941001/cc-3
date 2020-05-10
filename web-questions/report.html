@@ -34,6 +34,34 @@
     </div>
 
     <div class="report-div">
+        <div class="report-title"><span>您的肥胖因素分布</span> </div>
+        <div class="leida-in">
+            <div class="leida-pic">
+                <div class="in">
+                    <!-- 各项数据注入到这里 -->
+                    <span class="tip-1" data-num="0">战痘修复</span>
+                    <span class="tip-2" data-num="1">能量代谢水平</span>
+                    <span class="tip-3" data-num="2">维生素代谢</span>
+                    <span class="tip-4" data-num="3">维生素代谢</span>
+                    <span class="tip-5" data-num="4">维生素代谢</span>
+                    <span class="tip-6" data-num="5">能量代谢水平</span>
+                    <span class="tip-7" data-num="4">维生素代谢 </span>
+                    <span class="tip-8" data-num="3">能量代谢水平</span>
+                </div>
+            </div>
+            <div class="leida">
+                <canvas id="leida" height="450" width="450"></canvas>
+            </div>
+        </div>
+
+        <ul class="tag-list">
+            <li>标签1，本包装为基于个性化城需求定制的营养补充产品，不适合其他人食用。</li>
+            <li>标签1，本包装为基于个性化城需求定制的营养补充产品，不适合其他人食用。</li>
+            <li>标签1，本包装为基于个性化城需求定制的营养补充产品，不适合其他人食用。</li>
+        </ul>
+    </div>
+
+    <div class="report-div">
         <div class="report-title"><span>维生素</span> </div>
         <ul class="sport-show">
             <li>
@@ -442,12 +470,13 @@
     </div>
 
     <div class="bottom-list">
-        <a href=""><img src="./images/TEST2.png" alt="" />基因结果</a>
+        <a class="active" href=""><img src="./images/TEST2.png" alt="" />基因结果</a>
         <a href=""><img src="./images/TEST2.png" alt="" />营养方案</a>
     </div>
 
     <script src="./js/zepto.min.js"></script>
     <script type="text/javascript" src="js/zcircleMove.js"></script>
+    <script type="text/javascript" src="js/Chart.js"></script>
     <script src="js/app.js"></script>
     <script>
         // 综合评分最大的圆圈
@@ -459,6 +488,43 @@
             innerColorEnd: '#FF9494',
             lineW1: 8
         });
+
+        var dataList = [];
+        $('.leida-pic span').each(function () {
+            var data = $(this).data('num') * 20;
+            dataList.push(data);
+        })
+
+        var radarChartData = {
+            labels: ["", "", "", "", "", "", "", ""],
+            datasets: [{
+                label: "beauty",
+                fillColor: "rgba(253,190,175,.7)",
+                strokeColor: "#fcafa3",
+                pointColor: "rgba(0,0,0,0)",
+                pointStrokeColor: "rgba(0,0,0,0)",
+                pointHighlightFill: "rgba(0,0,0,0)",
+                pointHighlightStroke: "rgba(0,0,0,0)",
+                data: dataList,
+                scaleShowLine: false
+            },{
+                label: "beauty2",
+                fillColor: "rgba(255,141,158,0)",
+                strokeColor: "rgba(255,141,139,0)",
+                pointColor: "rgba(255,141,139,0)",
+                pointStrokeColor: "rgba(255,141,139,0)",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(220,220,220,0)",
+                data: [100,100,100,100,100,100, 100, 100],
+                scaleShowLine: false
+            }]
+        };
+
+        window.onload = function () {
+            window.myRadar = new Chart(document.getElementById("leida").getContext("2d")).Radar(radarChartData, {
+                responsive: true
+            });
+        }
     </script>
 </body>
 
