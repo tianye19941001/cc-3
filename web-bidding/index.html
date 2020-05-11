@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<title>Document</title>
+	<link rel="stylesheet" href="styles/styles.css">
+	<script src="js/fn.js"></script>
+</head>
+
+<body>
+	<div class="bidding-code">
+		<img src="./images/prod2.png" alt="">
+		<p>样本编号位于采集上</p>
+		<span id="get-code">
+			请扫入样本编号 <i></i>
+		</span>
+	</div>
+
+	<form action="">
+		<div class="choose-list">
+			<p>
+				<span>姓名</span>
+				<span><input type="text" placeholder="请输入检测者姓名"></span>
+			</p>
+			<p>
+				<span>性别</span>
+				<span>
+					<label for="">
+						<input type="radio"> 男
+					</label>
+					<label for="">
+						<input type="radio"> 女
+					</label>
+				</span>
+			</p>
+			<p>
+				<span>生日</span>
+				<span>选择出生日期 <i></i></span>
+			</p>
+			<p>
+				<span>民族</span>
+				<span>选择民族 <i></i></span>
+			</p>
+			<p>
+				<span>身高</span>
+				<span><input type="text" placeholder="请输入身高"> cm</span>
+			</p>
+			<p>
+				<span>体重</span>
+				<span><input type="text" placeholder="请输入体重"> kg</span>
+			</p>
+			<p>
+				<span>出生地</span>
+				<span><input type="text" placeholder="如：北京"></span>
+			</p>
+		</div>
+
+		<p class="book"><input type="checkbox"> 我已阅读并同意 <a href="">“知情同意书”</a></p>
+		<p><a class="btn next" href="">下一步</a></p>
+	</form>
+
+	
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/app.js"></script>
+</body>
+
+</html>
