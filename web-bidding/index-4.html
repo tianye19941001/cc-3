@@ -8,43 +8,71 @@
 	<meta name="format-detection" content="address=no">
 	<title>Document</title>
 	<link rel="stylesheet" href="styles/styles.css">
+	<link rel="stylesheet" href="styles/mobileSelect.css">
+	<link rel="stylesheet" href="styles/mobiletime.css">
 	<script src="js/fn.js"></script>
 </head>
 
 <body>
-	<div class="choose-data">
-		<h2><img src="" alt="">提示：本产品适用于成年人，请重新选择你的出生日期：</h2>
+	<div class="choose-data time-data">
+		<h2><img src="./images/icon1.png" alt="">提示：本产品适用于成年人，请重新选择你的出生日期：</h2>
 		<div class="select">
-			<span>选择出生日期 <i></i></span>
+			<span id="choose-date">选择出生日期 <i></i></span>
 		</div>
 	</div>
 
 	<div class="choose-data">
-		<h2><img src="" alt="">选择产品：</h2>
+		<h2><img src="./images/icon3.png" alt="">选择产品：</h2>
 		<div class="select">
-			<span>选择检测产品 <i></i></span>
+			<span id="choose-product">选择检测产品</span>
 		</div>
 	</div>
 
 	<div class="choose-data">
-		<h2><img src="" alt="">用户：</h2>
-		<p class="p1 active"><img src="" alt="">李小飞</p>
+		<h2><img src="./images/icon2.png" alt="">用户：</h2>
+		<p class="p1 active"><img src="./images/icon5.png" alt="">李小飞</p>
 	</div>
 
 	<div class="choose-data">
-		<h2><img src="" alt="">绑定营养卡：<i></i></h2>
+		<h2><img src="./images/icon1.png" alt="">绑定营养卡：<i></i></h2>
 		<p class="p2">刮卡卡片涂层，扫一扫二维码</p>
+		<div class="saocode">
+			<span>请扫入卡号</span>
+		</div>
 	</div>
 
 	<div class="choose-data">
-		<h2><img src="" alt="">营养包收货地址：<i></i></h2>
-		<a class="add-location" href=""><i></i>请新建收货地址</a>
+		<h2><img src="./images/icon4.png" alt="">营养包收货地址：<i></i></h2>
+		<a class="add-location" href=""><img src="./images/tianjia.png" alt=""> 请新建收货地址</a>
 	</div>
 
 	<a class="btn" href="">绑定完成</a>
 	
 	<script src="./js/jquery.min.js"></script>
 	<script src="./js/app.js"></script>
+	<script src="./js/mobileSelect.min.js"></script>
+	<script src="./js/mobiletime.js"></script>
+	<script>
+		var mobileSelect1 = new MobileSelect({
+			trigger: '#choose-product',
+			title: '选择产品',
+			wheels: [{
+				data: ["产品1","产品2","产品3","产品4"]
+			}],
+			callback: function (indexArr, data) {
+				console.log(data); //Returns the selected json data
+			},
+			position: [0] //Initialize positioning
+		});
+
+		new moTimeCJJ({
+			domId: "choose-date",
+			minTime: "2010-10-22 23:22:11",
+			maxTime: "2030-10-22 23:22:11",
+			value: "2019-11-22",
+			type: "YMD" // ["YMDHMS","YMD","HMS"]
+		})
+	</script>
 </body>
 
 </html>

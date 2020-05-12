@@ -8,35 +8,40 @@
 	<meta name="format-detection" content="address=no">
 	<title>Document</title>
 	<link rel="stylesheet" href="styles/styles.css">
+	<link rel="stylesheet" href="styles/mobileSelect.css">
+	<link rel="stylesheet" href="styles/mobiletime.css">
 	<script src="js/fn.js"></script>
 </head>
 
 <body>
 
 	<div class="choose-data">
-		<h2><img src="" alt="">绑定营养卡：<i></i></h2>
+		<h2><img src="./images/icon1.png" alt="">绑定营养卡：<i></i></h2>
 		<p class="p2">刮卡卡片涂层，扫一扫二维码</p>
-	</div>
-
-	<div class="choose-data">
-		<h2><img src="" alt="">用户：</h2>
-		<div class="select">
-			<span>张小欧 <i></i></span>
+		<div class="saocode">
+			<span>请扫入卡号</span>
 		</div>
 	</div>
 
 	<div class="choose-data">
-		<h2><img src="" alt="">选择产品：</h2>
+		<h2><img src="./images/icon2.png" alt="">用户：</h2>
 		<div class="select">
-			<span>选择检测产品 <i></i></span>
+			<span id="choose-person">张小欧</span>
 		</div>
 	</div>
 
 	<div class="choose-data">
-		<h2><img src="" alt="">营养包收货地址：<i></i></h2>
+		<h2><img src="./images/icon3.png" alt="">选择产品：</h2>
+		<div class="select">
+			<span id="choose-product">选择检测产品</span>
+		</div>
+	</div>
+
+	<div class="choose-data">
+		<h2><img src="./images/icon4.png" alt="">营养包收货地址：<i></i></h2>
 		<div class="location">
 			<p class="name"><span>张晓鸥</span><span>13345322345</span></p>
-			<p>
+			<p class="more">
 				<em class="default">默认</em>
 				<em class="home">家</em>
 				<span>北京市海淀区居山路77号大院内</span>
@@ -50,6 +55,33 @@
 	
 	<script src="./js/jquery.min.js"></script>
 	<script src="./js/app.js"></script>
+	<script src="./js/mobileSelect.min.js"></script>
+	<script src="./js/mobiletime.js"></script>
+	<script>
+		var mobileSelect1 = new MobileSelect({
+			trigger: '#choose-person',
+			title: '选择用户',
+			wheels: [{
+				data: ["老张","老李","laowang","嘿嘿"]
+			}],
+			callback: function (indexArr, data) {
+				console.log(data); //Returns the selected json data
+			},
+			position: [0] //Initialize positioning
+		});
+
+		var mobileSelect1 = new MobileSelect({
+			trigger: '#choose-product',
+			title: '选择产品',
+			wheels: [{
+				data: ["产品1","产品2","产品3","产品4"]
+			}],
+			callback: function (indexArr, data) {
+				console.log(data); //Returns the selected json data
+			},
+			position: [0] //Initialize positioning
+		});
+	</script>
 </body>
 
 </html>

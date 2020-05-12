@@ -1,0 +1,122 @@
+.clearBoth {
+  clear: both;
+}
+
+.screenTimeBox {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  width: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+.screenTimeBody {
+  position: absolute;
+  bottom: 0rem;
+  width: 98%;
+  left: 1%;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+  min-height: 2rem;
+  background: white;
+}
+
+.screenTimeBody p {
+  text-align: center;
+  font-size: 1.43rem;
+  color: #333;
+  margin: .5rem 0;
+}
+
+.timeScroll {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.dwwo {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#ffffff 0%, rgba(245, 245, 245, 0) 52%, rgba(245, 245, 245, 0) 48%, #ffffff 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), color-stop(0.52, rgba(245, 245, 245, 0)), color-stop(0.48, rgba(245, 245, 245, 0)), to(#ffffff));
+  background: -moz-linear-gradient(#ffffff 0%, rgba(245, 245, 245, 0) 52%, rgba(245, 245, 245, 0) 48%, #ffffff 100%);
+  background: -o-linear-gradient(#ffffff 0%, rgba(245, 245, 245, 0) 52%, rgba(245, 245, 245, 0) 48%, #ffffff 100%);
+}
+
+.timeMean {
+  width: 100%;
+
+}
+
+.timeMean h6 {
+  float: left;
+  line-height: 2rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 1.375rem;
+}
+
+.timeScroll .ulBox {
+  position: relative;
+  float: left;
+  z-index: 10;
+  /*  background: #444;*/
+  /*  background: linear-gradient(#000 0%,#444 45%, #444 55%, #000 100%);
+    background: -webkit-gradient(linear,left bottom,left top,from(#000),color-stop(0.45, #444),color-stop(0.55, #444),to(#000));
+    background: -moz-linear-gradient(#000 0%,#444 45%, #444 55%, #000 100%);
+    background: -o-linear-gradient(#000 0%,#444 45%, #444 55%, #000 100%);*/
+}
+
+.ulBox ul {
+  position: relative;
+  z-index: 2;
+}
+
+.timeScroll .ulBox li {
+  width: 100%;
+  line-height: 2rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #373737;
+}
+
+.timeScrollBoutton {
+  width: 100%;
+  border-top: 1px solid #eee;
+  margin-top: 0.2rem;
+}
+
+.timeScrollBoutton button {
+  width: 50%;
+  line-height: 2.3rem;
+  font-size: 1.375rem;
+  color: #333;
+  background: white;
+  box-sizing: border-box;
+  border: 0;
+}
+
+.timeScrollBoutton button:nth-child(2) {
+  border-left: 1px solid #bcbcbc;
+  border-right: 1px solid #bcbcbc;
+  display: none;
+}
+
+.lookTimeLine {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+}
