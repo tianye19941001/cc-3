@@ -765,4 +765,50 @@ input[type=radio]:checked {
   top: .5rem;
   transform: translateY(0); }
 
+.dialog-2 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); }
+  .dialog-2 .dialog-in {
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    width: 22.48rem;
+    height: 25.84rem;
+    margin-left: -11.24rem;
+    background-image: url(../images/putup-bg1.png);
+    background-size: 100% 100%; }
+  .dialog-2 .p1 {
+    padding: 2rem 0 0 0.8rem;
+    font-size: 1.92rem;
+    font-weight: bold;
+    color: white; }
+    .dialog-2 .p1 img {
+      width: 3.08rem;
+      vertical-align: middle; }
+  .dialog-2 .p3 {
+    width: 17.2rem;
+    font-size: 1.4rem;
+    color: #2f2f2f;
+    line-height: 2.2rem;
+    margin: 6rem auto 2.4rem;
+    text-indent: 2.8rem; }
+  .dialog-2 .p4 {
+    display: block;
+    font-size: 1.2rem;
+    color: #2f2f2f;
+    text-align: center;
+    margin-bottom: 1.2rem; }
+  .dialog-2 .btn {
+    width: 15.08rem;
+    font-size: 1.4rem;
+    border-radius: 3.44rem; }
+  .dialog-2 .close img {
+    position: absolute;
+    width: 2.08rem;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -4rem; }
+
 /*# sourceMappingURL=styles.css.map */

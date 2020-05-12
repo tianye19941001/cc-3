@@ -405,7 +405,7 @@ input[type=radio]:checked {
 .add-location {
     padding: rem(50) 0 0 rem(50);
     display: block;
-    color:rgba(93,92,92,1);
+    color: rgba(93, 92, 92, 1);
 
     img {
         width: rem(23);
@@ -417,4 +417,67 @@ input[type=radio]:checked {
 .choose-data.time-data h2 img {
     top: .5rem;
     transform: translateY(0);
+}
+
+.dialog-2 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+
+    .dialog-in {
+        position: absolute;
+        top: rem(100);
+        left: 50%;
+        width: rem(562);
+        height: rem(646);
+        margin-left: rem(-281);
+        background-image: url(../images/putup-bg1.png);
+        background-size: 100% 100%;
+    }
+
+    .p1 {
+        padding: rem(50) 0 0 rem(20);
+        font-size: rem(48);
+        font-weight: bold;
+        color: rgba(255, 255, 255, 1);
+
+        img {
+            width: rem(77);
+            vertical-align: middle;
+        }
+    }
+
+    .p3 {
+        width: rem(430);
+        font-size: rem(35);
+        color: rgba(47, 47, 47, 1);
+        line-height: rem(55);
+        margin: rem(150) auto rem(60);
+        text-indent: rem(70);
+    }
+
+    .p4 {
+        display: block;
+        font-size: rem(30);
+        color: rgba(47, 47, 47, 1);
+        text-align: center;
+        margin-bottom: rem(30);
+    }
+
+    .btn {
+        width: rem(377);
+        font-size: rem(35);
+        border-radius: rem(86);
+    }
+
+    .close {
+        img {
+            position: absolute;
+            width: rem(52);
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: rem(-100);
+        }
+    }
 }
