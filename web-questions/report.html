@@ -37,7 +37,7 @@
         <div class="report-title"><span>您的肥胖因素分布</span> </div>
         <div class="leida-in">
             <div class="leida-pic">
-                <div class="in">
+                <div class="in" data-max="5">
                     <!-- 各项数据注入到这里 -->
                     <span class="tip-1" data-num="0">战痘修复</span>
                     <span class="tip-2" data-num="1">能量代谢水平</span>
@@ -490,8 +490,9 @@
         });
 
         var dataList = [];
+        var dataMax = $('.leida-pic .in').data('max');
         $('.leida-pic span').each(function () {
-            var data = $(this).data('num') * 20;
+            var data = $(this).data('num') * (100 / dataMax);
             dataList.push(data);
         })
 
