@@ -347,7 +347,9 @@ header {
 
         &:nth-child(5) {
             left: auto;
-            right: rem(340);
+            right: rem(370);
+            -webkit-transform: translateX(0);
+    transform: translateX(0);
         }
     }
 }
