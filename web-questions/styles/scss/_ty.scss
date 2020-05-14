@@ -256,7 +256,8 @@ header {
         font-size: rem(20);
         padding: 0 rem(18);
         height: rem(50);
-        line-height: rem(50);
+        line-height: 1rem;
+        padding: 0.5rem;
         text-align: center;
 
         &:nth-child(1) {
@@ -314,6 +315,7 @@ header {
 
 .leida-in-my .leida-pic {
     .in>span {
+        padding-top: 0;
         line-height: rem(30);
 
         &:nth-child(1) {
