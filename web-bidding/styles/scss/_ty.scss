@@ -46,6 +46,10 @@ body {
             top: rem(19);
             right: rem(20);
         }
+
+        input {
+            outline: none;
+        }
     }
 }
 
@@ -168,6 +172,10 @@ input[type=radio]:checked {
     border-radius: rem(10);
     font-size: rem(42);
     display: block;
+
+    &.disabled {
+        background-color: #aaa;
+    }
 }
 
 
@@ -253,6 +261,16 @@ input[type=radio]:checked {
             left: rem(6);
             transform: translateY(-50%);
         }
+
+        i {
+            width: rem(29);
+            height: rem(29);
+            float: right;
+            margin-right: rem(70);
+            margin-top: rem(6);
+            background-size: 100% 100%;
+            background-image: url(../images/tishi.png);
+        }
     }
 
     .select {
@@ -322,6 +340,10 @@ input[type=radio]:checked {
         padding-left: rem(24);
         position: relative;
         margin: rem(30) 0 0 rem(50);
+
+        input {
+            outline: none;
+        }
 
         &:after {
             position: absolute;
@@ -469,6 +491,41 @@ input[type=radio]:checked {
         width: rem(377);
         font-size: rem(35);
         border-radius: rem(86);
+    }
+
+    .close {
+        img {
+            position: absolute;
+            width: rem(52);
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: rem(-100);
+        }
+    }
+}
+
+.dialog-3 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 9;
+
+    h2 {
+        font-size: rem(36);
+        text-align: center;
+        padding: rem(18) 0;
+    }
+
+    .dialog-in {
+        position: absolute;
+        width: rem(580);
+        padding: rem(40);
+        background-color: #fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: rem(10);
     }
 
     .close {

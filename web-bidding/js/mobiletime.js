@@ -97,7 +97,7 @@
             }
         },
 		dataShow:function () {
-		   var _this = this;
+           var _this = this;
             _this.random = Math.random();
             var screenTimeBox  =  document.createElement("div");
             var str =  '<div id="screenTimeBody'+ _this.random +'" class="screenTimeBody">' +
@@ -146,6 +146,7 @@
                     screenTimeBox.getElementsByClassName("screenTimeBodyP")[0].innerHTML =  _this.getTimeValue();
                 },200);
             }
+
             screenTimeBox.getElementsByTagName("button")[2].onclick = function () {
                _this.removeDom();
             }
@@ -168,9 +169,11 @@
             },2)
         },
 		getTypeUl :function (_dom) {
-		   var _this = this;
+           var _this = this;
+           
 		   var dom = _dom.getElementsByClassName("timeScroll")[0];
-		   var dom2 = _dom.getElementsByClassName("timeMean")[0];
+           var dom2 = _dom.getElementsByClassName("timeMean")[0];
+           
             _this.getDay();
 		   var str = "";
 		   var str2 = "";
@@ -523,7 +526,10 @@
              var date = new Date(_this.time.year,_this.time.mon,0);
              var List = [];
              _this.dateList = [],_this.yearList = [],_this.monList = [],_this.hourList = [],_this.minList = [],_this.secList = [];
-             for(var i = _this.time.year - 25; i < _this.time.year + 25;i++){
+
+             var minY = _this.array.minTime.slice(0, 4)
+             var maxY = _this.array.maxTime.slice(0, 4)
+             for(var i = minY; i < maxY;i++){
                  _this.yearList.push(i+1);
              }
              List.push(_this.yearList);
@@ -671,7 +677,10 @@
 		 setValue:function () {
 			var _this = this;
 			var dom = document.getElementById(_this.array.domId);
-			var str = _this.getTimeValue();
+            var str = _this.getTimeValue();
+            if(_this.array.callback) {
+                _this.array.callback(str)
+            }
 			dom.innerHTML = str;
          },
 		getTimeValue:function () {

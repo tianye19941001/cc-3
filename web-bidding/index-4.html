@@ -37,12 +37,12 @@
 		<h2><img src="./images/icon1.png" alt="">绑定营养卡：<i></i></h2>
 		<p class="p2">刮卡卡片涂层，扫一扫二维码</p>
 		<div class="saocode">
-			<span>请扫入卡号</span>
+			<input type="text" placeholder="请输入卡号">
 		</div>
 	</div>
 
 	<div class="choose-data">
-		<h2><img src="./images/icon4.png" alt="">营养包收货地址：<i></i></h2>
+		<h2><img src="./images/icon4.png" alt="">营养包收货地址：</h2>
 		<a class="add-location" href=""><img src="./images/tianjia.png" alt=""> 请新建收货地址</a>
 	</div>
 
@@ -67,9 +67,12 @@
 
 		new moTimeCJJ({
 			domId: "choose-date",
-			minTime: "2010-10-22 23:22:11",
-			maxTime: "2030-10-22 23:22:11",
+			minTime: "1910-10-22 23:22:11",
+			maxTime: "2020-10-22 23:22:11",
 			value: "2019-11-22",
+			callback: function(data){
+				console.log(data)
+			},
 			type: "YMD" // ["YMDHMS","YMD","HMS"]
 		})
 	</script>
