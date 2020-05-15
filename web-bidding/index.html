@@ -19,7 +19,8 @@
 		<img src="./images/prod2.png" alt="">
 		<p>样本编号位于采集上</p>
 		<span id="get-code">
-			请扫入样本编号 <img src="./images/scan.png" alt="">
+			<input type="text" placeholder="请扫入样本编号">
+			<img src="./images/scan.png" alt="">
 		</span>
 	</div>
 
@@ -64,6 +65,7 @@
 
 		<p class="book"><input type="checkbox"> 我已阅读并同意 <a href="">“知情同意书”</a></p>
 		<p><a class="btn next" href="">下一步</a></p>
+		<p><a class="btn next disabled" href="">灰色按钮</a></p>
 	</form>
 
 
@@ -91,7 +93,7 @@
 
 		new moTimeCJJ({
 			domId: "choose-date",
-			minTime: "2010-10-22 23:22:11",
+			minTime: "1910-10-22 23:22:11",
 			maxTime: "2030-10-22 23:22:11",
 			value: "2019-11-22",
 			type: "YMD" // ["YMDHMS","YMD","HMS"]
