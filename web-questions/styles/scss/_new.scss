@@ -28,6 +28,12 @@
     }
 }
 
+.detial-3 .report-div {
+    &:nth-child(2) {
+        margin-top: 0;
+    }
+}
+
 .report-title {
     height: rem(72);
     line-height: rem(72);

@@ -57,7 +57,11 @@
 			trigger: '#choose-product',
 			title: '选择产品',
 			wheels: [{
-				data: ["产品1","产品2","产品3","产品4"]
+				data: [
+					{id: 1, value: '1231'},
+					{id: 2, value: '12312121'},
+					{id: 3, value: '2121'},
+				]
 			}],
 			callback: function (indexArr, data) {
 				console.log(data); //Returns the selected json data

@@ -1203,11 +1203,16 @@ h3 {
 
     .btns {
         padding-top: rem(30);
+        height: 2.96rem;
+
         .btn-3 {
+            margin-right: 0;
+            float: left;
             background:linear-gradient(-90deg,rgba(139,139,139,1),rgba(107,107,107,1));
         }
 
         .btn-1 {
+            float: right;
             background:linear-gradient(90deg,rgba(254,135,60,1) 0%,rgba(254,159,116,1) 100%);
         }
     }
