@@ -49,6 +49,7 @@ body {
 
         input {
             outline: none;
+            border: 0;
         }
     }
 }
@@ -91,8 +92,10 @@ body {
     }
 
     .select {
-        color: #ABABAB;
-
+        // color: #ABABAB;
+        em {
+            color: #ABABAB;
+        }
         &:after {
             content: '';
             display: inline-block;
@@ -281,10 +284,14 @@ input[type=radio]:checked {
         background: rgba(255, 255, 255, 1);
         border: 1px solid rgba(171, 171, 171, 1);
         font-size: rem(30);
-        color: #ABABAB;
+       
         padding-left: rem(24);
         position: relative;
         margin: rem(30) 0 0 rem(50);
+
+        em {
+            color: #ABABAB;
+        }
 
         span {
             display: block;
@@ -343,6 +350,7 @@ input[type=radio]:checked {
 
         input {
             outline: none;
+            border: 0;
         }
 
         &:after {

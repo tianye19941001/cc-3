@@ -17,14 +17,14 @@
 	<div class="choose-data time-data">
 		<h2><img src="./images/icon7.png" alt="">提示：本产品适用于成年人，请重新选择你的出生日期：</h2>
 		<div class="select">
-			<span id="choose-date">选择出生日期 <i></i></span>
+			<span id="choose-date"> <em>选择出生日期 <i></i></em></span>
 		</div>
 	</div>
 
 	<div class="choose-data">
 		<h2><img src="./images/icon3.png" alt="">选择产品：</h2>
 		<div class="select">
-			<span id="choose-product">选择检测产品</span>
+			<span id="choose-product"><em>选择检测产品</em></span>
 		</div>
 	</div>
 
@@ -58,15 +58,15 @@
 			title: '选择产品',
 			wheels: [{
 				data: [
-					{id: 1, value: '1231'},
-					{id: 2, value: '12312121'},
-					{id: 3, value: '2121'},
+					{id: 1, value: '1'},
+					{id: 2, value: '12'},
+					{id: 3, value: '123'},
 				]
 			}],
 			callback: function (indexArr, data) {
 				console.log(data); //Returns the selected json data
 			},
-			position: [0] //Initialize positioning
+			// position: [2] //Initialize positioning
 		});
 
 		new moTimeCJJ({
