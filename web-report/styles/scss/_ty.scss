@@ -27,17 +27,17 @@ body {
     }
 
     .header-title {
-        width: rem(1084);
-        height: rem(229);
+        width: rem(960);
+        height: rem(200);
         background-image: url(../images/banner.png);
         background-size: 100% 100%;
         text-align: center;
         font-size: rem(76);
         font-weight: bold;
         color: rgba(255, 255, 255, 1);
-        line-height: rem(229);
+        line-height: rem(200);
         display: block;
-        margin-left: rem(20);
+        margin: 0 auto;
 
         img {
             vertical-align: rem(-6);
@@ -49,7 +49,7 @@ body {
 
 .report-list-1 {
     background: #fff;
-    width: rem(1075);
+    width: 95%;
     margin: 0 auto;
     box-shadow: 0px rem(6) rem(15) 0px rgba(115, 115, 115, 0.1);
     border-radius: rem(20);
@@ -59,8 +59,8 @@ body {
     }
 
     li {
-        width: rem(958);
-        height: rem(258);
+        width: rem(900);
+        height: rem(238);
         border-radius: 30px;
         margin: 0 auto rem(128);
         background-size: 100% 100%;
@@ -77,22 +77,22 @@ body {
         .r {
             width: rem(213+473);
             height: 100%;
-            line-height: rem(258);
+            line-height: rem(238);
             position: absolute;
             right: 0;
             bottom: 0;
-            font-size: rem(40);
+            font-size: rem(34);
             color: rgba(255, 255, 255, 1);
 
             strong {
-                font-size: rem(72);
+                font-size: rem(66);
                 font-weight: bold;
                 margin-right: rem(20);
             }
 
             img {
                 float: right;
-                margin: rem(102) rem(89) 0 0;
+                margin: rem(92) rem(66) 0 0;
                 width: rem(37);
             }
         }
@@ -116,7 +116,7 @@ body {
         .l {
             img {
                 width: rem(162);
-                top: rem(57);
+                top: rem(37);
                 left: rem(21);
             }
         }
@@ -128,7 +128,7 @@ body {
         .l {
             img {
                 width: rem(158);
-                top: rem(56);
+                top: rem(45);
                 left: rem(27);
             }
         }
