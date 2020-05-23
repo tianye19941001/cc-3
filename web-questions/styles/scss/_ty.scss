@@ -1580,7 +1580,7 @@ h3 {
 }
 
 .bottom-list-my {
-    position: fixed;
+    position: sticky;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -1588,7 +1588,7 @@ h3 {
     line-height: rem(107);
     overflow: hidden;
     background-color: #eef1f0;
-    z-index: 3;
+    z-index: 9;
     border-top: 1px solid rgba(0, 0, 0, .1);
 
     a {
