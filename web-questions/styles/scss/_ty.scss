@@ -1546,7 +1546,7 @@ h3 {
 }
 
 .bottom-list {
-    position: fixed;
+    position: sticky;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -1585,7 +1585,6 @@ h3 {
     left: 0;
     width: 100%;
     height: rem(107);
-    line-height: rem(107);
     overflow: hidden;
     background-color: #eef1f0;
     z-index: 9;
@@ -1597,13 +1596,14 @@ h3 {
         height: 100%;
         text-align: center;
         color: #333;
-        font-size: rem(38);
+        font-size: rem(28);
         box-sizing: border-box;
 
         i {
-            display: inline-block;
+            display: block;
             width: rem(40);
             height: rem(40);
+            margin: rem(20) auto 0;
             vertical-align: middle;
             background-size: 100% 100%;
             background-image: url(../images/icon-1.png);
@@ -1614,11 +1614,11 @@ h3 {
         }
 
         &:last-child i {
-            background-image: url(../images/icon-3.png);
+            background-image: url(../images/my/icon-3.png);
         }
 
         &:last-child.active i {
-            background-image: url(../images/icon-4.png);
+            background-image: url(../images/my/icon-4.png);
         }
     }
 

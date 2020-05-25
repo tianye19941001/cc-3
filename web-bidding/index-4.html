@@ -51,7 +51,7 @@
 	<script src="./js/jquery.min.js"></script>
 	<script src="./js/app.js"></script>
 	<script src="./js/mobileSelect.min.js"></script>
-	<script src="./js/mobiletime.js"></script>
+	<script src="./js/rolldate.js"></script>
 	<script>
 		var mobileSelect1 = new MobileSelect({
 			trigger: '#choose-product',
@@ -69,15 +69,15 @@
 			// position: [2] //Initialize positioning
 		});
 
-		new moTimeCJJ({
-			domId: "choose-date",
-			minTime: "1910-10-22 23:22:11",
-			maxTime: "2020-10-22 23:22:11",
-			value: "2019-11-22",
-			callback: function(data){
+		new Rolldate({
+			el: '#choose-date',
+			format: 'YYYY-MM-DD',
+			beginYear: 2000,
+			endYear: 2100,
+			// value: '2018-03-18', //默认值
+			confirm: function(data){ //回调函数
 				console.log(data)
-			},
-			type: "YMD" // ["YMDHMS","YMD","HMS"]
+			}
 		})
 	</script>
 </body>
