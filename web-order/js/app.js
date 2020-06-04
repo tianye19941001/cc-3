@@ -1,6 +1,7 @@
  $(document).ready(function(){
 
 	$('body').on('click', '.card-list li', function(){
+		$('.card-list li').removeClass('active');
 		$(this).toggleClass('active');
 	})
 
