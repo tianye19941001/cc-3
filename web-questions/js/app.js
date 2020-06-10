@@ -56,7 +56,7 @@
  function initRadioDom(data, type) {
  	var liDom = $('<li class="qus-' + data.name + '"><input class="choose-data-inp" name="' + data.name + '" type="hidden" /><br /><br /></li>');
  	var imgDom = $('<img class="icon-dom" src="' + data.icon + '" /><br ><br >');
- 	var titleDom = $('<h3>' + data.title + '' + (type == 'check' ? (data.title.length > 16 ? '' : '<br>') + '<em class="more">可多选</em>' : '') + '</h3><br ><br ><br >');
+ 	var titleDom = $('<h3>' + data.title + '' + (type == 'check' ? (data.title.length > 16 ? '' : '<br>') + '<em class="more">（可多选）</em>' : '') + '</h3><br ><br ><br >');
 
  	if (type != 'check') {
  		titleDom.append('<br ><br >')
@@ -198,10 +198,11 @@
  	$('body').on('touchend', '.next-normal',function () {
  		$(this).parents('.inner-body').removeClass('active').hide().next().show().addClass('active');
  		if ($(this).parents('.inner-body').next().hasClass('auto-next')) {
- 			var dom = $(this).parents('.inner-body').next();
+			 var dom = $(this).parents('.inner-body').next();
+			 var isFast = $(this).parents('.inner-body').next().hasClass('fast-auto-next')
  			setTimeout(function () {
  				dom.find('.next-normal').trigger('touchend')
- 			}, 3000)
+ 			}, isFast ? 1500 : 3000)
 		 }
 		 
 		 if ($(this).parents('.inner-body').next().hasClass('needbac')) {
@@ -332,6 +333,8 @@
 		var deg = (roundData - 55) * (18 / 4);
 		$('.progress-pic .point').css('transform', 'rotate('+ deg +'deg)')
 	 }
+
+	 $('.inner-body').eq(1).addClass('active')
 
 	 $('.move-latter').eq(0).addClass('active');
 

@@ -1,0 +1,170 @@
+@charset "utf-8";
+
+.oh {
+    overflow: hidden;
+}
+
+body {
+    background-color: #fff;
+    font-family: "黑体";
+}
+
+// 手机
+.eat-con {
+    .write-icon {
+        height: rem(120);
+        display: block;
+        margin: 0 auto;
+        padding: rem(120) 0;
+    }
+
+    .list-text {
+        width: rem(550);
+        margin: 0 auto;
+        font-size: rem(34);
+        color: rgba(50, 50, 50, 1);
+        line-height: 2;
+
+        p {
+            padding-left: rem(32);
+            word-break: break-all;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                width: rem(12);
+                height: rem(12);
+                left: 0;
+                top: rem(26);
+                background-color: #000;
+                border-radius: rem(15);
+            }
+        }
+    }
+
+    .btn {
+        width: rem(416);
+        height: rem(86);
+        line-height: rem(86);
+        text-align: center;
+        font-size: rem(42);
+        color: rgba(255, 255, 255, 1);
+        display: block;
+        margin: rem(130) auto;
+        border-radius: rem(86);
+    }
+
+    .btn-yellow {
+        background: linear-gradient(90deg, rgba(254, 135, 60, 1) 0%, rgba(254, 159, 116, 1) 100%);
+        box-shadow: 0px rem(20) rem(25) 0px rgba(251, 85, 4, 0.4);
+    }
+
+    .btn-blue {
+        background: rgb(75, 155, 250);
+    }
+
+    .btn-gray {
+        background: rgb(155, 157, 159);
+    }
+}
+
+.eat-dialog {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+
+    .in {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-48%, -50%);
+        width: rem(620);
+        height: rem(871);
+        border-radius: rem(30);
+        background-image: url(../images/UP-BG.png);
+        background-size: 100% 100%;
+    }
+
+    h3 {
+        font-size: rem(36);
+        color: rgba(255, 255, 255, 1);
+        text-align: center;
+        padding-top: rem(50);
+        margin-bottom: rem(150);
+
+        i {
+            display: inline-block;
+            width: rem(37);
+            height: rem(34);
+            vertical-align: middle;
+            margin-right: rem(12);
+            background-image: url(../images/icon5.png);
+            background-size: 100% 100%;
+        }
+    }
+
+    .p1 {
+        width: rem(420);
+        font-size: rem(30);
+        font-weight: 300;
+        color: rgba(46, 46, 46, 1);
+        line-height: rem(55);
+        margin: 0 auto rem(50);
+    }
+
+    .p2 {
+        width: rem(420);
+        font-size: rem(28);
+        color: rgba(46, 46, 46, 1);
+        line-height: rem(55);
+        margin: 0 auto;
+    }
+
+    span {
+        display: block;
+        text-align: center;
+        width: rem(376);
+        height: rem(85);
+        margin: 0 auto;
+        margin-top: rem(132);
+        font-size: rem(35);
+        color: rgba(255, 255, 255, 1);
+    }
+
+    .close {
+        position: absolute;
+        bottom: rem(-90);
+        left: 50%;
+        margin-left: rem(-26);
+        width: rem(52);
+    }
+}
+
+.top-con {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: all .3s;
+
+    &.active {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.bottom-con {
+    opacity: 0;
+    transform: translateX(50%);
+    transition: all .3s;
+
+    &.active {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

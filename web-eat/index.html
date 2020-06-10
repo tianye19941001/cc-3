@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<title>Document</title>
+	<link rel="stylesheet" href="styles/styles.css">
+	<script src="js/fn.js"></script>
+</head>
+
+<body>
+	<div class="eat-con">
+		<div class="top-con">
+			<img class="write-icon" src="./images/icon1.png" alt="">
+
+			<div class="list-text">
+				<p>3-5分钟填写专属问卷</p>
+				<p>评估饮食和生活方式</p>
+				<p>综合基因检测结果获取营养方案</p>
+			</div>
+
+			<a class="btn btn-blue" href="">饮食评估</a>
+			<a class="btn btn-yellow" href="">饮食评估</a>
+		</div>
+
+		<div class="bottom-con">
+			<div class="list-text">
+				<p>您也可以稍后再填</p>
+				<p>您也可以稍后再填，直接查看营养方案</p>
+			</div>
+	
+			<a class="btn btn-gray" href="">稍后再填</a>
+			<a class="btn btn-gray" href="">查看方案</a>
+		</div>
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/app.js"></script>
+	<script>
+		$('.top-con').addClass('active')
+		setTimeout(function(){
+			$('.bottom-con').addClass('active')
+		}, 500)
+	</script>
+</body>
+</html>
