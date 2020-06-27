@@ -82,7 +82,8 @@ body {
 
 .p10 {
     font-size: rem(38);
-    line-height: 2;;
+    line-height: 2;
+    ;
     color: #fff;
 }
 
@@ -171,6 +172,8 @@ header {
     margin-left: rem(-370);
     padding-bottom: rem(100);
     text-align: center;
+    outline: none;
+    user-select: none;
 
     .btn-1 {
         display: inline-block;
@@ -179,18 +182,25 @@ header {
     .btn-2 {
         display: inline-block;
     }
+
     a {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        // -webkit-user-modify: read-write-plaintext-only;
         outline: none;
         user-select: none;
     }
 }
 
 .btns2 {
+    outline: none;
+    user-select: none;
+
     .btn-1 {
         float: none;
         display: block;
         margin: 0 auto;
     }
+
     a {
         outline: none;
         user-select: none;
@@ -362,7 +372,7 @@ header {
             left: auto;
             right: rem(370);
             -webkit-transform: translateX(0);
-    transform: translateX(0);
+            transform: translateX(0);
         }
     }
 }
@@ -1029,14 +1039,15 @@ h3 {
     }
 
     .p4 {
-        width:rem(508);
-        font-size:rem(28);
-        font-weight:300;
-        color:rgba(33,33,33,1);
-        line-height:rem(36);
-        position: relative; 
+        width: rem(508);
+        font-size: rem(28);
+        font-weight: 300;
+        color: rgba(33, 33, 33, 1);
+        line-height: rem(36);
+        position: relative;
         padding-left: rem(95);
         margin: rem(100) 0 rem(60);
+
         img {
             width: rem(63);
             position: absolute;
@@ -1058,7 +1069,7 @@ h3 {
 }
 
 .detial-my {
-    .report-div:nth-child(2){
+    .report-div:nth-child(2) {
         margin-top: 0;
     }
 
@@ -1068,17 +1079,17 @@ h3 {
         background-color: transparent;
         margin-top: rem(16);
         padding-bottom: rem(32);
-    
+
         img {
             display: block;
             width: rem(470);
             margin: 0 auto;
         }
-    
+
         .card-in {
             padding: rem(40) 0;
         }
-    
+
         h2 {
             font-size: rem(34);
             color: rgba(255, 129, 72, 1);
@@ -1087,14 +1098,14 @@ h3 {
             text-align: center;
             font-weight: bold;
         }
-    
+
         .table-2 {
             width: rem(546);
             margin: 0 auto;
             border-top: rem(5) solid rgba(255, 129, 72, 1);
             border-bottom: rem(5) solid rgba(255, 129, 72, 1);
         }
-    
+
         .th,
         .td {
             display: block;
@@ -1102,25 +1113,25 @@ h3 {
             overflow: hidden;
             line-height: rem(56);
             border-bottom: rem(1) solid rgba(255, 129, 72, 1);
-    
+
             span {
                 display: block;
                 float: left;
             }
-    
+
             span {
                 &:last-child {
                     float: right;
                 }
             }
         }
-    
+
         .th {
             font-size: rem(22);
             color: rgba(255, 129, 72, 1);
             font-weight: bold;
         }
-    
+
         .td {
             font-size: rem(20);
             color: rgba(64, 64, 64, 1);
@@ -1134,7 +1145,7 @@ h3 {
         background-image: url(../images/bag-bg.png);
         margin: 0 auto;
         position: relative;
-    
+
         .name {
             font-size: rem(45);
             width: rem(200);
@@ -1143,7 +1154,7 @@ h3 {
             top: 10rem;
             text-align: center;
         }
-    
+
         .give-list {
             width: rem(440);
             font-size: rem(26);
@@ -1152,12 +1163,12 @@ h3 {
             display: block;
             margin: 0 auto;
             padding-top: 14.5rem;
-    
+
             span {
                 float: right;
             }
         }
-    
+
         .about3,
         .about4 {
             font-size: rem(22);
@@ -1166,13 +1177,13 @@ h3 {
             color: #212121;
             float: left;
         }
-    
+
         .about4 {
             float: right;
             padding: 2rem rem(70) 0 0;
         }
     }
-    
+
 }
 
 .qus-detial-my {
@@ -1208,12 +1219,12 @@ h3 {
         .btn-3 {
             margin-right: 0;
             float: left;
-            background:linear-gradient(-90deg,rgba(139,139,139,1),rgba(107,107,107,1));
+            background: linear-gradient(-90deg, rgba(139, 139, 139, 1), rgba(107, 107, 107, 1));
         }
 
         .btn-1 {
             float: right;
-            background:linear-gradient(90deg,rgba(254,135,60,1) 0%,rgba(254,159,116,1) 100%);
+            background: linear-gradient(90deg, rgba(254, 135, 60, 1) 0%, rgba(254, 159, 116, 1) 100%);
         }
     }
 }
@@ -1441,14 +1452,14 @@ h3 {
     .td {
         font-size: rem(20);
         color: #404040;
-        flex-basis: 26%;
+        flex: 1;
 
-        &:nth-child(3n) {
-            text-align: right;
+        &:nth-child(2n) {
+            text-align: center;
         }
 
-        &:nth-child(3n-2) {
-            flex-basis: 48%;
+        &:last-child {
+            text-align: right;
         }
     }
 }

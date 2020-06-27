@@ -200,9 +200,13 @@
  		if ($(this).parents('.inner-body').next().hasClass('auto-next')) {
 			 var dom = $(this).parents('.inner-body').next();
 			 var isFast = $(this).parents('.inner-body').next().hasClass('fast-auto-next')
+			 var isMiddle = $(this).parents('.inner-body').next().hasClass('middle-auto-next')
+			 var time = 3000
+			 if(isFast) time = 1500
+			 if(isMiddle) time = 2300
  			setTimeout(function () {
  				dom.find('.next-normal').trigger('touchend')
- 			}, isFast ? 1500 : 3000)
+ 			}, time	)
 		 }
 		 
 		 if ($(this).parents('.inner-body').next().hasClass('needbac')) {

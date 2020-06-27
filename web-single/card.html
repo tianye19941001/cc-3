@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<title>Document</title>
+	<link rel="stylesheet" href="styles/styles.css">
+	<script src="js/fn.js"></script>
+</head>
+
+<body class="f6">
+	<div class="card-tab">
+		<ul>
+			<li class="active"><a>可使用</a></li>
+			<li><a>已使用</a></li>
+		</ul>
+	</div>
+
+	<!-- 可用和用过的都在这里 -->
+
+	<div class="card-list">
+		<ul class="active">
+			<li>
+				<div class="in">
+					<p><span class="tit">营养卡号：</span>123ty73u</p>
+					<p><span class="tit">绑定样本：</span>李小欧</p>
+					<p><span class="tit">绑定产品：</span>免疫力提升基因检测</p>
+					<p><span class="tit">收货地址：</span>李小欧 15621345432</p>
+					<p>北京市清华同方科技广场D座</p>
+					<a href="">立即使用 ></a>
+				</div>
+			</li>
+
+			<li>
+				<div class="in">
+					<p><span class="tit">营养卡号：</span>123ty73u</p>
+					<p><span class="tit">绑定样本：</span>李小欧</p>
+					<p><span class="tit">绑定产品：</span>免疫力提升基因检测</p>
+					<p><span class="tit">收货地址：</span>李小欧 15621345432</p>
+					<p>北京市清华同方科技广场D座</p>
+					<a href="">立即使用 ></a>
+				</div>
+			</li>
+
+			<li>
+				<div class="in">
+					<p><span class="tit">营养卡号：</span>123ty73u</p>
+					<p><span class="tit">绑定样本：</span>李小欧</p>
+					<p><span class="tit">绑定产品：</span>免疫力提升基因检测</p>
+					<p><span class="tit">收货地址：</span>李小欧 15621345432</p>
+					<p>北京市清华同方科技广场D座</p>
+					<a href="">立即使用 ></a>
+				</div>
+			</li>
+		</ul>
+		<ul>
+			<li class="used">
+				<div class="in">
+					<p><span class="tit">营养卡号：</span>123ty73u</p>
+					<p><span class="tit">绑定样本：</span>李小欧</p>
+					<p><span class="tit">绑定产品：</span>免疫力提升基因检测</p>
+					<p><span class="tit">收货地址：</span>李小欧 15621345432</p>
+					<p>北京市清华同方科技广场D座</p>
+					<a href="">查看使用详情 ></a>
+				</div>
+			</li>
+
+			<li class="used">
+				<div class="in">
+					<p><span class="tit">营养卡号：</span>123ty73u</p>
+					<p><span class="tit">绑定样本：</span>李小欧</p>
+					<p><span class="tit">绑定产品：</span>免疫力提升基因检测</p>
+					<p><span class="tit">收货地址：</span>李小欧 15621345432</p>
+					<p>北京市清华同方科技广场D座</p>
+					<a href="">查看使用详情 ></a>
+				</div>
+			</li>
+
+			<li class="used">
+				<div class="in">
+					<p><span class="tit">营养卡号：</span>123ty73u</p>
+					<p><span class="tit">绑定样本：</span>李小欧</p>
+					<p><span class="tit">绑定产品：</span>免疫力提升基因检测</p>
+					<p><span class="tit">收货地址：</span>李小欧 15621345432</p>
+					<p>北京市清华同方科技广场D座</p>
+					<a href="">查看使用详情 ></a>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/app.js"></script>
+	<script>
+		$('.card-tab li').click(function(){
+			var index = $('.card-tab li').index($(this));
+			$('.card-tab li').removeClass('active').eq(index).addClass('active')
+			$('.card-list ul').removeClass('active').eq(index).addClass('active')
+		})
+	</script>
+</body>
+
+</html>

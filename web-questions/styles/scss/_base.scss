@@ -30,8 +30,8 @@ sup { bottom: -0.25em; }
 /*FONT
 -------------------------------------------------------------- */
 body { font:12px/1.5 "Arial","\5FAE\8F6F\96C5\9ED1","\5b8b\4f53", sans-serif; color: #000; background:#fff; }
-a{color:#000; text-decoration: none;}
-a:active{color: #df1830;}
+a{color:#000; text-decoration: none; }
+a:active{color: #df1830; user-select: none;}
 .fb { font-weight: 700 }
 .fn { font-weight: 400 }
 .unl { text-decoration: underline }

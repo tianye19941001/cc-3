@@ -88,7 +88,7 @@
 			</div>
 		</div>
 
-		<div data-step="4" class="inner-body auto-next fast-auto-next" style="display: none">
+		<div data-step="4" class="inner-body auto-next middle-auto-next" style="display: none">
 			<br><br>
 			<img class="head-icon" src="./images/ICON1.png" alt=""><br />
 			<p class="p9">您好，<span id="name-is"></span></p>
@@ -143,7 +143,15 @@
 		$('#submit').click(function(){
 			var param = getAllData() //获取最终问卷数据
 			console.log(param)
+
+			gotoUrl('http://baidu.com', 1000)
 		})
+
+		function gotoUrl(url, time) {
+			setTimeout(function(){
+				window.location.href = url
+			}, time)
+		}
 
 		function callBackJump(data, jumpName) {
 			// data：本题选择的数据 jumpName：跳转到的题目
