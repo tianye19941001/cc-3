@@ -30,13 +30,13 @@ body {
     background: rgba(255, 255, 255, 1);
     box-shadow: 0px 0 rem(35) 0px rgba(72, 92, 144, 0.2);
     border-radius: rem(24);
-    padding: rem(70) 0;
+    padding: rem(20) 0 rem(40);
     margin: 0 auto;
 
     .about {
         font-size: rem(25);
         color: rgba(40, 40, 40, 1);
-        padding: rem(40) 0 rem(110);
+        padding: rem(20) 0 rem(40);
         text-align: center;
     }
 
@@ -47,22 +47,29 @@ body {
         color: rgba(19, 195, 255, 1);
     }
 
+    .list-w {
+        overflow-y: scroll;
+        box-shadow: inset 0px 1px rem(35) 0px rgba(72, 92, 144, 0.2);
+        margin-bottom: rem(40);
+    }
+
     .list {
+        padding-top: rem(50);
         padding-left: rem(220);
+        padding-bottom: rem(50);
         font-size: rem(33);
         color: rgba(40, 40, 40, 1);
         position: relative;
-        margin-bottom: rem(90);
-
+    
         &::after {
             display: block;
             content: '';
             width: 1px;
-            height: 98%;
+            height: 84%;
             background: rgba(40, 40, 40, 1);
             position: absolute;
             left: rem(255);
-            top: 1%;
+            top: rem(50);
         }
 
         li {
@@ -146,7 +153,7 @@ body {
     }
 
     .list {
-        height: rem(938);
+        height: rem(238);
         box-sizing: border-box;
         padding: rem(25) 0;
         box-shadow: inset 0px 1px rem(35) 0px rgba(72, 92, 144, 0.2);

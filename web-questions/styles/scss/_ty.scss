@@ -240,6 +240,7 @@ header {
         top: 51%;
         width: rem(425);
         transform: translate(-50%, -50%) rotate(0);
+        pointer-events: none;
     }
 }
 
@@ -253,9 +254,9 @@ header {
 
     .leida {
         position: absolute;
-        left: 50%;
+        left: 50.1%;
         top: 56.5%;
-        width: rem(425);
+        width: rem(445);
         transform: translate(-50%, -50%) rotate(0);
     }
 }
@@ -438,6 +439,11 @@ header {
     background: linear-gradient(90deg, rgba(255, 165, 123, 1) 0%, rgba(255, 139, 123, 1) 100%) !important;
 }
 
+.style-red2 {
+    color: #fff !important;
+    background: linear-gradient(90deg, #fdd67b 0%, #fea57b 100%) !important;
+}
+
 .style-yellow {
     color: #fff !important;
     background: linear-gradient(90deg, #FFF08C 0%, #FFD572 100%) !important;
@@ -553,7 +559,11 @@ header {
         background: linear-gradient(90deg, rgba(193, 228, 155, 1) 0%, rgba(124, 213, 145, 1) 100%);
     }
 
-    .progress-4,
+    .progress-4 {
+        
+        background: linear-gradient(90deg, #fdd67b 0%, #fea57b 100%);
+    }
+
     .progress-5 {
         background: linear-gradient(90deg, rgba(255, 165, 123, 1) 0%, rgba(255, 139, 123, 1) 100%);
     }
@@ -764,10 +774,10 @@ h3 {
         font-size: rem(30);
 
         i {
-            width: rem(20);
-            height: rem(20);
+            width: 12px;
+            height: 12px;
             border: rem(2) solid #999;
-            border-radius: rem(24);
+            border-radius: 50%;
             display: inline-block;
             vertical-align: middle;
             margin-right: rem(30);
@@ -797,13 +807,13 @@ h3 {
                 content: '';
                 display: block;
                 position: absolute;
-                width: rem(16);
-                height: rem(16);
+                width: 10px;
+                height: 10px;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 background-color: #fe8e4d;
-                border-radius: rem(16);
+                border-radius: 50%;
             }
         }
     }

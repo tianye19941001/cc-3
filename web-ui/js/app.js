@@ -83,4 +83,8 @@
 		var divs = $(this).parents('.table-public-warp').find('.left-icons > div');
 		divs.eq(index).height(height+ 1)
 	})
+
+	var precent = 380 / 736
+	var screenHeight = document.documentElement.clientHeight
+	$('.inner-con-2 .list,.inner-con .list-w').height(precent * screenHeight)
 });
