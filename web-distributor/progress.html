@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
-	<meta name="format-detection" content="telephone=no">
-	<meta name="format-detection" content="address=no">
-	<title>Document</title>
-	<link rel="stylesheet" href="styles/styles.css">
-	<script src="js/fn.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="js/fn.js"></script>
 </head>
+
 <body class="gray">
-	<div class="dis-common-header progress-head">
+    <div class="dis-common-header progress-head">
         <img class="menu" src="./images/ICON01.png" alt="">
         <h2>进度提醒</h2>
         <img class="notice" src="./images/notice.png" alt="">
@@ -23,8 +26,48 @@
             <span>跟进提醒</span>
         </div>
 
-        <div class="con">
+        <div class="con active" data-firstshow="5" data-stepshow="2" data-nowshow="5">
             <ul>
+                <li>
+                    <a href="">
+                        <img class="" src="./images/4-3.png" alt="">
+                        <h3>陈小欧 (样本编号:MY19000021)</h3>
+                        <h3>免疫力提升基因检测报告审核通过</h3>
+                        <p>推送时间: <span>2020.05.12-12:12:12</span></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img class="" src="./images/4-3.png" alt="">
+                        <h3>陈小欧 (样本编号:MY19000021)</h3>
+                        <h3>免疫力提升基因检测报告审核通过</h3>
+                        <p>推送时间: <span>2020.05.12-12:12:12</span></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img class="" src="./images/4-3.png" alt="">
+                        <h3>陈小欧 (样本编号:MY19000021)</h3>
+                        <h3>免疫力提升基因检测报告审核通过</h3>
+                        <p>推送时间: <span>2020.05.12-12:12:12</span></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img class="" src="./images/4-3.png" alt="">
+                        <h3>陈小欧 (样本编号:MY19000021)</h3>
+                        <h3>免疫力提升基因检测报告审核通过</h3>
+                        <p>推送时间: <span>2020.05.12-12:12:12</span></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img class="" src="./images/4-3.png" alt="">
+                        <h3>陈小欧 (样本编号:MY19000021)</h3>
+                        <h3>免疫力提升基因检测报告审核通过</h3>
+                        <p>推送时间: <span>2020.05.12-12:12:12</span></p>
+                    </a>
+                </li>
                 <li>
                     <a href="">
                         <img class="" src="./images/4-3.png" alt="">
@@ -59,9 +102,48 @@
                 </li>
             </ul>
         </div>
+
+        <div class="con">
+            <ul>
+                <li>
+                    <a href="">
+                        <img class="" src="./images/4-3.png" alt="">
+                        <h3>陈小欧 (样本编号:MY19000021)</h3>
+                        <h3>免疫力提升基因检测报告审核通过</h3>
+                        <p>推送时间: <span>2020.05.12-12:12:12</span></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img class="" src="./images/4-3.png" alt="">
+                        <h3>陈小欧 (样本编号:MY19000021)</h3>
+                        <h3>免疫力提升基因检测报告审核通过</h3>
+                        <p>推送时间: <span>2020.05.12-12:12:12</span></p>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
-    
-<script src="js/jquery.min.js"></script>
-<script src="js/app.js"></script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        $('.common-top span').click(function () {
+            var index = $('.common-top span').index($(this))
+            $('.common-top span').removeClass('active').eq(index).addClass('active')
+            $('.common-con .con').removeClass('active').eq(index).addClass('active')
+        })
+
+        window.onscroll = () => {
+            let scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+            let clientHeight = document.documentElement.clientHeight || document.body.clientHeight
+            let scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight
+
+            if (scrollTop + clientHeight >= scrollHeight) {
+                alert('到底了，执行你要执行的函数')
+            }
+        }
+    </script>
 </body>
+
 </html>

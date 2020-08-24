@@ -12,33 +12,35 @@
     <script src="js/fn.js"></script>
 </head>
 
-<body>
-    <div class="dis-common-header">
+<body class="gray">
+    <div class="dis-common-header info-head">
         <img class="menu" src="./images/ICON01.png" alt="">
         <h2>艾兰得母婴 # 二级经销商</h2>
+        <img class="notice" src="./images/notice.png" alt="">
+        <img class="bg" src="./images/5-1.png" alt="">
     </div>
 
-    <div class="dis-level-con">
+    <div class="dis-information-con  common-con">
         <div class="common-top">
             <span class="active">基因报告统计</span>
             <span>营养包订单统计</span>
         </div>
 
-        <div class="name">
+        <div class="name-2">
             <img src="./images/4-3.png" alt="">
             <span>新疆万和商贸</span>
             <span>（20202011567）</span>
         </div>
 
-        <div class="in">
+        <div class="con s-con active">
             <div class="top">
-                <p>
-                    <img src="" alt="">
+                <p class="p1">
+                    <img src="./images/5-1-1.png" alt="">
                     <span>供货总量：</span>
                     <em>1200</em>
                 </p>
-                <p>
-                    <img src="" alt="">
+                <p class="p2">
+                    <img src="./images/5-1-2.png" alt="">
                     <span>供货总量：</span>
                     <em>407</em>
                 </p>
@@ -47,26 +49,60 @@
             </div>
 
             <div class="bottom">
-                <ul>
-                    <li>
-                        <span>YY200005205106</span>
-                        <span>陈小欧</span>
-                        <span>免疫力提升基因检测</span>
-                        <span>2020.5.20 出报告</span>
-                    </li>
-                    <li>
-                        <span>YY200005205106</span>
-                        <span>陈小欧</span>
-                        <span>免疫力提升基因检测</span>
-                        <span>2020.5.20 出报告</span>
-                    </li>
-                    <li>
-                        <span>YY200005205106</span>
-                        <span>陈小欧</span>
-                        <span>免疫力提升基因检测</span>
-                        <span>2020.5.20 出报告</span>
-                    </li>
-                </ul>
+                <table>
+                    <tr>
+                        <td>YY200005205106</td>
+                        <td>陈小欧</td>
+                        <td>免疫力提升基因检测</td>
+                        <td>2020.5.20 出报告</td>
+                    </tr>
+                    <tr>
+                        <td>YY200005205106</td>
+                        <td>陈小欧</td>
+                        <td>免疫力提升基因检测</td>
+                        <td>2020.5.20 出报告</td>
+                    </tr>
+                    <tr>
+                        <td>YY200005205106</td>
+                        <td>陈小欧</td>
+                        <td>免疫力提升基因检测</td>
+                        <td>2020.5.20 出报告</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="con s-con">
+            <div class="top">
+                <p class="p1">
+                    <img src="./images/5-1-1.png" alt="">
+                    <span>供货总量：</span>
+                    <em>100</em>
+                </p>
+                <p class="p2">
+                    <img src="./images/5-1-2.png" alt="">
+                    <span>供货总量：</span>
+                    <em>47</em>
+                </p>
+
+                <a href="">导出信息</a>
+            </div>
+
+            <div class="bottom">
+                <table>
+                    <tr>
+                        <td>YY200005205106</td>
+                        <td>陈小欧</td>
+                        <td>免疫力提升基因检测</td>
+                        <td>2020.5.20 出报告</td>
+                    </tr>
+                    <tr>
+                        <td>YY200005205106</td>
+                        <td>陈小欧</td>
+                        <td>免疫力提升基因检测</td>
+                        <td>2020.5.20 出报告</td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
@@ -74,6 +110,16 @@
 
     <script src="js/jquery.min.js"></script>
     <script src="js/app.js"></script>
+    <script>
+        $('.top img').click(function () {
+            $(this).parents('li').toggleClass('active')
+        })
+        $('.common-top span').click(function () {
+            var index = $('.common-top span').index($(this))
+            $('.common-top span').removeClass('active').eq(index).addClass('active')
+            $('.common-con .con').removeClass('active').eq(index).addClass('active')
+        })
+    </script>
 </body>
 
 </html>

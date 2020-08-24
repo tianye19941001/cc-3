@@ -19,8 +19,15 @@ body {
 
     .logo {
         position: absolute;
-        height: rem(86);
-        left: rem(50);
+        width: rem(130);
+        left: rem(20);
+        top: rem(84);
+    }
+
+    .logo2 {
+        position: absolute;
+        width: rem(130);
+        left: rem(180);
         top: rem(84);
     }
 }

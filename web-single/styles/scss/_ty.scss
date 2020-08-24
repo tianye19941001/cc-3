@@ -144,7 +144,12 @@ body {
 }
 
 .order-con {
+    display: none;
     background-color: #EEEFEF;
+
+    &.active {
+        display: block;
+    }
 
     >div {
         margin-bottom: rem(10);
@@ -885,4 +890,11 @@ body {
         border-radius: rem(88);
         color: rgba(255, 255, 255, 1);
     }
+}
+
+.fixtop {
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    left: 0;
 }

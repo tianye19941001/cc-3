@@ -1,32 +1,60 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
-	<meta name="format-detection" content="telephone=no">
-	<meta name="format-detection" content="address=no">
-	<title>Document</title>
-	<link rel="stylesheet" href="styles/styles.css">
-	<script src="js/fn.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="js/fn.js"></script>
 </head>
+
 <body>
-	<div class="dis-export">
-		<div class="export-in">
+    <div class="dis-export">
+        <div class="export-in">
             <h3>导出数据</h3>
             <div class="time">
-                <span>选择开始时间</span><img src="./images/5-5.png" alt="">
+                <span id="choose-start">选择开始时间</span><img src="./images/5-5.png" alt="">
             </div>
             <div class="time">
-                <span>选择结束时间</span><img src="./images/5-5.png" alt="">
+                <span id="choose-end">选择结束时间</span><img src="./images/5-5.png" alt="">
             </div>
 
             <a class="submit">确认导出</a>
             <i></i>
         </div>
-	</div>
-	
+    </div>
 
-<script src="js/jquery.min.js"></script>
-<script src="js/app.js"></script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="./js/rolldate.js"></script>
+    <script>
+        new Rolldate({
+            el: '#choose-start',
+            format: 'YYYY-MM-DD',
+            beginYear: 2000,
+            endYear: 2100,
+            // value: '2018-03-18', //默认值
+            confirm: function (data) { //回调函数
+                console.log(data)
+            }
+        })
+
+        new Rolldate({
+            el: '#choose-end',
+            format: 'YYYY-MM-DD',
+            beginYear: 2000,
+            endYear: 2100,
+            // value: '2018-03-18', //默认值
+            confirm: function (data) { //回调函数
+                console.log(data)
+            }
+        })
+    </script>
 </body>
+
 </html>

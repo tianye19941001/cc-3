@@ -183,12 +183,21 @@ header {
         display: inline-block;
     }
 
+    .btn-4 {
+        display: inline-block;
+    }
+
     a {
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         // -webkit-user-modify: read-write-plaintext-only;
         outline: none;
         user-select: none;
     }
+}
+
+.icon-1-next {
+    display: inline-block !important;
+    margin-left: 2rem !important;
 }
 
 .btns2 {
@@ -208,7 +217,8 @@ header {
 }
 
 .btn-1,
-.btn-2 {
+.btn-2,
+.btn-4 {
     width: rem(280);
     height: rem(74);
     line-height: rem(74);
@@ -230,7 +240,6 @@ header {
     width: rem(372);
     height: rem(372);
     background-size: 100% 100%;
-    background-image: url(../images/leida.png);
     margin: rem(120) auto rem(120);
     position: relative;
 
@@ -248,7 +257,6 @@ header {
     width: rem(371);
     height: rem(354);
     background-size: 100% 100%;
-    background-image: url(../images/fenbutu1.png);
     margin: rem(120) auto rem(120);
     position: relative;
 
@@ -259,6 +267,13 @@ header {
         width: rem(445);
         transform: translate(-50%, -50%) rotate(0);
     }
+}
+
+#leida2,
+#leida3 {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .leida-pic {
@@ -560,7 +575,7 @@ header {
     }
 
     .progress-4 {
-        
+
         background: linear-gradient(90deg, #fdd67b 0%, #fea57b 100%);
     }
 
@@ -686,10 +701,10 @@ header {
 }
 
 .nav-list {
-    display: flex;
+    width: 100%;
     position: absolute;
     text-align: center;
-    top: rem(500);
+    top: rem(430);
     width: 100%;
     box-sizing: border-box;
     padding: 0 rem(30);
@@ -697,20 +712,22 @@ header {
 
     span {
         display: block;
-        width: 33.33%;
+        width: 100%;
         font-size: rem(40);
         transition: all .9s;
+        line-height: 4rem;
     }
 
     i {
-        display: block;
+        display: inline-block;
+        vertical-align: middle;
         margin: 0 auto;
         width: rem(26);
         height: rem(26);
         border: rem(3) solid #333;
         border-radius: rem(30);
-        margin-top: rem(28);
         transition: all .9s;
+        margin-right: rem(43);
     }
 
     .active {
@@ -723,9 +740,14 @@ header {
             height: rem(38);
             border: rem(4) solid #333;
             border-radius: rem(30);
-            margin-top: rem(10);
+            position: relative;
+            right: -.65rem;
         }
     }
+}
+
+.desc-mini {
+    font-size: rem(26);
 }
 
 .icon-dom {
@@ -749,6 +771,10 @@ h3 {
         display: none;
         opacity: 0;
         transition: all 1.5s;
+
+        > ul {
+            padding-bottom: rem(60);
+        }
     }
 
     >li.active {
@@ -1605,9 +1631,9 @@ h3 {
     width: 100%;
     height: rem(107);
     overflow: hidden;
-    background-color: #eef1f0;
+    background-color: #f7f7f7;
     z-index: 9;
-    border-top: 1px solid rgba(0, 0, 0, .1);
+    box-shadow: 0 rem(-10) rem(10) rgba(0, 0, 0, .05);
 
     a {
         float: left;
@@ -1626,10 +1652,6 @@ h3 {
             vertical-align: middle;
             background-size: 100% 100%;
             background-image: url(../images/icon-1.png);
-        }
-
-        &:last-child {
-            border-left: 1px solid rgba(0, 0, 0, .1);
         }
 
         &:last-child i {
@@ -1659,4 +1681,67 @@ h3 {
         padding-top: rem(5);
     }
 
+}
+
+.iconList-ul, .iconList2-ul  {
+    overflow: hidden;
+    width: rem(600);
+    margin: 0 auto;
+    margin-top: rem(-100);
+
+    li {
+        float: left;
+        width: rem(149);
+        height: auto;
+        padding: 0 rem(30);
+        box-sizing: border-box;
+
+        span {
+            display: block;
+            text-align: center;
+            color: #646464;
+            font-size: rem(22);
+            margin-bottom: rem(45);
+        }
+    }
+
+    .active {
+        .img {
+            background: rgba(255, 204, 180, 1);
+        }
+
+        span {
+            color: #FFCCB4;
+        }
+    }
+
+    .img {
+        display: block;
+        margin: 0 auto;
+        width: rem(90);
+        height: rem(90);
+        position: relative;
+        border-radius: rem(90);
+        background: rgba(255, 255, 255, 1);
+        margin-bottom: rem(30);
+
+        img {
+            position: absolute;
+            top: 50%;
+            bottom: 50%;
+            transform: translate(-50%, -50%);
+            max-height: rem(45);
+            max-width: rem(45);
+        }
+    }
+}
+
+.iconList2-ul {
+    margin-top: 0;
+    text-align: center;
+
+    li {
+        float: none;
+        display: inline-block;
+    }
 }

@@ -10,10 +10,10 @@
 	<script src="js/fn.js"></script>
 </head>
 <body>
-	<div class="dis-search-header">
+	<div class="dis-search-header dis-common-header">
         <h3>营养订单查询</h3>
-        <p>Gene report query</p>
-        <img class="bac" src="./images/8-1.png" alt="">
+        <p>Nutrition order query</p>
+        <img class="bac-2" src="./images/8-1.png" alt="">
 
         <div class="search-bar">
             <img class="search-icon" src="./images/3-2.png" alt="">
@@ -22,19 +22,19 @@
         </div>
     </div>
     
-    <div class="dis-search-con">
+    <div class="dis-search-con common-con">
         <div class="th">
-            <div><img src="" alt="">编号</div>
-            <div><img src="" alt="">姓名</div>
-            <div><img src="" alt="">手机号</div>
-            <div><img src="" alt="">状态</div>
+            <div><img src="./images/5-1-1.png" alt="">编号</div>
+            <div><img src="./images/2-3.png" alt="">姓名</div>
+            <div><img src="./images/4-3.png" alt="">手机号</div>
+            <div><img src="./images/5-1-2.png" alt="">状态</div>
         </div>
         <div class="tr">
             <div>YY19000045</div>
             <div>程晓鸥</div>
             <div>13828176634</div>
             <div>
-                <span class="blue">已绑定<i></i></span>
+                <span class="open-btn blue">已绑定<i></i></span>
             </div>
             <div class="hide-div">
                 <p>绑定时间 - 2020.06.01 - 12:12:12</p>
@@ -52,7 +52,7 @@
             <div>程晓鸥</div>
             <div>13828176634</div>
             <div>
-                <span class="yellow">已接收<i></i></span>
+                <span class="open-btn yellow">已接收<i></i></span>
             </div>
             <div class="hide-div">
                 <p>绑定时间 - 2020.06.01 - 12:12:12</p>
@@ -70,7 +70,7 @@
             <div>程晓鸥</div>
             <div>13828176634</div>
             <div>
-                <span class="purple">检测中<i></i></span>
+                <span class="open-btn purple">检测中<i></i></span>
             </div>
             <div class="hide-div">
                 <p>绑定时间 - 2020.06.01 - 12:12:12</p>
@@ -88,7 +88,7 @@
             <div>程晓鸥</div>
             <div>13828176634</div>
             <div>
-                <span class="red">已出报告<i></i></span>
+                <span class="open-btn red">已出报告<i></i></span>
             </div>
             <div class="hide-div">
                 <p>绑定时间 - 2020.06.01 - 12:12:12</p>
@@ -106,7 +106,7 @@
             <div>程晓鸥</div>
             <div>13828176634</div>
             <div>
-                <span class="red">已出报告<i></i></span>
+                <span class="open-btn red">已出报告<i></i></span>
             </div>
             <div class="hide-div">
                 <p>绑定时间 - 2020.06.01 - 12:12:12</p>
@@ -124,5 +124,10 @@
 	
 <script src="js/jquery.min.js"></script>
 <script src="js/app.js"></script>
+<script>
+    $('.open-btn').click(function(){
+        $(this).parents('.tr').toggleClass('active')
+    })
+</script>
 </body>
 </html>

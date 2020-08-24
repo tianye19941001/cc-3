@@ -1,5 +1,5 @@
 .bg-gray {
-    background-color: #eef1f0;
+    background-color: #f7f7f7   ;
     overflow-x: hidden;
 }
 
@@ -408,7 +408,6 @@ canvas {
 .new-p4 {
     width: rem(508);
     font-size: rem(28);
-    font-weight: 300;
     color: rgba(33, 33, 33, 1);
     line-height: rem(36);
     position: relative;
@@ -437,7 +436,6 @@ canvas {
     color: rgba(33, 33, 33, 1);
     line-height: rem(36);
     position: relative;
-    font-weight: 300;
 
     img {
         position: absolute;
@@ -632,7 +630,6 @@ canvas {
     color: rgba(33, 33, 33, 1);
     line-height: rem(36);
     position: relative;
-    font-weight: 300;
 
     span {
         color: #F84A4A
@@ -640,8 +637,16 @@ canvas {
 }
 
 .item-list-1 {
-    .list-show {
+    .item {
         width: rem(580);
+        margin: 0 auto;
+        box-shadow: 0px 0px rem(10) 0px rgba(6, 2, 3, 0.16);
+        border-radius: rem(10);
+        margin-bottom: rem(20);
+    }
+
+    .list-show {
+        padding: rem(12) 0 0 rem(6);
         margin: 0 auto;
         overflow: hidden;
 
@@ -658,6 +663,7 @@ canvas {
             width: rem(430);
             padding-top: rem(10);
             padding-left: rem(12);
+            padding-bottom: rem(6);
             float: left;
 
             h3 {
@@ -669,7 +675,6 @@ canvas {
             p {
                 font-size: rem(26);
                 color: #4A4A4A;
-                font-weight: 300;
             }
         }
 
@@ -680,18 +685,15 @@ canvas {
             display: block;
             background-image: url(../images/my/line4.png);
             background-size: 100% 100%;
-            margin-left: rem(110);
         }
     }
 
     .bottom-hide {
         display: none;
         width: rem(556);
-        box-shadow: 0px 0px 10px 0px rgba(6, 2, 3, 0.16);
-        background-color: #fafafa;
-        margin: rem(12) auto;
+        margin: rem(12) auto 0;
         box-sizing: border-box;
-        padding: 0 rem(40);
+        padding: 0 rem(40) rem(24);
 
         .title {
             font-size: rem(24);
@@ -701,7 +703,7 @@ canvas {
 
             img {
                 height: rem(30);
-                vertical-align: middle;
+                vertical-align: rem(-4);
                 margin-right: rem(10);
             }
         }
@@ -715,7 +717,6 @@ canvas {
                 padding-left: rem(22);
                 margin-bottom: rem(20);
                 position: relative;
-                font-weight: 300;
 
                 &::before {
                     content: '';
@@ -819,7 +820,7 @@ canvas {
     .active {
         .list-show {
             .line {
-                display: none;
+                background-image: url(../images/my/line3.png);
             }
         }
 
@@ -839,15 +840,14 @@ canvas {
 
         img {
             height: rem(32);
-            vertical-align: middle;
-            margin-right: rem(12);
+            vertical-align: rem(-4);
+            margin-right: rem(6);
         }
 
         span {
             float: right;
             font-size: rem(26);
             font-weight: 400;
-            color: rgba(252, 116, 116, 1);
         }
     }
 
@@ -859,7 +859,6 @@ canvas {
             line-height: rem(35);
             padding-left: rem(20);
             position: relative;
-            font-weight: 300;
 
             &::before {
                 content: '';
@@ -876,11 +875,13 @@ canvas {
 }
 
 .advice-list {
-    border-top: 1px solid rgba(1, 1, 1, .2);
 
     .item {
-        border-bottom: 1px solid rgba(1, 1, 1, .2);
+        box-shadow:0px 0px rem(10) 0px rgba(6,2,3,0.16);
+        border-radius:rem(15);
         position: relative;
+        margin-bottom: rem(20);
+        font-size: rem(24);
 
         .text-in,
         .text-in-2 {
@@ -888,16 +889,20 @@ canvas {
         }
 
         >i {
-            width: rem(20);
-            height: rem(10);
+            width: rem(26);
+            height: rem(26);
             position: absolute;
-            top: rem(24);
-            right: rem(5);
+            top: rem(14);
+            right: rem(15);
             background-size: 100% 100%;
-            background-image: url(../images/my/icon-11.png);
+            transform: rotate(180deg);
+            background-image: url(../images/my/icon-up.png);
         }
 
         &.active {
+            .title { 
+                border-bottom: 1px solid rgba(210,209,209,.75);
+            }
 
             .text-in,
             .text-in-2 {
@@ -905,19 +910,21 @@ canvas {
             }
 
             >i {
-                top: auto;
-                bottom: rem(12);
-                background-image: url(../images/my/icon-10.png);
+                transform: rotate(0);
             }
         }
     }
 
     .title {
+        position: relative;
         height: rem(55);
         line-height: rem(55);
-        font-size: rem(26);
-        color: rgba(252, 116, 116, 1);
+        font-size: rem(28);
         padding-bottom: 0;
+        margin: 0 rem(15);
+        
+        color: #4A4A4A;
+        font-weight: normal;
 
         img {
             height: rem(33);
@@ -926,47 +933,53 @@ canvas {
         }
 
         span {
+            font-size: rem(20);
+            color: #FF8C47;
             float: right;
-            margin-right: rem(100);
+            margin-right: rem(60);
         }
     }
 
     .text-in {
         font-size: rem(24);
         color: rgba(64, 64, 64, 1);
-        padding: rem(20) 0;
+        padding: rem(20) rem(15);
 
         p {
             padding-left: rem(33);
             position: relative;
             margin-bottom: rem(12);
-            font-weight: 300;
 
             &::before {
                 content: '';
                 position: absolute;
                 left: rem(8);
-                top: rem(9);
+                top: rem(10);
                 width: 5px;
                 height: 5px;
-                background: rgba(252, 116, 116, 1);
+                background: #FF8047;
                 border-radius: 50%;
             }
         }
     }
 
     .text-in-2 {
+        padding: rem(20) rem(15);
+        overflow: hidden;
+        
         img {
             display: block;
             width: rem(120);
             margin: 0 auto;
-            padding: rem(20) 0;
+            float: right;
+            width: rem(90);
+            margin: rem(20);
         }
 
         p {
             padding-left: rem(33);
+            margin-bottom: rem(12);
             position: relative;
-            font-weight: 300;
 
             &::before {
                 content: '';
@@ -988,4 +1001,14 @@ canvas {
     background: linear-gradient(-90deg, rgba(230, 217, 29, 1) 0%, rgba(104, 201, 212, 1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.new-text {
+    p {
+        margin-bottom: 1.8rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }

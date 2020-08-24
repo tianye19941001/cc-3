@@ -12,21 +12,23 @@
     <script src="js/fn.js"></script>
 </head>
 
-<body>
-    <div class="dis-common-header">
+<body class="gray">
+    <div class="dis-common-header level-head">
         <img class="menu" src="./images/ICON01.png" alt="">
         <h2>信息统计</h2>
-        <img src="" alt="">
+        <img class="bg" src="./images/6-1.png" alt="">
+        <div class="name1">【一级经销商】</div>
+        <div class="name2">艾兰得母婴</div>
     </div>
 
-    <div class="dis-level-con">
+    <div class="common-con dis-level-con">
         <div class="common-top-2">
             <div class="start">
-                <span>选择起始时间</span>
+                <span id="choose-start">选择起始时间</span>
                 <img src="./images/5-5.png" alt="">
             </div>
             <div class="end">
-                <span>选择结束时间</span>
+                <span id="choose-end">选择结束时间</span>
                 <img src="./images/5-5.png" alt="">
             </div>
 
@@ -36,23 +38,25 @@
 
 
         <div class="lebel-top">
-            <img class="star" src="" alt="">
             <div class="tit">汇总</div>
 
-            <p>
-                <span>基因报告</span>
-                <span>供货量：</span>
-                <span>1200</span>
-                <span>已出报告：</span>
-                <span>407</span>
-            </p>
-            <p>
-                <span>营养订单</span>
-                <span>供货量：</span>
-                <span>1200</span>
-                <span>已发货：</span>
-                <span>407</span>
-            </p>
+            <div class="in">
+                <img class="star" src="./images/star.png" alt="">
+                <p>
+                    <span>基因报告 </span>
+                    <span>供货量: </span>
+                    <span>1200 </span>
+                    <span>已出报告: </span>
+                    <span>407 </span>
+                </p>
+                <p>
+                    <span>营养订单 </span>
+                    <span>供货量: </span>
+                    <span>1200 </span>
+                    <span>已发货: </span>
+                    <span>407 </span>
+                </p>
+            </div>
         </div>
 
         <div class="level-list">
@@ -64,6 +68,10 @@
                             <span>新疆万和商贸全国经销商</span>
                             <img class="right" src="./images/6-4.png" alt="">
                         </h4>
+                        <div class="bottom">
+                            <p>基因报告 <span>供货量：100</span> <span>已出报告：45</span></p>
+                            <p>基因报告 <span>供货量：100</span> <span>已出报告：45</span></p>
+                        </div>
                     </a>
                 </li>
                 <li>
@@ -73,15 +81,9 @@
                             <span>新疆万和商贸全国经销商</span>
                             <img class="right" src="./images/6-4.png" alt="">
                         </h4>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <h4>
-                            <img class="person" src="./images/4-3.png" alt="">
-                            <span>新疆万和商贸全国经销商</span>
-                            <img class="right" src="./images/6-4.png" alt="">
-                        </h4>
+                        <div class="bottom">
+                            <p>基因报告 <span>供货量：100</span> <span>已出报告：45</span></p>
+                        </div>
                     </a>
                 </li>
             </ul>
@@ -95,6 +97,30 @@
 
     <script src="js/jquery.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="./js/rolldate.js"></script>
+    <script>
+        new Rolldate({
+            el: '#choose-start',
+            format: 'YYYY-MM-DD',
+            beginYear: 2000,
+            endYear: 2100,
+            // value: '2018-03-18', //默认值
+            confirm: function (data) { //回调函数
+                console.log(data)
+            }
+        })
+
+        new Rolldate({
+            el: '#choose-end',
+            format: 'YYYY-MM-DD',
+            beginYear: 2000,
+            endYear: 2100,
+            // value: '2018-03-18', //默认值
+            confirm: function (data) { //回调函数
+                console.log(data)
+            }
+        })
+    </script>
 </body>
 
 </html>

@@ -1,5 +1,79 @@
 var questionData = {
     list1: [{
+        title: '1.您当前的营养目标？', //题目名称
+        icon: './images/new_report/icon4.png', // 顶部icon url
+        type: 6, // type表示多选单选 1：简单单选 2：简单多选 3：两个大圆形按钮单选 5：带小icon单选 6: 多选icon 1-3个选项
+        name: 'question-1', // 数据提交参数名
+        descMini: '（请选1-3项）', //题目下方小字介绍文案
+        choose: [ //选项
+            {
+                value: 0,
+                text: '免疫力',
+                icon: './images/new_report/免疫.png'
+            },
+            {
+                value: 1,
+                text: '情绪压力',
+                icon: './images/new_report/精力.png'
+            },
+            {
+                value: 2,
+                text: '皮肤',
+                icon: './images/new_report/皮肤.png'
+            },
+            {
+                value: 3    ,
+                text: '头发',
+                icon: './images/new_report/头发.png'
+            },
+            {
+                value: 4,
+                text: '记忆力',
+                icon: './images/new_report/大脑.png'
+            },
+            {
+                value: 5,
+                text: '睡眠',
+                icon: './images/new_report/睡眠.png'
+            },
+            {
+                value: 6,
+                text: '眼睛',
+                icon: './images/new_report/眼睛.png'
+            },
+            {
+                value: 7,
+                text: '运动',
+                icon: './images/new_report/运动.png'
+            },
+            {
+                value: 8,
+                text: '减肥',
+                icon: './images/new_report/减肥.png'
+            },
+            {
+                value: 9,
+                text: '骨骼',
+                icon: './images/new_report/骨骼.png'
+            },
+            {
+                value: 10,
+                text: '关节',
+                icon: './images/new_report/关节.png'
+            },
+            {
+                value: 11,
+                text: '慢性病',
+                icon: './images/new_report/心脏.png'
+            },
+        ]
+    },{
+        title: '2.当前首要营养目标？', //题目名称
+        icon: './images/new_report/icon5.png', // 顶部icon url
+        type: 7, // type表示多选单选 1：简单单选 2：简单多选 3：两个大圆形按钮单选 5：带小icon单选 6: 多选icon 1-3个选项
+        name: 'question0', // 数据提交参数名
+        choose: []
+    },{
         title: '是否经常上火、口腔溃疡？', //题目名称
         icon: './images/ICON4.png', // 顶部icon url
         type: 1, // type表示多选单选 1：简单单选 2：简单多选 3：两个大圆形按钮单选 5：带小icon单选
@@ -511,6 +585,150 @@ var questionData = {
         icon: './images/ICON29.png',
         type: 1,
         name: 'question23',
+        choose: [{
+                value: 0,
+                text: '没有购买和服用过'
+            },
+            {
+                value: 1,
+                text: '服用过他人赠送的'
+            },
+            {
+                value: 2,
+                text: '购买过1-2次'
+            },
+            {
+                value: 3,
+                text: '购买过3次以上'
+            }
+        ]
+    }],
+    list4: [{
+        title: '您是否在备孕？',
+        icon: './images/ICON24.png',
+        type: 3,
+        name: 'question24',
+        choose: [{
+                value: 0,
+                text: '是'
+            },
+            {
+                value: 1,
+                text: '否'
+            },
+        ]
+    }, {
+        title: '您处在以下哪个阶段？',
+        icon: './images/ICON24.png',
+        type: 4,
+        name: 'question25',
+        choose: [{
+                value: 0,
+                text: '备孕期',
+                icon: './images/ICON21.png'
+            },
+            {
+                value: 1,
+                text: '怀孕期',
+                icon: './images/ICON22.png'
+            },
+            {
+                value: 2,
+                text: '哺乳期',
+                icon: './images/ICON23.png'
+            }
+        ],
+    }, {
+        title: '现在是否有以下疾病或症状？',
+        icon: './images/ICON26.png',
+        type: 2,
+        name: 'question26',
+        choose: [{
+                value: 0,
+                text: '高血糖'
+            },
+            {
+                value: 1,
+                text: '高血压'
+            },
+            {
+                value: 2,
+                text: '高血脂'
+            },
+            {
+                value: 3,
+                text: '高胆固醇'
+            },
+            {
+                value: 4,
+                text: '心脏病'
+            },
+            {
+                value: 5,
+                text: '痛风'
+            },
+            {
+                value: 6,
+                text: '脂肪肝/肝炎'
+            },
+            {
+                value: 7,
+                text: '肾炎/肾结石'
+            }
+        ]
+    }, {
+        title: '最近半年是否曾被诊断出缺乏以下营养素？',
+        icon: './images/ICON27.png',
+        type: 2,
+        name: 'question27',
+        choose: [{
+                value: 0,
+                text: '铁'
+            },
+            {
+                value: 1,
+                text: '钙'
+            },
+            {
+                value: 2,
+                text: '维生素B族'
+            },
+            {
+                value: 3,
+                text: '维生素C'
+            },
+            {
+                value: 4,
+                text: '维生素D'
+            },
+            {
+                value: 5,
+                text: '其他营养素'
+            }
+        ]
+    }, {
+        title: '是否服用维生素或其他补充剂？',
+        icon: './images/ICON28.png',
+        type: 1,
+        name: 'question28',
+        choose: [{
+                value: 0,
+                text: '经常'
+            },
+            {
+                value: 1,
+                text: '偶尔'
+            },
+            {
+                value: 2,
+                text: '很少'
+            }
+        ]
+    }, {
+        title: '最近1年内是否购买并服用过营养素补充剂？',
+        icon: './images/ICON29.png',
+        type: 1,
+        name: 'question29',
         choose: [{
                 value: 0,
                 text: '没有购买和服用过'
