@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/mobileSelect.css">
+    <script src="js/fn.js"></script>
+</head>
+
+<body>
+    <div class="order-pkg">
+        <div class="in">
+            <h2>您已选中<strong>78</strong>位用户</h2>
+            <div class="tit">清选择生产数量: </div>
+            <div id="choose-num" class="inp-1"></div>
+            <div class="tit">请填写收获信息:</div>
+            <div class="inp-2">
+                <span>收件人:</span>
+                <input type="text">
+            </div>
+            <div class="inp-2">
+                <span>电话号码:</span>
+                <input type="text">
+            </div>
+            <div class="inp-2">
+                <span>省份:</span>
+                <input type="text">
+            </div>
+            <div class="inp-2">
+                <span>详细:</span>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+
+            <a class="submit" href="">确认生产</a>
+            <p class="desc">确认后不可取消</p>
+        <div class="line"></div>
+
+        </div>
+    </div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="./js/mobileSelect.min.js"></script>
+    <script>
+        var mobileSelect1 = new MobileSelect({
+			trigger: '#choose-num',
+			title: '选择数量',
+			wheels: [{
+				data: ["1","10","100","1000"]
+			}],
+			callback: function (indexArr, data) {
+				console.log(data); //Returns the selected json data
+			},
+			position: [0] //Initialize positioning
+		});
+    </script>
+</body>
+
+</html>

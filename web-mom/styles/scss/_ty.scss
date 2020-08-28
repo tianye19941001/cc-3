@@ -1040,12 +1040,14 @@ p.sp-2 {
 
             .item {
                 width: rem(163);
+                -webkit-tap-highlight-color:rgba(0,0,0,0);
             }
 
             img {
                 display: block;
                 width: 100%;
                 margin-bottom: rem(20);
+                -webkit-tap-highlight-color:rgba(0,0,0,0);
             }
 
             p {
